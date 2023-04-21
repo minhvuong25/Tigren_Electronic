@@ -1,0 +1,57 @@
+.content {
+    --content_margin: 80px 0 0 0;
+    --header_margin: 15px 0 0 0;
+    --message_margin: 10px 0 0 0;
+    --actions_margin: 30px 0 0 0;
+
+    --text_font_size: 16px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: var(--content_margin);
+}
+
+.header {
+    font-size: var(--text_font_size);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #31353b;
+
+    margin: var(--header_margin);
+}
+
+.message {
+    font-size: var(--text_font_size);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--black-color-31);
+    margin: var(--message_margin);
+}
+
+.actionsContainer {
+    margin: var(--actions_margin);
+}
+
+.actionsContainer > button {
+    min-width: 248px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+
+@media screen and (max-width: 767px) {
+    .content {
+        --text_font_size: 14px;
+    }
+}

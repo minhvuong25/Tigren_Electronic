@@ -1,0 +1,14 @@
+.root {
+    display: flex;
+    flex-direction: column;
+}
+
+.root span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+}
+

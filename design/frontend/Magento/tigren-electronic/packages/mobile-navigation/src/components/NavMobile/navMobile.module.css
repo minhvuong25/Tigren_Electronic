@@ -1,0 +1,112 @@
+.root {
+    display: none;
+}
+
+.home,
+.category,
+.cart,
+.account,
+.search {
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    position: relative;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home:hover,
+.category:hover,
+.cart:hover,
+.account:hover,
+.search:hover {
+    font-size: 15px;
+    color: #e20900;
+    opacity: 1;
+}
+
+.home.active,
+.category.active,
+.cart.active,
+.account.active,
+.search.active {
+    opacity: 1;
+}
+
+.category svg {
+    stroke: #000;
+    stroke-width: 2px;
+}
+
+.active {
+    color: #e20900;
+    opacity: 1;
+}
+
+.cart .count {
+    position: relative;
+    line-height: normal;
+    display: flex;
+}
+
+.counter {
+    position: absolute;
+    padding: 2px;
+    font-size: 9px;
+    top: -7px;
+    left: 90%;
+    line-height: 1;
+    margin-left: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--theme__base-color);
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .root {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: grid;
+        grid-area: items;
+        grid-gap: 0;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        height: 60px;
+        background: #ffffff;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        z-index: 10;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .account .text {
+        display: block;
+        hyphens: auto;
+        margin: 0;
+        word-wrap: break-word;
+        height: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+
+    :global(html[data-show-nav-mobile="true"] button[name="compareLink"]) {
+        bottom: 80px;
+    }
+
+    :global(html[data-show-nav-mobile="true"] footer) {
+        padding-bottom: 60px;
+    }
+}

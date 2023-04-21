@@ -1,0 +1,55 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/SearchPage/NoProductsFound/noProductsFound.module.css';
+    transform: translateY(40%);
+    margin-top: 0;
+}
+
+.button {
+    border: 0;
+    min-width: 135px;
+    color: var(--button__color);
+    background: #D77601;
+    border-radius: 4px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.button a {
+    color: var(--button__color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.image {
+    composes: image from '@tigrensolutions/core/src/components/SearchPage/NoProductsFound/noProductsFound.module.css';
+    height: 241px;
+    width: 234px;
+    max-width: 234px;
+}
+
+.imageContainer {
+    composes: imageContainer from '@tigrensolutions/core/src/components/SearchPage/NoProductsFound/noProductsFound.module.css';
+    margin-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+    .imageContainer {
+        width: 145px;
+        height: 120px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 500px;
+        background-position: -7px -100px;
+    }
+
+    .image {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        display: none;
+    }
+}

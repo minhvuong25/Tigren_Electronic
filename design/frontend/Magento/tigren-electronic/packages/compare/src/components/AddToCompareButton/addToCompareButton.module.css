@@ -1,0 +1,100 @@
+.compare {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--primary__color);
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+    composes: icon-sprite-before from global;
+}
+
+.compare:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-position: -380px -373px;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.compare:hover,
+.inCompare {
+    color: var(--orange_text_f60);
+}
+
+.compare:hover:before {
+    background-position: -420px -373px;
+}
+
+.inCompare:before {
+    background-position: -420px -373px;
+}
+
+.inCompare:disabled, .inCompare:hover:disabled {
+    pointer-events: none;
+}
+
+.inCompare:disabled .iconCompare {
+    background-position: -420px -373px;
+}
+
+.inCompare:disabled .text {
+    color: var(--orange_text_f60);
+}
+
+.compareDetail {
+    composes: root_lowPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    color: var(--primary__color);
+    border: 1px solid var(--primary__color);
+}
+
+.compareDetail:focus {
+    box-shadow: none;
+}
+
+.compareDetail:hover {
+    color: var(--white_text_color);
+    background: var(--primary__color);
+}
+
+.inCompareOpen {
+    --stroke: var(--button__warning__color);
+    color: var(--button__warning__color);
+    background: var(--button__warning__background);
+    border: var(--button__warning__border);
+    border-radius: var(--button__border__radius);
+    padding: var(--button__padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inCompareOpen:hover {
+    --stroke: var(--button__warning__hover__color);
+    color: var(--button__warning__hover__color);
+    background: var(--button__warning__hover__background);
+    border: var(--button__warning__hover__border);
+}
+
+.inCompareOpen:hover .iconCompare {
+    background-position: -457px -373px;
+}
+
+.iconCompare {
+    composes: icon-sprite from global;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-position: -380px -373px;
+    margin-right: 5px;
+}
+
+.inCompareOpenIcons {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--primary__color);
+    position: relative;
+    margin-right: 5px;
+}

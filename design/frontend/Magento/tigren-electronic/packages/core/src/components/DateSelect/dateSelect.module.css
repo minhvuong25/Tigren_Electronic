@@ -1,0 +1,36 @@
+.dateGroup {
+    display: flex;
+}
+
+.itemField {
+    display: block;
+}
+
+.itemField p {
+    text-align: left !important;
+}
+
+.day {
+    display: inline-block;
+    width: 24.8%;
+    margin-right: 10px;
+}
+
+.month {
+    display: inline-block;
+    width: 42.6%;;
+    margin-right: 11px;
+}
+
+.year {
+    display: inline-block;
+    width: 30.8%;
+}
+
+.dateGroup span[class*="fieldIcons-after"] {
+    width: 24px;
+}
+
+.dateGroup svg {
+    width: 18px;
+}

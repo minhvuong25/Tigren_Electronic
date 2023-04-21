@@ -1,0 +1,14 @@
+.root {
+    --success_font-size: var(--checkout_font-size, 14px);
+}
+
+.heading {
+    display: none;
+}
+
+.itemsContainer {
+    display: grid;
+    row-gap: 15px;
+    padding: 15px 0;
+    font-size: var(--success_font-size);
+}

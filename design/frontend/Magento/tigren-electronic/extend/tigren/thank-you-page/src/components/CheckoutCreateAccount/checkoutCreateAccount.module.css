@@ -1,0 +1,45 @@
+.root {
+    composes: root from '@tigrensolutions/thank-you-page/src/components/CheckoutCreateAccount/checkoutCreateAccount.module.css';
+}
+
+.actions {
+    composes: actions from '@tigrensolutions/thank-you-page/src/components/CheckoutCreateAccount/checkoutCreateAccount.module.css';
+}
+
+.form {
+    composes: form from '@tigrensolutions/thank-you-page/src/components/CheckoutCreateAccount/checkoutCreateAccount.module.css';
+}
+
+.form > div.actions button {
+    background-color: var(--button__background);
+    border-radius: var(--button__border__radius);
+    border-color: var(--border_color);
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .root form {
+        display: grid;
+        gap: 0.5rem 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .root form > div {
+        grid-column-end: span 2;
+        width: 100%;
+    }
+
+    .root form > div:nth-child(2) {
+        grid-column-end: span 1;
+    }
+
+    .root form > div:nth-child(1) {
+        grid-column-end: span 1;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

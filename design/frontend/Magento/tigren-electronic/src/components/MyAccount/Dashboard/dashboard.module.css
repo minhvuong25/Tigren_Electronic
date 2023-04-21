@@ -1,0 +1,89 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+}
+
+.myAccountTitle {
+    composes: myAccountTitle from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+}
+
+.card {
+    composes: card from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+    border: none;
+}
+
+.heading {
+    composes: heading from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+}
+
+.actions {
+    composes: actions from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+}
+
+.myAccountTitle {
+    composes: myAccountTitle from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+}
+
+.groupTitle {
+    composes: groupTitle from '@tigrensolutions/core/src/components/MyAccount/Dashboard/dashboard.module.css';
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.card .heading {
+    border-bottom: none;
+}
+
+.manageAddress {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.manageAddress button {
+    border: 0;
+    text-transform: uppercase;
+}
+
+.manageAddress button:hover {
+    border-color: var(--button__hover__background);
+    border: 0;
+}
+
+.changePassword {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    border: 0;
+    margin-left: 10px;
+}
+
+.changePassword:hover {
+    border: 0;
+}
+
+.content button,
+.actions button {
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .content button,
+    .actions button,
+    .manageAddress button {
+        width: 100%;
+    }
+
+    .card {
+        background: #FFFFFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+
+    .manageAddress {
+        margin-top: 10px;
+    }
+
+    .groupTitle {
+        border-bottom: none;
+    }
+}

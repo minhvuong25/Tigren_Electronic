@@ -1,0 +1,9 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderTotal.module.css';
+    background-color: #FFFFFF;
+}
+
+
+@media (max-width: 767px) {
+
+}

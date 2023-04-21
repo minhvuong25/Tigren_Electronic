@@ -1,0 +1,119 @@
+.sortbyText {
+    position: relative;
+    margin-right: 7px;
+}
+
+.page,
+.navigate {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navigate {
+        background-image: var(--background_electronic_image_icon);
+        background-position: -416px -19px;
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 18px;
+        z-index: 11;
+        left: 2px;
+        display: block;
+    }
+
+    .page {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        min-height: 70px;
+        max-width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .sortbyText {
+        display: none;
+    }
+
+    .menu {
+        composes: menu from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        left: 10px;
+    }
+
+    .mobileText {
+        composes: mobileText from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        display: block;
+    }
+
+    .desktopText {
+        composes: desktopText from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        display: none;
+    }
+
+    .sortButton {
+        composes: sortButton from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        width: 50px;
+        height: 25px;
+        color: #646464;
+        border: 1px solid #646464;
+        border-radius: 5px;
+    }
+
+    .headerButtons {
+        composes: headerButtons from '@tigrensolutions/core/src/components/SearchPage/searchPage.module.css';
+        justify-content: initial;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .headerButtons button[class*='filterModalOpenButton'] {
+        width: 50px;
+        color: #646464;
+        border: 1px solid #646464;
+        border-radius: 5px;
+        height: 25px;
+        flex-basis: unset;
+    }
+
+    .headerButtons button[class*='filterModalOpenButton'] span {
+        display: block;
+        margin-left: 0;
+    }
+
+    .headerButtons button[class*='filterModalOpenButton']:before {
+        display: none;
+        background-position: -382px -23px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .heading {
+        composes: heading from '@tigrensolutions/core/src/components/SearchPage/searchPage.module.css';
+        justify-content: left;
+    }
+
+    .searchInfo {
+        composes: searchInfo from '@tigrensolutions/core/src/components/SearchPage/searchPage.module.css';
+        font-weight: 600;
+        margin: 80px 0 20px;
+        max-width: 90vw;
+        text-align: left;
+    }
+
+    .heading div[class*='sortedByContainer'] {
+        display: none;
+    }
+
+    .totalPages {
+        composes: totalPages from '@tigrensolutions/core/src/components/SearchPage/searchPage.module.css';
+        display: none;
+    }
+}

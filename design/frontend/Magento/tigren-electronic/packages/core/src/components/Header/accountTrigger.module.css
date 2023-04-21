@@ -1,0 +1,53 @@
+.root {
+    align-items: center;
+    display: grid;
+    /* The full height of the site header minus (box shadow height * 2). */
+    height: calc(5rem - 8px);
+}
+
+.root_open {
+    composes: root;
+
+    box-shadow: 0 4px rgb(var(--venia-brand-color-1-700));
+}
+
+.trigger {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.module.css';
+    height: 3rem;
+    min-width: unset;
+    z-index: 1;
+    padding-right: 40px;
+}
+
+.trigger .text {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--primary__color);
+    align-items: center;
+}
+
+.trigger .icon {
+    width: 18px;
+    height: 22px;
+    display: block;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-position: -716px -61px;
+    margin-bottom: 10px;
+}
+
+.triggerSignIn {
+    composes: trigger;
+}
+
+.triggerSignIn .icon {
+    background-position: -754px -60px;
+}
+
+@media (max-width: 640px) {
+    .root {
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+.error {
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.radioLabel {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 1rem 0.5rem;
+    justify-content: flex-end;
+    font-size: var(--checkout_font-size);
+    font-weight: normal;
+    color: var(--primary__color);
+}
+
+.radioMessage {
+    display: none;
+}
+
+.radioRoot {
+    /* We explicitly want one radio item per row. */
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.radioRoot > label {
+    padding: 25px 0;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 640px) {
+    .radioLabel {
+        grid-template-columns: 100%;
+        gap: 0.5rem;
+    }
+}

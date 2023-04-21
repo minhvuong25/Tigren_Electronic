@@ -1,0 +1,129 @@
+.root {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    flex-grow: 1;
+    padding: 7px;
+    min-width: 110px;
+    min-height: 38px;
+    font-size: var(--global_L_font_size_base);
+    text-transform: capitalize;
+}
+
+.root:disabled, root:hover:disabled {
+    --stroke: var(--button__background);
+}
+
+.icon {
+    display: none;
+    stroke: #fff;
+}
+
+.text {
+    display: inline;
+}
+
+.addToCart {
+    width: 100%;
+    display: flex;
+}
+
+.quantity {
+    padding-right: 10px;
+}
+
+.quantityRoot {
+    display: flex;
+    border-radius: 18px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    overflow: hidden;
+    height: 38px;
+    align-items: center;
+}
+
+.quantityRoot button,
+.quantityRoot input {
+    border: none;
+    font-size: var(--global_L_font_size_base);
+}
+
+.quantityRoot svg {
+    stroke: var(--primary__color);
+    stroke-width: 1px;
+    fill: var(--primary__color);
+    width: 12px;
+    height: 12px;
+}
+
+
+@media (max-width: 767px) {
+    .icon {
+        display: none;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .noQuantity .text {
+        display: block;
+        font-size: 13px;
+    }
+
+    .noQuantity .root {
+        min-width: 47px;
+        min-height: 32px;
+        position: relative;
+        display: flex;
+        gap: 6px;
+    }
+
+    .addToCart {
+
+    }
+
+    .root {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        min-width: 47px;
+        min-height: 32px;
+        position: relative;
+        padding: 6px 7px;
+        composes: icon-sprite-after from global;
+    }
+
+    .addToCart .root:hover {
+        background: var(--button__background);
+    }
+
+    .addToCart.noQuantity .root:hover {
+        background: var(--button__color);
+    }
+
+    .root:after {
+        display: block;
+        width: 24px;
+        height: 22px;
+        background-position: -121px -440px;
+    }
+
+    .quantityRoot {
+        height: 32px;
+    }
+
+    .quantityRoot button,
+    .quantityRoot input {
+        font-size: 13px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 480px) {
+    .text {
+        display: none;
+    }
+}

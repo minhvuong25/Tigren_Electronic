@@ -1,0 +1,48 @@
+.heading {
+    composes: heading from "@tigrensolutions/core/src/components/SearchBar/suggestions.module.css";
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333333;
+    margin: 0 0 15px 0;
+}
+
+.categories {
+    composes: categories from "@tigrensolutions/core/src/components/SearchBar/suggestions.module.css";
+    border-right: 1px solid #D6D6D6;
+    grid-area: categories;
+}
+
+.products {
+    composes: products from "@tigrensolutions/core/src/components/SearchBar/suggestions.module.css";
+    grid-area: products;
+    margin-left: 15px;
+}
+
+.button {
+    grid-area: viewAllResult;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.viewAllResult {
+    composes: viewAllResult from "@tigrensolutions/core/src/components/SearchBar/suggestions.module.css";
+    border-top: none;
+    font-size: 15px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    color: var(--primary_text_color);
+    font-weight: 600;
+}
+
+.viewAllResult:hover {
+    color: var(--theme__base-color);
+}
+
+@media (max-width: 1280px) and (min-width: 768px) {
+    .categories {
+        border: none;
+    }
+}

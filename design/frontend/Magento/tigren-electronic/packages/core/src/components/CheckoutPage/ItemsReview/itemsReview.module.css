@@ -1,0 +1,22 @@
+.items_review_container {
+    min-height: 2rem;
+    border: none;
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+    border-radius: 0;
+}
+
+.items_container {
+    display: grid;
+    padding: 0 0 20px;
+    font-size: var(--checkout_font-size);
+    color: var(--primary__color);
+}
+
+.total_quantity_amount {
+    composes: total_quantity_amount from '~@magento/venia-ui/lib/components/CheckoutPage/ItemsReview/itemsReview.module.css';
+    padding-right: 5px;
+}
+
+.items_review_container > button {
+    border: none;
+}

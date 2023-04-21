@@ -1,0 +1,13 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/WishlistPage/wishlistPage.module.css';
+}
+
+.heading {
+    composes: heading from '@tigrensolutions/core/src/components/WishlistPage/wishlistPage.module.css';
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+@media (max-width: 767px) {
+
+}

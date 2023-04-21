@@ -1,0 +1,9 @@
+.root {
+    max-width: var(--category-sidebar-width);
+    display: flex;
+    align-items: center;
+}
+
+.root svg {
+    stroke: var(--primary__color);
+}

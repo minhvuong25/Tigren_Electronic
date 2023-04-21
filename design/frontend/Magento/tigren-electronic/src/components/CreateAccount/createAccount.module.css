@@ -1,0 +1,50 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CreateAccount/createAccount.module.css';
+    gap: 1rem;
+}
+
+.rootBottom {
+    composes: rootBottom from '@tigrensolutions/core/src/components/CreateAccount/createAccount.module.css';
+    margin-top: 15px;
+}
+
+.submitButton {
+    composes: submitButton from '@tigrensolutions/core/src/components/CreateAccount/createAccount.module.css';
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+
+.nameGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.root label[class*="field-label"] {
+    font-weight: 600;
+    color: #333333;
+}
+
+.passwordButton {
+    composes: root from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    --stroke: var(--venia-global-color-gray-500);
+    background: none;
+    border-radius: 0;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.passwordButton:hover {
+    --stroke: var(--venia-global-color-gray-700);
+}
+
+.passwordButton:focus {
+    box-shadow: none;
+    --stroke: var(--venia-global-color-gray-700);
+}
+
+@media (max-width: 767px) {
+
+}

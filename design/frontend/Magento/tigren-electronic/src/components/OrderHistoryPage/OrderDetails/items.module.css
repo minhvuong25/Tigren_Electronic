@@ -1,0 +1,33 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/items.module.css';
+}
+
+.contentTitle {
+    composes: contentTitle from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/items.module.css';
+}
+
+.itemsContainer {
+    composes: itemsContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/items.module.css';
+    border-bottom: 1px solid #D6D6D6;
+
+}
+
+.heading {
+    composes: heading from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/items.module.css';
+    display: none;
+}
+
+.itemTitle {
+    composes: itemTitle from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/items.module.css';
+
+}
+
+.contentTitle, .itemTitle {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-global);
+}
+
+@media (max-width: 767px) {
+
+}

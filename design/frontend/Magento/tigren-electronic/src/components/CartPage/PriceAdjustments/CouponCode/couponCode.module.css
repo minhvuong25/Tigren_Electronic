@@ -1,0 +1,30 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CartPage/PriceAdjustments/CouponCode/couponCode.module.css';
+}
+
+.title {
+    composes: title from '@tigrensolutions/core/src/components/CartPage/PriceAdjustments/CouponCode/couponCode.module.css';
+}
+
+.entryForm {
+    composes: entryForm from '@tigrensolutions/core/src/components/CartPage/PriceAdjustments/CouponCode/couponCode.module.css';
+    display: flex;
+}
+
+.hideForm {
+    composes: hideForm from '@tigrensolutions/core/src/components/CartPage/PriceAdjustments/CouponCode/couponCode.module.css';
+}
+
+.root .hideForm {
+    display: none;
+}
+
+.entryForm input {
+    border-radius: 4px;
+}
+
+.entryFormError button,
+.entryForm button {
+    top: 0;
+    height: 38px;
+}

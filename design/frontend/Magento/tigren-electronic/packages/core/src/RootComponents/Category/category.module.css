@@ -1,0 +1,369 @@
+:root {
+    --category-sidebar-width: 200px;
+}
+
+.root {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0 0.5rem;
+}
+
+.pagination {
+    position: relative;
+    bottom: 0;
+}
+
+.placeholder {
+    height: 100vh;
+}
+
+.categoryTitle {
+    color: rgb(var(--venia-global-color-text));
+    padding-bottom: 1rem;
+    font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+    text-align: center;
+}
+
+.heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+
+.categoryInfo {
+    flex-basis: 100%;
+    margin: 1rem 0;
+    max-width: 75vw;
+    text-align: center;
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    line-height: normal;
+    color: var(--primary__color);
+    display: flex;
+    align-items: center;
+}
+
+.headerButtons {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+}
+
+.contentWrapper {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sidebar {
+    display: none;
+}
+
+.banner {
+    position: relative;
+    margin-top: 15px;
+    min-height: 20px;
+}
+
+.banner .image {
+    width: 100%;
+}
+
+.banner .name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--primary__color);
+}
+
+.filterButton {
+    display: none;
+}
+
+.filterButtonShimmer {
+    display: none;
+}
+
+.currentFilterContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--gray_color_f7);
+    min-height: 60px;
+    row-gap: 10px;
+}
+
+.currentFilterContainer h3 {
+    font-size: var(--global_L_font_size_base);
+    font-weight: 600;
+    line-height: 1.71;
+    color: #717171;
+
+    margin-right: 10px;
+    height: fit-content;
+}
+
+.currentFilterContainer ul[class*='currentFilters-root'] {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+
+.currentFilterContainer ul[class*='currentFilters-root'] span[class*='currentFilter-root'] {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 8px;
+    gap: 8px;
+    background-color: #fff;
+    padding: 6px 10px;
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: var(--primary__color);
+    text-transform: uppercase;
+}
+
+.currentFilterContainer ul[class*='currentFilters-root'] span[class*='currentFilter-root'] button svg {
+    stroke: black;
+    width: 15px;
+    height: 15px;
+}
+
+.currentFilterContainer div[class*='currentFilters-showMore'] {
+    padding: 0;
+}
+
+.currentFilterContainer div[class*='filterSidebar-action'] {
+    padding: 0;
+    margin-left: 10px;
+}
+
+.currentFilterContainer div[class*='filterSidebar-action'] > button {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #af0000;
+}
+
+.action {
+    padding: 0;
+}
+
+.action button {
+    font-size: var(--global_L_font_size_base);
+    text-decoration: none;
+}
+
+.modeButtonShimmer {
+    composes: root_button from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    margin-right: 10px;
+    min-width: unset;
+    border-radius: 0;
+}
+
+@media (max-width: 767px) {
+    .banner .name {
+        font-size: 15px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--primary__color);
+    }
+
+    .filterButton, .filterButtonShimmer, .productSortShimmer {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .banner .name {
+        text-align: center;
+    }
+
+    .headerButtons {
+        justify-content: space-between;
+    }
+
+    .filterButtonShimmer, .productSortShimmer {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .banner {
+        margin-top: 0;
+    }
+
+    .headerButtons {
+        padding-bottom: 0;
+    }
+
+    .categoryInfo {
+        padding: 21px 0 10px 0;
+        font-size: 12px;
+        text-align: left;
+        margin: 0;
+        max-width: unset;
+        color: var(--primary__color);
+    }
+
+    .filterButton {
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+        height: 34px;
+        gap: 5px;
+        border-radius: 5px;
+        border: solid 1px var(--gray-color_e7);
+        font-size: 13px;
+        text-align: left;
+        composes: icon-sprite-before from global;
+    }
+
+    .filterButton:before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-position: -66px -115px;
+    }
+
+    .heading {
+        flex-direction: column-reverse;
+    }
+
+    .categoryContent div[class*='sortedByContainer-root'] {
+        display: none;
+    }
+
+    .banner div[class*='image-root'] img[loading="lazy"] {
+        min-height: 96px;
+    }
+
+    .sortedBySkeleton {
+        width: 100%;
+    }
+
+    .filterButtonShimmer {
+        composes: root_button from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+        border-radius: 5px;
+        height: 34px;
+        min-height: 34px;
+        display: block;
+    }
+
+    .productSortShimmer {
+        composes: root_button from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+        border-radius: 5px;
+        height: 34px;
+        min-height: 34px;
+    }
+
+    .headerButtons {
+        gap: 15px;
+    }
+
+    .action {
+        font-size: var(--global_M_font_size_base);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--theme__base-color);
+    }
+}
+
+@media (max-width: 767px) {
+    .headerButtons {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contentWrapper {
+        gap: 40px;
+        display: grid;
+        grid-template-columns: var(--category-sidebar-width) calc(100% - var(--category-sidebar-width) - 40px);
+    }
+
+    .hideFilter {
+        display: block;
+    }
+
+    .categoryHeader {
+        width: 100%;
+    }
+
+    .headerButtons {
+        justify-content: flex-end;
+    }
+
+
+    .heading {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .headerButtons {
+        padding-bottom: 0;
+    }
+
+    .categoryInfo {
+        margin: 0;
+        text-align: left;
+        font-size: var(--global_L_font_size_base);
+        color: #333;
+    }
+
+    .sidebar {
+        display: flex;
+        align-self: flex-start;
+        width: var(--category-sidebar-width);
+        padding-top: 0 !important;
+    }
+
+    .categoryContent {
+        width: 100%;
+    }
+
+    .contentWrapper {
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .productSortShimmer {
+        border-radius: 0;
+        height: 34px;
+        width: 180px;
+    }
+}

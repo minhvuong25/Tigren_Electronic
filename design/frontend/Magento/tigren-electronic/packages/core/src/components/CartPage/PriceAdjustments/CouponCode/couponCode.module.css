@@ -1,0 +1,174 @@
+/* Styles for "add" view. */
+.entryForm,
+.entryFormError {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.root {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--cart-border_color);
+}
+
+.entryFormError label,
+.entryForm label {
+    font-weight: 600;
+    padding-bottom: 15px;
+    display: none;
+}
+
+.entryFormError input,
+.entryForm input {
+    border-color: #dcdcdc;
+    border-radius: 18px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.entryFormError input:focus {
+    border-color: rgb(var(--venia-global-color-gray-600));
+}
+
+.entryFormError p {
+    color: rgb(var(--venia-global-color-error));
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.errorContainer {
+    /* Duplicate the left/right/bottom padding on the accordion section */
+    padding-top: 1.5rem;
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.entryFormError button,
+.entryForm button {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    min-width: 52px;
+    min-height: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 3px 5px;
+    color: var(--button__color);
+    background-color: var(--button__background);
+    border-color: var(--button__background);
+}
+
+.entryFormError button:hover,
+.entryForm button:hover {
+    color: var(--button__hover__color);
+    background-color: var(--button__hover__background);
+}
+
+.message {
+    position: relative;
+    color: var(--input-error_color);
+    font-size: var(--input-error_font-size);
+    text-align: left;
+    padding-left: 20px;
+    display: block;
+    margin-top: 10px;
+    composes: icon-sprite-before from global;
+}
+
+.message:before {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: -142px -141px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.couponItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.couponItem > span {
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: var(--gray_color_f7);
+    height: 38px;
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--black-color-31);
+}
+
+.removeButton {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--theme__base-color);
+    text-decoration: none;
+
+    --stroke: var(--theme__base-color);
+}
+
+.removeButton span[class*='icon-root'] {
+    margin-top: 5px;
+    margin-right: -2px;
+}
+
+.removeButton:hover {
+    color: var(--cate_pb_text_hover-color);
+    --stroke: var(--cate_pb_text_hover-color);
+}
+
+.title {
+    font-size: var(--global_XL_font_size_base);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--black-color-31);
+}
+
+.hideForm {
+    display: none;
+}
+
+.checkout {
+    composes: root;
+    max-width: 350px;
+    border: none;
+    padding: 0;
+}
+
+/* on mobile... */
+@media (max-width: 960px) {
+    .entryForm,
+    .entryFormError {
+        /* switch to rows. */
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .entryFormError label,
+    .entryForm label {
+        font-size: 15px;
+    }
+
+    .removeButton, .couponItem > span {
+        font-size: var(--global_M_font_size_base);
+    }
+}
+
+/* Styles for "removal" view. */
+.removeButton {
+    composes: root from '~@magento/venia-ui/lib/components/LinkButton/linkButton.module.css';
+    margin-left: 1rem;
+}

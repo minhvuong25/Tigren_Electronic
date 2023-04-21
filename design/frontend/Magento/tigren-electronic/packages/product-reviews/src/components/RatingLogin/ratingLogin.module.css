@@ -1,0 +1,84 @@
+.root {
+    --content-width: 420px;
+    /* The root aside element takes up the whole screen. */
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    /* It is hidden by default. */
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate3d(-50%, 0, 0);
+    /* It animates to being closed, and then moves off screen. */
+    transition: opacity 192ms var(--venia-global-anim-out),
+    visibility 192ms var(--venia-global-anim-out), left 0s 192ms;
+
+    /* It sits over all background content. */
+    z-index: 3;
+}
+
+.root_open {
+    composes: root;
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+
+    /* It animates to being open. */
+    transition: opacity 224ms var(--venia-global-anim-in),
+    visibility 224ms var(--venia-global-anim-in), left 0s;
+}
+
+.contents {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.content {
+    background-color: rgb(var(--venia-global-color-background));
+    height: 100%;
+    max-height: 90vh;
+    min-height: 360px;
+    width: 90vw;
+    max-width: var(--content-width);
+    overflow: hidden;
+    display: grid;
+    pointer-events: auto;
+    z-index: 4;
+    position: relative;
+    padding: 30px 30px 50px;
+}
+
+.header {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--primary__color);
+    margin-bottom: 30px;
+}
+
+.close {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+}
+
+.contents button[class*="signIn-createAccount"] {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 15px 40px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+}

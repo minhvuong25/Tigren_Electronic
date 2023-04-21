@@ -1,0 +1,36 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/CartPage/PriceAdjustments/ShippingMethods/shippingForm.module.css';
+}
+
+.submit {
+    composes: root_lowPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    justify-self: flex-end;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    grid-area: submit;
+}
+
+@media (min-width: 1280px) {
+    .root {
+        display: grid;
+        gap: 0.9375rem 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        'country state zip'
+        'submit submit submit';
+    }
+
+    .submit {
+        justify-self: flex-end;
+        grid-area: submit;
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 767px) {
+    .submit {
+        width: 100%;
+    }
+}

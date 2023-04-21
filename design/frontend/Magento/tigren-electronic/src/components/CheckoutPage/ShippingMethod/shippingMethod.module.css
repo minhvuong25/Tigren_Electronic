@@ -1,0 +1,46 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CheckoutPage/ShippingMethod/shippingMethod.module.css';
+    border: none;
+}
+
+.done {
+    composes: done from '@tigrensolutions/core/src/components/CheckoutPage/ShippingMethod/shippingMethod.module.css';
+    border: none;
+}
+
+.editingHeading {
+    composes: editingHeading from '@tigrensolutions/core/src/components/CheckoutPage/ShippingMethod/shippingMethod.module.css';
+    display: none;
+}
+
+.done h3 {
+    display: none;
+}
+
+.form {
+    composes: form from '@tigrensolutions/core/src/components/CheckoutPage/ShippingMethod/shippingMethod.module.css';
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .form div label,
+    .done form label {
+        background-color: #FAFAFA;
+        padding-left: 30px;
+        margin-bottom: 20px;
+        border: 1px solid #E9E9E9;
+    }
+
+    .form div label:last-child,
+    .done form label:last-child {
+        border-bottom: 1px solid #E9E9E9;
+    }
+}
+
+@media (max-width: 767px) {
+    .done h3,
+    .editingHeading {
+        display: flex;
+        text-transform: capitalize;
+    }
+}

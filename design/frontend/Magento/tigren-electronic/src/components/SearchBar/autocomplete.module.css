@@ -1,0 +1,23 @@
+.root {
+    composes: root from "@tigrensolutions/core/src/components/SearchBar/autocomplete.module.css";
+}
+
+.suggestions {
+    composes: suggestions from "@tigrensolutions/core/src/components/SearchBar/autocomplete.module.css";
+}
+
+.suggestions {
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas:
+        'categories products'
+        'categories viewAllResult';
+}
+
+@media (max-width: 1280px) and (min-width: 768px) {
+    .suggestions {
+        grid-template-areas:
+        'categories categories'
+        'products products'
+        'viewAllResult viewAllResult';
+    }
+}

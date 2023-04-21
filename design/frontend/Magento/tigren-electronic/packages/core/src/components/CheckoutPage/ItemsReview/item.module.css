@@ -1,0 +1,35 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/CheckoutPage/ItemsReview/item.module.css';
+}
+
+.thumbnail {
+    composes: thumbnail from '~@magento/venia-ui/lib/components/CheckoutPage/ItemsReview/item.module.css';
+    border: none;
+}
+
+.thumbnail img {
+    background: var(--white_text_color);
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.options {
+    composes: options from '~@magento/venia-ui/lib/components/CheckoutPage/ItemsReview/item.module.css';
+    margin-top: 5px;
+}
+
+.root *[class*="productBundle-options"] + .options {
+    display: none;
+}
+
+.price {
+    grid-column-start: 3;
+}
+
+.quantity {
+    composes: quantity from '~@magento/venia-ui/lib/components/CheckoutPage/ItemsReview/item.module.css';
+    margin-top: 5px;
+}

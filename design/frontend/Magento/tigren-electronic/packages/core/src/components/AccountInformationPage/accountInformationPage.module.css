@@ -1,0 +1,179 @@
+.formEditAccount {
+    text-align: left;
+    position: relative;
+}
+
+.formEditAccount h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.boxTitle {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    margin-bottom: 20px;
+}
+
+.formEditAccount .actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.itemActionLoading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}
+
+.selection {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.selection .item {
+    background: var(--my_account_personal_background_box);
+    border-radius: 4px;
+    padding: 8px 8px 8px 20px;
+}
+
+.selection label span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+}
+
+.changePassword {
+    padding: 8px 20px 30px;
+    border-radius: 4px;
+    background-color: var(--my_account_personal_background_box);
+
+    display: grid;
+    grid-template-areas:
+        "a b"
+        "c auto";
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buttonSave {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    width: 180px;
+}
+
+.goBack {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    composes: icon-sprite-before from global;
+    width: fit-content;
+    padding-left: 5px;
+}
+
+
+.goBack:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-position: -324px -301px;
+}
+
+
+.skeleton .profileInfo {
+    height: 250px;
+}
+
+.skeleton .selection {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px;
+}
+
+@media (min-width: 768px) {
+    .profileInfo .formFields {
+        display: grid;
+        grid-template-rows: auto;
+        column-gap: 20px;
+        row-gap: 25px;
+        grid-template-areas: 'leftSection rightSection';
+        grid-template-columns: 50fr 50fr;
+    }
+
+    .root, .skeleton {
+        width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .formEditAccount {
+        --global_L_font_size_base: var(--global_M_font_size_base);
+    }
+
+    .profileInfo .formFields {
+        padding-bottom: 20px;
+    }
+
+    .profileInfo div[class*='field-root'] {
+        margin-top: 10px;
+    }
+
+    .boxTitle {
+        display: none;
+    }
+
+    .formEditAccount label[class*='field-label'] {
+        margin-top: 10px;
+    }
+
+    .formEditAccount div[class*='password-root'] {
+        padding-top: 10px;
+    }
+
+    .formEditAccount .actions {
+        margin-top: 40px;
+    }
+
+    .buttonSave {
+        width: 150px;
+    }
+
+    .selection {
+        margin-top: 0;
+    }
+
+    .changePassword {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0 15px 30px 15px;
+        transform: translateY(-10px);
+    }
+
+    .formEditAccount .profileInfo {
+        margin-top: -15px;
+    }
+
+    .skeleton .selection {
+        margin-top: 30px;
+    }
+}

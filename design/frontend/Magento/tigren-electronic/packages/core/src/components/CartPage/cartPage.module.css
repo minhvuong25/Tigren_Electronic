@@ -1,0 +1,181 @@
+.root {
+    margin: 0 auto;
+}
+
+.body {
+    padding: 0 15px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 18rem;
+    /* The summary grid item spans the entire right column. */
+    grid-template-areas:
+        'items summary'
+        'adjustments summary';
+    align-items: flex-start;
+}
+
+.bodyLoading {
+    composes: body;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.heading_container {
+    display: grid;
+    margin-bottom: 0;
+    row-gap: 1rem;
+    padding: 40px 15px 20px;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.27;
+    color: var(--secondary__color);
+}
+
+.heading {
+    line-height: 1.25em;
+}
+
+.stockStatusMessageContainer:empty {
+    display: none;
+}
+
+.items_container {
+    grid-area: items;
+}
+
+.price_adjustments_container {
+    grid-area: adjustments;
+}
+
+.bodyLoading {
+    composes: body;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.summary {
+    grid-area: summary;
+}
+
+.summary_container {
+    height: auto;
+    padding: 18px 15px 25px;
+    border-radius: 5px;
+    border: solid 1px var(--cart-border_color);
+    background-color: #fff;
+}
+
+.summary_contents {
+    position: sticky;
+    /*
+     * TODO: Use CSS Properties (variables) or something instead of hardcoding this.
+     *  - 3.5rem = min-height of nav header. See the "toolbar" class in header.css.
+     *  - 2rem = padding-top of the cart page.
+     */
+    top: 5.5rem;
+}
+
+.cartActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cartActions button {
+    min-width: 175px;
+}
+
+.emptyCart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.emptyCart img {
+    width: 120px;
+}
+
+.emptyCart h3 {
+    margin: 0;
+    font-size: var(--global_XLL_font_size_base);
+    font-weight: 600;
+    text-align: center;
+    color: var(--cart-text_color);
+}
+
+.emptyCart p {
+    margin-bottom: 20px;
+    font-size: var(--global_XLL_font_size_base);
+    font-weight: normal;
+    text-align: center;
+    color: var(--cart-text_color);
+}
+
+.emptyCart button {
+    width: 100%;
+    max-width: 248px;
+    height: 40px;
+}
+
+.stockStatusMessage {
+    font-size: var(--global_XLL_font_size_base);
+    font-weight: normal;
+    color: var(--error-text_color);
+    grid-area: stock;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 960px) {
+    .root {
+
+    }
+
+    .body {
+        /* Only one column in mobile view. */
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'items'
+            'adjustments'
+            'summary';
+        gap: 10px;
+    }
+
+    .heading_container {
+        padding: 20px 15px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cartActions {
+        gap: 15px;
+    }
+
+    .cartActions button {
+        min-width: 110px;
+        width: 165px;
+        max-width: 50%;
+        white-space: nowrap;
+    }
+
+    .summary {
+        position: relative;
+        padding-top: 70px;
+    }
+
+    .summary_contents {
+        position: unset;
+    }
+
+    .stockStatusMessage {
+        font-size: var(--global-font_size_base);
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html data-image-optimizing-origin="<%= process.env.IMAGE_OPTIMIZING_ORIGIN %>"
+      data-media-backend="<%= global.MAGENTO_MEDIA_BACKEND_URL %>"
+      lang="<%= global.LOCALE %>">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="#ffffff" name="theme-color">
+    <link crossorigin="use-credentials" href="/manifest.json" rel="manifest">
+
+    <!--
+        Apple Specific Tags
+
+        To be included until Safari supports WebAppManifest
+        See Docs:
+        - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+        - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+    -->
+    <!--
+        Apple Icons for Homescreen
+        Sizes: https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
+    -->
+    <link href="/local-static/icons/venia_square_57.png" rel="apple-touch-icon">
+    <link href="/local-static/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="<%= process.env.MAGENTO_BACKEND_URL %>" rel="preconnect">
+    <script type="text/javascript">
+        window.isBotOrHeadless = false;
+        if (navigator && navigator.userAgent) {
+            var botPattern = '(googlebot|Googlebot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google|bingbot|slurp|java|wget|curl|Commons-HttpClient|Python-urllib|libwww|httpunit|nutch|phpcrawl|msnbot|jyxobot|FAST-WebCrawler|FAST Enterprise Crawler|biglotron|teoma|convera|seekbot|gigablast|exabot|ngbot|ia_archiver|GingerCrawler|webmon |httrack|webcrawler|grub.org|UsineNouvelleCrawler|antibot|netresearchserver|speedy|fluffy|bibnum.bnf|findlink|msrbot|panscient|yacybot|AISearchBot|IOI|ips-agent|tagoobot|MJ12bot|dotbot|woriobot|yanga|buzzbot|mlbot|yandexbot|purebot|Linguee Bot|Voyager|CyberPatrol|voilabot|baiduspider|citeseerxbot|spbot|twengabot|postrank|turnitinbot|scribdbot|page2rss|sitebot|linkdex|Adidxbot|blekkobot|ezooms|dotbot|Mail.RU_Bot|discobot|heritrix|findthatfile|europarchive.org|NerdByNature.Bot|sistrix crawler|ahrefsbot|Aboundex|domaincrawler|wbsearchbot|summify|ccbot|edisterbot|seznambot|ec2linkfinder|gslfbot|aihitbot|intelium_bot|facebookexternalhit|yeti|RetrevoPageAnalyzer|lb-spider|sogou|lssbot|careerbot|wotbox|wocbot|ichiro|DuckDuckBot|lssrocketcrawler|drupact|webcompanycrawler|acoonbot|openindexspider|gnam gnam spider|web-archive-net.com.bot|backlinkcrawler|coccoc|integromedb|content crawler spider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler.com|siteexplorer.info|elisabot|proximic|changedetection|blexbot|arabot|WeSEE:Search|niki-bot|CrystalSemanticsBot|rogerbot|360Spider|psbot|InterfaxScanBot|Lipperhey SEO Service|CC Metadata Scaper|g00g1e.net|GrapeshotCrawler|urlappendbot|brainobot|fr-crawler|binlar|SimpleCrawler|Livelapbot|Twitterbot|cXensebot|smtbot|bnf.fr_bot|A6-Indexer|ADmantX|Facebot|Twitterbot|OrangeBot|memorybot|AdvBot|MegaIndex|SemanticScholarBot|ltx71|nerdybot|xovibot|BUbiNG|Qwantify|archive.org_bot|Applebot|TweetmemeBot|crawler4j|findxbot|SemrushBot|yoozBot|lipperhey|y!j-asr|Domain Re-Animator Bot|AddThis|Lighthouse)',
+                botRegex = new RegExp(botPattern, 'i'),
+                userAgent = navigator.userAgent;
+            if (botRegex.test(userAgent)) {
+                window.isBotOrHeadless = true;
+            }
+        }
+
+        window.prerenderReady = false;
+        setTimeout(function () {
+            window.prerenderReady = true;
+        }, 1000 * 5);
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('error', function (e) {
+            if (
+                e && e.target &&
+                (
+                    (e.target.src && (typeof e.target.src === 'string') && e.target.src.indexOf('runtime') !== -1) ||
+                    (e.target.src && (typeof e.target.src === 'string') && e.target.src.indexOf('client') !== -1) ||
+                    (e.target.src && (typeof e.target.src === 'string') && e.target.src.indexOf('vendors') !== -1) ||
+                    (e.message && e.message === 'Script error.')
+                )
+            ) {
+                console.log('Version is outdated - old client file not found.');
+                try {
+                    if (typeof (caches) !== 'undefined') {
+                        caches.keys().then(function (names) {
+                            for (const name of names)
+                                caches.delete(name);
+                        });
+                    }
+
+                    navigator.serviceWorker.getRegistrations().then(
+                        function (registrations) {
+                            for (let registration of registrations) {
+                                registration.unregister();
+                            }
+                        });
+                } catch (err) {
+                    console.log(err);
+                }
+                try {
+                    sessionStorage.clear();
+                    window.location.reload();
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+        }, true);
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        var dataLayer = window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            event: 'dataLayerInit',
+            originalLocation: document.location.protocol + '//' +
+                document.location.hostname +
+                document.location.pathname +
+                document.location.search
+        });
+    </script>
+    <script id="custom_script"></script>
+</head>
+<body>
+<div id="root"></div>
+<div class="splash-screen" id="splash-screen" style="margin-top:0;text-align:center;width: 100%;top: 0;left: 0;">
+    <div style="width: 100%; height: auto; margin: 0 auto 0;">
+        <img id="splash-image" alt="Splash Image"
+             style="position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); z-index:-1; width: 100%; max-width: <%= global.SPLASH_SCREEN_IMAGE_WIDTH %>;"
+             src="<%= global.SPLASH_SCREEN_IMAGE %>" />
+    </div>
+</div>
+
+<!-- Fallback for when JavaScript is disabled. -->
+<noscript>
+    <style>
+        .fallback-nojs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .fallback-nojs a {
+            color: currentColor;
+        }
+
+        .fallback-closed {
+            height: 40vh;
+        }
+
+        .fallback-heading {
+            font-weight: 600;
+            padding-bottom: 16px;
+            font-size: xx-large;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .fallback-heading {
+                font-size: x-large;
+            }
+        }
+    </style>
+    <div class="fallback-nojs">
+        <img alt="JavaScript is disabled" class="fallback-closed" src="/venia-static/veniaClosed.png">
+        <div class="fallback-heading">Oops! JavaScript is disabled</div>
+        <div class="fallback-message">
+            To browse the store,<br>
+            <a href="https://www.enable-javascript.com">enable JavaScript in your browser.</a>
+        </div>
+    </div>
+</noscript>
+<!-- Inlined Data -->
+{{#pageTypeNonce}}
+<script nonce="{{pageTypeNonce}}">
+    try {
+        var INLINED_PAGE_TYPE = JSON.parse('{{pageType}}'.replace(/&quot;/g, '"'));
+    } catch (error) {}
+</script>
+
+{{#webpackChunks}}
+<script src="/{{.}}" type="text/javascript"></script>
+{{/webpackChunks}}
+{{/pageTypeNonce}}
+<!-- /Inlined Data -->
+</body>
+</html>

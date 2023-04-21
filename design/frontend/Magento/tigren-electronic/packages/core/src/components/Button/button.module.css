@@ -1,0 +1,177 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.module.css';
+    --stroke: var(--button__background);
+    background: none;
+    border-color: var(--stroke);
+    border-radius: var(--button__border__radius);
+    border-style: solid;
+    border-width: 2px;
+    color: var(--stroke);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    line-height: 1.25rem;
+    max-width: 100%;
+    min-width: 110px;
+    min-height: var(--button__height);
+    outline: none;
+    padding: var(--button__padding);
+    transition-duration: 256ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: var(--venia-global-anim-standard);
+}
+
+.root:hover {
+    --stroke: var(--button__background);
+}
+
+.root:focus {
+    box-shadow: none;
+}
+
+.root:active {
+    transition-duration: 128ms;
+    --stroke: var(--button__background);
+}
+
+/**
+ * Some browsers retain the :hover state after a click, this ensures if a button becomes disabled after
+ * being clicked it will be visually disabled.
+ */
+.root:disabled,
+.root:hover:disabled {
+    pointer-events: none;
+    background-color: var(--button_deactive_background_color);
+    color: var(--button_deactive_text_color);
+    border: var(--button_deactive_border);
+}
+
+.content {
+    align-items: center;
+    display: inline-grid;
+    gap: 0.35rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* derived classes */
+.root_lowPriority {
+    composes: root;
+    --stroke: var(--primary__color);
+    border-width: 1px;
+}
+
+.root_lowPriority:hover {
+    --stroke: var(--primary__color);
+    color: #fff;
+    background: var(--primary__color);
+}
+
+.root_lowPriorityNegative {
+    composes: root_lowPriority;
+    --stroke: var(--white_text_color);
+    background-color: var(--primary__color);
+}
+
+.root_lowPriorityNegative:hover {
+    --stroke: var(--venia-global-color-red-800);
+    background-color: var(--secondary__color);
+    color: var(--white_text_color);
+}
+
+.root_normalPriority {
+    composes: root;
+}
+
+.root_normalPriorityNegative {
+    composes: root_normalPriority;
+    --stroke: var(--venia-global-color-red-700);
+}
+
+.root_normalPriorityNegative:hover {
+    --stroke: var(--venia-global-color-red-800);
+}
+
+.root_highPriority {
+    composes: root;
+    background-color: var(--stroke);
+    color: var(--button__color);
+}
+
+.root_highPriority:hover,
+.root_highPriority:focus {
+    color: var(--button__hover__color);
+    background-color: var(--button__hover__background);
+    border: var(--button__hover__border);
+}
+
+.root_highPriorityNegative {
+    composes: root_highPriority;
+    --stroke: var(--venia-global-color-red-700);
+}
+
+.root_highPriorityNegative:hover {
+    --stroke: var(--venia-global-color-red-800);
+}
+
+.root_infoPriority {
+    composes: root;
+    color: var(--button__info__color);
+    background: var(--button__info__background);
+    border: var(--button__info__border);
+}
+
+.root_infoPriority:hover {
+    color: var(--button__info__hover__color);
+    background: var(--button__info__hover__background);
+    border: var(--button__info__hover__border);
+}
+
+.root_infoPriority:disabled {
+    color: var(--button__info__deactive__color);
+    background: var(--button__info__deactive__background);
+    border: var(--button__info__deactive__border);
+}
+
+
+.root_dangerPriority {
+    composes: root;
+    color: var(--button__danger__color);
+    background: var(--button__danger__background);
+    border: var(--button__danger__border);
+}
+
+.root_dangerPriority:hover {
+    color: var(--button__danger__hover__color);
+    background: var(--button__danger__hover__background);
+    border: var(--button__danger__hover__border);
+}
+
+.root_dangerPriority:disabled {
+    color: var(--button__danger__deactive__color);
+    background: var(--button__danger__deactive__background);
+    border: var(--button__danger__deactive__border);
+}
+
+
+.root_warningPriority {
+    composes: root;
+    --stroke: var(--button__warning__color);
+    color: var(--button__warning__color);
+    background: var(--button__warning__background);
+    border: var(--button__warning__border);
+}
+
+.root_warningPriority:hover {
+    --stroke: var(--button__warning__hover__color);
+    color: var(--button__warning__hover__color);
+    background: var(--button__warning__hover__background);
+    border: var(--button__warning__hover__border);
+}
+
+.root_warningPriority:disabled {
+    --stroke: var(--button__warning__deactive__color);
+    color: var(--button__warning__deactive__color);
+    background: var(--button__warning__deactive__background);
+    border: var(--button__warning__deactive__border);
+}

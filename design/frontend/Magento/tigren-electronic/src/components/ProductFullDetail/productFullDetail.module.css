@@ -1,0 +1,415 @@
+.productName {
+    composes: productName from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    font-weight: 600;
+    color: #000000;
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 36px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.top {
+    composes: top from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    justify-content: flex-start;
+}
+
+.root {
+    composes: root from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    grid-template-areas:
+        'images title'
+        'images top'
+        'images rating'
+        'images price'
+        'images shortDescription'
+        'images availability'
+        'images errors'
+        'images promotion'
+        'images tierPrices'
+        'images messages'
+        'images options'
+        'images group'
+        'images moreActions'
+        'images .';
+}
+
+.price {
+    composes: price from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+}
+
+.availability {
+    grid-area: availability;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.availability .title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #333333;
+}
+
+.availability .stock {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #219653;
+}
+
+.price div[class*='productPrice-root'] > div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.price div[class*='productPrice-oldPrice'] {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.price div[class*='productPrice-specialPrice'],
+.price div[class*='productPrice-productPrice'] {
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: #d77601;
+}
+
+.actions {
+    composes: actions from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    display: flex;
+}
+
+.actions button {
+    position: relative;
+    text-transform: uppercase;
+    height: 50px;
+    border: 1px solid #d77601;
+    padding: 10px 15px;
+}
+
+.quantity {
+    composes: quantity from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    padding: 1.5rem 0 0 0;
+}
+
+.icon {
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -252px -251px;
+    width: 32px;
+    height: 30px;
+}
+
+.moreActions {
+    composes: moreActions from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+}
+
+.shortDescription {
+    composes: shortDescription from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.moreActions button[class*='addToListButton'] span,
+.moreActions button[class*='addToCompareButton'] span {
+    display: block;
+    font-size: 14px;
+}
+
+.moreActions button[class*='addToCompareButton'] {
+    position: relative;
+    background: none;
+    width: 20%;
+    margin-left: 10px;
+}
+
+.group {
+    grid-area: group;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 1.5rem 0;
+}
+
+.specifications {
+    margin-top: 20px;
+}
+
+.options {
+    composes: options from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+}
+
+.options:not(:empty) {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.socialShare {
+    composes: socialShare from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+}
+
+.star {
+    composes: star from '@tigrensolutions/core/src/components/ProductFullDetail/productFullDetail.module.css';
+    width: 76px;
+}
+
+/* Tabs */
+.root ~ div[class='react-tabs'] {
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 50px;
+    margin-left: 15px;
+}
+
+.root ~ div[class='react-tabs'] ul[class='react-tabs__tab-list'],
+.root ~ div[class='react-tabs'] li[class*='react-tabs__tab--selected'] {
+    border-color: #d6d6d6;
+}
+
+.root ~ div[class='react-tabs'] ul[class='react-tabs__tab-list'] {
+    display: flex;
+}
+
+.headingTab {
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: #888888;
+}
+
+li[class*='react-tabs__tab--selected'] .headingTab {
+    color: #333333;
+}
+
+.actionsMobile {
+    display: none;
+}
+
+.moreActions button[class*='addToListButton']:before {
+    background-position: -264px -187px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: 450px;
+}
+
+.moreActions button[class*='addToListButton']:hover:before {
+    background-position: -290px -187px;
+}
+
+.moreActions button[class*='addToListButton-root_selected']:before {
+    background-position: -290px -187px;
+}
+
+.moreActions button[class*='addToCompareButton-inCompare']:before {
+    background-position: -240px -189px;
+}
+
+.quantity span[class*='productFullDetail-quantityTitle'] {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #333333;
+}
+
+.quantity span[class*='productFullDetail-quantityTitle']:after {
+    content: ': ';
+}
+
+@media (min-width: 768px) {
+    .top {
+        gap: 50px;
+    }
+
+    .moreActions button[class*='addToListButton'],
+    .moreActions button[class*='addToCompareButton'] {
+        text-align: center;
+        color: #888888;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .moreActions button[class*='addToListButton']:hover,
+    .moreActions button[class*='addToCompareButton']:hover,
+    .moreActions button[class*='addToListButton-root_selected'],
+    .moreActions button[class*='addToCompareButton-inCompare'] {
+        color: #333333;
+    }
+
+    .quantity div[class*='quantity-root'] {
+        margin-top: 15px;
+    }
+
+    .group {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .root {
+        background: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 0 0 30px 30px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-areas:
+            'images'
+            'title'
+            'top'
+            'rating'
+            'price'
+            'shortDescription'
+            'availability'
+            'errors'
+            'promotion'
+            'tierPrices'
+            'messages'
+            'options'
+            'group'
+            'moreActions'
+            '.';
+    }
+
+    .headingTab {
+        text-transform: none;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .actionsMobile {
+        display: flex;
+        justify-content: space-evenly;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 16px;
+        z-index: 11;
+        right: 20px;
+    }
+
+    .actionsMobile button:hover:disabled,
+    .actionsMobile button:disabled,
+    .actionsMobile button:focus,
+    .actionsMobile button:hover {
+        color: transparent;
+        background-color: transparent;
+        border: none;
+        opacity: 0.5;
+    }
+
+    .actionsMobile button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .actionsMobile .icon {
+        background-position: -416px -56px;
+    }
+
+    [data-page='product-detail'] span[class*='breadcrumbs-text'],
+    [data-page='product-detail'] div[class*='header-messagePromo'],
+    [data-page='product-detail'] footer,
+    [data-page='product-detail'] header div[class*='header-primaryActions'] {
+        display: none;
+    }
+
+    div[class='react-tabs'] {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    li[class*='react-tabs__tab--selected'] {
+        border: none;
+        border-bottom: 4px solid #d77601;
+    }
+
+    .group {
+        z-index: 10;
+        position: fixed;
+        bottom: 0px;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 0 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80px;
+        box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    div[class='header-primaryActions'] {
+        display: none;
+    }
+
+    .actions span[class*='productFullDetail-icon'] {
+        display: none;
+    }
+
+    .actions button {
+        height: 40px;
+        padding: 0 40px;
+    }
+
+    .actions {
+        grid-template-rows: none;
+    }
+
+    .quantity div[class*='quantity-root'],
+    .quantity div[class*='quantity-root'] button {
+        height: 40px;
+    }
+
+    .quantity {
+        padding: 0.25rem 0 0 0;
+    }
+
+    .quantityTitle {
+        display: none;
+    }
+
+    .moreActions button[class*='addToListButton'] span,
+    .moreActions button[class*='addToCompareButton'] span {
+        display: none;
+    }
+
+    .moreActions {
+        display: grid;
+        grid-template-areas: 'addToCompareButton addToListButton socialShare';
+        padding-top: 0;
+        border-top: none;
+    }
+
+    .moreActions button[class*='addToListButton'] {
+        grid-area: addToListButton;
+    }
+
+    .moreActions button[class*='addToCompareButton'] {
+        grid-area: addToCompareButton;
+    }
+
+    .moreActions .socialShare {
+        grid-area: socialShare;
+    }
+
+    [data-page='product-detail'] div[class*='breadcrumbs-root'] {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .root
+    ~ div[class='react-tabs']
+    div[class*='productReviews-root']
+    div[class*='productReviews-summary'] {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .root ~ div[class='react-tabs'] ul[class='react-tabs__tab-list'] {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

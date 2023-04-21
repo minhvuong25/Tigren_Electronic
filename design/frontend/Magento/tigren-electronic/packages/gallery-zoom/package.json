@@ -1,0 +1,26 @@
+{
+  "name": "@tigrensolutions/gallery-zoom",
+  "version": "1.1.1",
+  "private": true,
+  "description": "Product gallery improvements for PWA Studio",
+  "main": "./targets/local-intercept.js",
+  "license": "(OSL-3.0 OR AFL-3.0)",
+  "author": "Tigren Solutions",
+  "dependencies": {
+    "node-sass": "~5.0.0",
+    "sass-loader": "~10.1.0",
+    "react-image-gallery": "~1.2.0",
+    "react-zoom-pan-pinch": "^1.6.1"
+  },
+  "peerDependencies": {
+    "@apollo/client": "~3.4.0",
+    "@magento/peregrine": "~12.3.0",
+    "@magento/pwa-buildpack": "~11.2.0",
+    "@magento/venia-ui": "~9.3.0"
+  },
+  "pwa-studio": {
+    "targets": {
+      "intercept": "./targets/local-intercept"
+    }
+  }
+}

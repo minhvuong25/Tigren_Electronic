@@ -1,0 +1,239 @@
+.root {
+    --slider_arrow-height: 20px;
+    --slider_arrow-width: 20px;
+    --option_padding: 0 10px;
+
+    margin-top: 12px;
+    min-height: 53px;
+    display: flex;
+    flex-direction: column;
+}
+
+.root :global(.slick-slider .slick-arrow) {
+    transform: scale(0.4);
+    font-size: 0;
+    top: -1px;
+}
+
+.root :global(.slick-slider .slick-arrow.slick-prev) {
+    left: -10px;
+    width: 30px;
+    height: 30px;
+}
+
+.root :global(.slick-slider .slick-arrow.slick-next) {
+    right: -10px;
+    width: 30px;
+    height: 30px;
+}
+
+.root :global(.slick-slider) {
+    padding: 0 9px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 80px auto;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quantityRoot {
+    display: flex;
+    border-radius: 18px;
+    border: solid 1px #ddd;
+    background-color: #fff;
+    overflow: hidden;
+    height: 36px;
+    align-items: center;
+}
+
+.quantityRoot button,
+.quantityRoot input {
+    border: none;
+}
+
+.quantityRoot input {
+    text-align: center;
+}
+
+.quantityRoot svg {
+    stroke: var(--primary__color);
+    stroke-width: 1px;
+    fill: var(--primary__color);
+    width: 12px;
+    height: 12px;
+}
+
+.quantityRoot button[class*='quantity-button_decrement'] {
+    padding-left: 5px;
+}
+
+.quantityRoot button[class*='quantity-button_increment'] {
+    padding-right: 5px;
+}
+
+.actions button[data-action='addToCart'] {
+    flex-grow: 1;
+    padding: 9px;
+    border-radius: 18px;
+    background-color: var(--button__background);
+    height: 36px;
+    min-height: 36px;
+    min-width: unset;
+
+    font-size: var(--button-font-size);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--button__color);
+    border: var(--button__border);
+}
+
+.actions button[data-action='addToCart']:focus, .actions button[data-action='addToCart']:hover {
+    box-shadow: none;
+    background-color: var(--button__hover__background);
+    border: var(--button__active__border);
+    color: var(--button__active__color);
+}
+
+.actions button[data-action='addToCart']:disabled {
+    background-color: var(--button_deactive_background_color);
+    border: 1px solid var(--button_deactive_background_color);
+}
+
+.quantityRoot input:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 767px) {
+    .root:empty {
+        display: none;
+    }
+
+    .categoryStyle {
+        padding: 0;
+        max-width: 250px;
+        margin-top: 9px;
+    }
+
+    .categoryStyle div[class*='slider-root'] {
+        padding: 0;
+    }
+
+    .categoryStyle div[class*='colors-root'] > div[class*='slick-slider'] {
+        padding-bottom: 12px;
+    }
+
+    .categoryStyle div[class*='options-root'] {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .categoryStyle div[class*='options-root'] > div[class*='slick-slider'] {
+        padding-bottom: 0;
+    }
+
+    .addToCartCategoryStyle .quantityRoot {
+        height: 32px;
+        max-width: 120px;
+    }
+
+    .addToCartCategoryStyle .quantityRoot input {
+        font-size: 13px;
+        color: var(--primary__color);
+        padding: 0 3px;
+        height: 32px;
+    }
+
+    .addToCartCategoryStyle .quantityRoot svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .actions.addToCartCategoryStyle {
+        grid-template-columns: 1fr auto;
+    }
+
+    .addToCartCategoryStyle button[data-action='addToCart'] {
+        height: 32px;
+        min-height: unset;
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .homeStyle button[data-action='addToCart'], .homeStyle button[data-action='preOrder'],
+    .addToCartCategoryStyle button[data-action='addToCart'], .addToCartCategoryStyle button[data-action='preOrder'] {
+        min-width: 47px;
+        min-height: 32px;
+        position: relative;
+        padding: 6px 7px;
+    }
+
+    .homeStyle button[data-action='addToCart']:after, .homeStyle button[data-action='preOrder']:after,
+    .addToCartCategoryStyle button[data-action='addToCart']:after, .addToCartCategoryStyle button[data-action='preOrder']:after {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: var(--background_image_icon);
+        background-size: var(--background_image_size);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        width: 24px;
+        height: 22px;
+        background-position: -121px -440px;
+    }
+
+    .homeStyle button[data-action='addToCart'] span, .homeStyle button[data-action='preOrder'] span,
+    .addToCartCategoryStyle button[data-action='addToCart'] span, .addToCartCategoryStyle button[data-action='preOrder'] span {
+        display: none;
+    }
+
+    .homeStyle.actions {
+        grid-template-columns: 1fr auto;
+    }
+
+    .root {
+        padding: 0;
+    }
+
+    .root div :global(.slick-slider) {
+        margin: 0;
+        padding: 0;
+    }
+
+    .root :global(.slick-slider .slick-list) {
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .homeStyle button[data-action='addToCart']:after, .homeStyle button[data-action='preOrder']:after,
+    .addToCartCategoryStyle button[data-action='addToCart']:after, .addToCartCategoryStyle button[data-action='preOrder']:after {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: var(--background_image_icon);
+        background-size: var(--background_image_size);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        width: 24px;
+        height: 22px;
+        background-position: -121px -440px;
+    }
+
+    .homeStyle button[data-action='addToCart'] span, .homeStyle button[data-action='preOrder'] span,
+    .addToCartCategoryStyle button[data-action='addToCart'] span, .addToCartCategoryStyle button[data-action='preOrder'] span {
+        display: none;
+    }
+}

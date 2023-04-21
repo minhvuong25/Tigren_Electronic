@@ -1,0 +1,17 @@
+.root {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer {
+    composes: root;
+}
+
+.shimmer > div {
+    width: var(--swatch_width);
+    height: var(--swatch_width);
+    border: var(--swatch_border);
+    border-radius: 50%;
+    padding: 0;
+}

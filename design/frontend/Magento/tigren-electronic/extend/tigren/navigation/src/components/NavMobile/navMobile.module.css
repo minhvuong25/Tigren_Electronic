@@ -1,0 +1,89 @@
+@media (max-width: 767px) {
+    .root {
+        composes: root from '@tigrensolutions/mobile-navigation/src/components/NavMobile/navMobile.module.css';
+        background: #23334c;
+    }
+
+    .home:not(.active) svg,
+    .category:not(.active) svg,
+    .cart:not(.active) svg,
+    .account:not(.active) svg,
+    .search:not(.active) svg {
+        display: none;
+    }
+
+    .home.active svg,
+    .category.active svg,
+    .cart.active svg,
+    .account.active svg,
+    .search.active svg {
+        display: none;
+    }
+}
+
+.home,
+.category,
+.cart,
+.account,
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home::before, .search::before, .cart::before, .account::before, .category::before {
+    display: block;
+    content: "";
+    background-image: var(--background_electronic_image_icon);
+    background-size: 600px;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.home::before {
+    background-position: 417px -184px;
+}
+
+.home.active::before {
+    background-position: 417px -215px;
+}
+
+.search::before {
+    background-position: 380px -184px;
+}
+
+.search.active::before {
+    background-position: 380px -215px;
+}
+
+.category::before {
+    background-position: 344px -184px;
+}
+
+.category.active::before {
+    background-position: 344px -215px;
+}
+
+.cart::before {
+    background-position: 316px -184px;
+}
+
+.cart.active::before {
+    background-position: 316px -215px;
+}
+
+.account::before {
+    background-position: 280px -184px;
+}
+
+.account.active::before {
+    background-position: 280px -215px;
+}
+
+.counter {
+    composes: counter from '@tigrensolutions/mobile-navigation/src/components/NavMobile/navMobile.module.css';
+    top: 8px;
+    left: 72%;
+    background: #f52832;
+}

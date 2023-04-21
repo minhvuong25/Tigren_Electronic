@@ -1,0 +1,124 @@
+.root {
+    display: grid;
+    padding: 15px 0;
+    /*align-items: center;*/
+    grid-template-columns: 10fr 90fr;
+    grid-template-rows: auto 1fr;
+    border-bottom: 1px solid #ececec;
+}
+
+.root:last-child {
+    border-bottom: none;
+}
+
+.wrapContent {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 35fr 25fr 25fr 15fr;
+}
+
+.options {
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 1.43;
+}
+
+.sku {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: var(--checkbox_border-color);
+}
+
+.root:last-child {
+    margin-bottom: 25px;
+}
+
+.wrapName {
+    display: flex;
+}
+
+.root img {
+    width: 62px;
+    margin-right: 34px;
+    max-width: unset;
+}
+
+.quantity, .price {
+    text-align: center;
+    font-size: 14px;
+    color: var(--primary__color);
+}
+
+.quantity {
+    color: var(--black-color-31);
+}
+
+.nameContainer {
+    white-space: pre-wrap;
+    color: var(--primary__color);
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.rootSuccess {
+    composes: root;
+}
+
+.rootSuccess .price {
+    text-align: right;
+}
+
+.rootSuccess .priceItem {
+    text-align: center;
+}
+
+.root *[class*="orderBundleItems-bundleOptions"] + .options {
+    display: none;
+}
+
+.root *[class*="orderBundleItems-open"] + .options {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .root img {
+        width: 80px;
+        margin-right: 15px;
+    }
+
+    .nameContainer {
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .options {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .priceItem {
+        display: none;
+    }
+
+    .wrapContent .quantity {
+        display: block;
+        margin-top: 10px;
+        color: var(--black-color-31);
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .wrapContent .quantity, .wrapContent .price {
+        text-align: left;
+    }
+
+    .wrapContent {
+        display: block;
+    }
+
+    .price {
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--black-color-31);
+    }
+}

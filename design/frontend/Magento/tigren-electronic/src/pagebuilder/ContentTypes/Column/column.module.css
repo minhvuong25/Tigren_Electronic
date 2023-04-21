@@ -1,0 +1,66 @@
+.root {
+    composes: root from '@magento/pagebuilder/lib/ContentTypes/Column/column.module.css';
+}
+
+.root :global(.money-back),
+.root :global(.online-support),
+.root :global(.free-shipping) {
+    display: flex;
+    column-gap: 10px;
+}
+
+.root :global(.money-back) h2,
+.root :global(.online-support) h2,
+.root :global(.free-shipping) h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #232323;
+    margin: 0;
+}
+
+.root :global(.money-back) span,
+.root :global(.online-support) span,
+.root :global(.free-shipping) span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #646464;
+}
+
+.root :global(.free-shipping):before {
+    content: '';
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -232px -75px;
+    width: 31px;
+    height: 25px;
+}
+
+.root :global(.money-back):before {
+    content: '';
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -277px -67px;
+    width: 39px;
+    height: 39px;
+}
+
+.root :global(.online-support):before {
+    content: '';
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -328px -68px;
+    width: 39px;
+    height: 39px;
+}

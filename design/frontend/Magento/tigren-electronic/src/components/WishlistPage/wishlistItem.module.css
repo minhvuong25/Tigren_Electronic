@@ -1,0 +1,155 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+    position: relative;
+}
+
+.root_disabled {
+    composes: root_disabled from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+    position: relative;
+}
+
+.priceContainer {
+    composes: priceContainer from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+}
+
+.name {
+    composes: name from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+    -webkit-box-orient: initial;
+}
+
+.addToCart {
+    composes: addToCart from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+    margin-top: 0;
+    border-radius: 0;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.actionContainer {
+    composes: actionContainer from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+    position: absolute;
+    top: 250px;
+    opacity: 0;
+    transition: opacity .35s ease;
+    margin-bottom: 75px;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: #E9E9E9;
+}
+
+.root:hover .actionContainer {
+    opacity: 1;
+}
+
+.actionContainer button[class*="compareButton-compare"] {
+    position: relative;
+    top: 19px;
+}
+
+.actionContainer button[class*="compareButton-compare"] span {
+    display: none;
+}
+
+.deleteItem {
+    composes: deleteItem from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+    width: 20%;
+    margin-top: 9px;
+}
+
+.deleteItem svg {
+    stroke: #646464a1;
+}
+
+.linkContainer {
+    composes: linkContainer from '@tigrensolutions/core/src/components/WishlistPage/wishlistItem.module.css';
+}
+
+@media (max-width: 767px) {
+    .root {
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+        position: relative;
+    }
+
+    .linkContainer {
+        position: relative;
+    }
+
+    .actionContainer {
+        opacity: 1;
+        position: absolute;
+        top: auto;
+        bottom: 7px;
+        right: 5px;
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: calc(100% - 20px);
+        gap: 10px;
+        width: auto;
+        margin: 0;
+    }
+
+    .actionContainer button[class*='compareButton-compare'] {
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
+        background: #ffffff;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+        order: 1;
+        top: 0;
+    }
+
+    .actionContainer .deleteItem {
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+        margin: 0;
+    }
+
+    .actionContainer button[class*="compareButton-compare"]:before {
+        left: 8px;
+    }
+
+    .addToCart {
+        order: 3;
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+        width: 37px;
+        min-width: 37px;
+        background-color: transparent;
+    }
+
+    .addToCart:focus,
+    .addToCart:hover,
+    .addToCart:disabled,
+    .addToCart:disabled:focus,
+    .addToCart:disabled:hover {
+        background-color: transparent;
+        border: none;
+    }
+
+    .addToCart:before {
+        background-image: var(--background_electronic_image_icon);
+        background-size: var(--background_electronic_image_size);
+        background-position: -215px -251px;
+    }
+
+    .priceContainer div[class*='productPrice-salePercent'] {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border-radius: 20px 0;
+        width: 55px;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        font-size: 13px;
+    }
+}

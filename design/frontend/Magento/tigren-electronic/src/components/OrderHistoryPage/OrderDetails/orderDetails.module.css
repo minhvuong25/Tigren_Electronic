@@ -1,0 +1,81 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+}
+
+.table {
+    composes: table from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+    border: none;
+}
+
+.itemsContainer {
+    composes: itemsContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+}
+
+.goBackBtn {
+    composes: goBackBtn from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+}
+
+.iconPrint {
+    composes: iconPrint from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+}
+
+.printLabel {
+    composes: printLabel from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+    color: #FFFFFF;
+}
+
+.btnReorder {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    text-transform: uppercase;
+}
+
+.printButton {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.btnReorder span,
+.iconPrint {
+    display: none;
+}
+
+.wrapBottom {
+    composes: wrapBottom from '@tigrensolutions/core/src/components/OrderHistoryPage/OrderDetails/orderDetails.module.css';
+}
+
+.wrapBottom > div {
+    background-color: #FAFAFA;
+    padding: 25px;
+}
+
+@media (min-width: 768px) {
+    .wrapBottom {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapBottom > div {
+        background-color: #FFFFFF;
+        padding: 15px 25px;
+    }
+
+    .goBackBtn {
+        background-position: -416px -19px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 18px;
+        z-index: 11;
+        left: 2px;
+        display: block;
+        text-indent: -9999px;
+        background-color: #ffffff;
+        padding-top: 0;
+    }
+}

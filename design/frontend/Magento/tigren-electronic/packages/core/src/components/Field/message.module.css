@@ -1,0 +1,6 @@
+.root_error {
+    composes: root from '~@magento/venia-ui/lib/components/Field/message.module.css';
+    color: var(--input-error_color);
+    font-size: var(--input-error_font-size);
+    text-align: left;
+}

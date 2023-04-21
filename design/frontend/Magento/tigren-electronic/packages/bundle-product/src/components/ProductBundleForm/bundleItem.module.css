@@ -1,0 +1,55 @@
+.root {
+    border-bottom: 1px solid rgb(var(--venia-border));
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.title, .titleRequired {
+    margin: 0 0 10px;
+    display: block;
+}
+
+.optionQty input {
+    text-align: center;
+    width: 54px;
+    display: block;
+    flex: none;
+    border: 1px solid rgb(var(--venia-global-color-gray-400));
+    font-size: 14px;
+    padding: 4px 0;
+    margin-top: 6px;
+}
+
+.optionQty {
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+}
+
+.optionQty span {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.root *[class*="field-label"] {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.root *[class*="select-input"] {
+    text-transform: uppercase;
+}
+
+.root *[class*="option-optionRenderRadioSingle"] {
+    margin-bottom: 0;
+}
+
+.root *[class*="option-optionRenderRadioSingle"] > *:first-child {
+    font-weight: 300;
+}
+
+.root *[class*="option-optionRenderRadioSingle"] > *:not(:first-child) {
+    font-weight: 600;
+}

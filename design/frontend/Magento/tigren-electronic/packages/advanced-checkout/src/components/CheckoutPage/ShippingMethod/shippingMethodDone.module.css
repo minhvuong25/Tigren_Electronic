@@ -1,0 +1,37 @@
+.editingHeading {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+    font-size: 18px;
+}
+
+.form {
+    composes: form from '~@magento/venia-ui/lib/components/CheckoutPage/ShippingMethod/shippingMethod.module.css';
+    padding: 0 30px;
+    gap: 0;
+}
+
+.form label {
+    padding: 25px 0;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.form label:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 960px) {
+    .form label {
+        padding: 20px 0;
+    }
+
+    .editingHeading {
+        padding: 20px 15px;
+    }
+
+    .form {
+        padding: 0 15px;
+    }
+}

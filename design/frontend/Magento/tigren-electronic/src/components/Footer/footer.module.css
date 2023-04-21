@@ -1,0 +1,148 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+    background-color: var(--theme__base-color);
+    padding-top: 0;
+    margin-top: 64px;
+}
+
+.footerTop {
+    composes: footerTop from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+    background-color: #E9E9E9;
+}
+
+.links {
+    composes: links from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+    grid-template-columns: 1fr;
+}
+
+.root .links :global(.footer-links-content) div[class*="columnGroup-root"] {
+    gap: 20px;
+}
+
+.root .links {
+    padding: 0 0 42px 15px;
+}
+
+.branding {
+    composes: branding from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+}
+
+.root div[class*="footer-link"] * {
+    color: white;
+}
+
+.root div[class="footer-links"] {
+    margin-right: 30px;
+}
+
+.branding {
+    composes: branding from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+    padding: 0;
+}
+
+.copyright:after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -27px -72px;
+    width: 194px;
+    height: 31px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.copyright {
+    composes: copyright from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+    position: relative;
+}
+
+.root .copyright {
+    color: white;
+    padding: 18px 0;
+    border-top: 1px solid #D6D6D6;
+}
+
+.root div[class*="footer-link"] strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.root div[class*="footer-link"] a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.root div[class*="footer-link"] p {
+    margin-bottom: 18px;
+}
+
+.root div[class*="footer-link"] li[class*="item"] {
+    padding-bottom: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF
+}
+
+.root div[class*="footer-account"] :global(.links) {
+    padding-left: 0;
+}
+
+div[class*="footer-popular-tag"] button,
+div[class*="footer-popular-tag"] button:hover {
+    border: 2px solid #ffffff;
+    border-radius: 0;
+}
+
+.root div[class*="buttons-root"] button {
+    background-color: var(--button__hover__border);
+}
+
+.root div[class*="buttons-root"] button:hover {
+    background-color: var(--button__background);
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .root .links {
+        padding: 0 15px 0 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footerTop {
+        composes: footerTop from '@tigrensolutions/core/src/components/Footer/footer.module.css';
+        height: 180px;
+    }
+
+    .root .links {
+        padding: 0 0 42px 10px;
+    }
+
+    .root {
+        min-height: 0;
+    }
+
+    .root .footerTop,
+    .root .links,
+    .root .branding {
+        display: none;
+    }
+}
+

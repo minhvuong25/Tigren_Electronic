@@ -1,0 +1,30 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.module.css';
+    border-radius: 17px;
+    border: var(--tile_border);
+    height: var(--tile_height);
+    color: var(--tile_color);
+    font-size: var(--tile_font_size);
+}
+
+.root:disabled {
+    opacity: 0.22;
+}
+
+.root_selected {
+    composes: root;
+    color: var(--tile_selected_color);
+    border: var(--tile_selected_border);
+}
+
+.root_focused {
+    composes: root;
+}
+
+.root_selected_focused {
+    composes: root_selected;
+}
+
+.disabled {
+    opacity: 0.3;
+}

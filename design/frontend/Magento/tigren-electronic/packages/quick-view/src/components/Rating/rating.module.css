@@ -1,0 +1,32 @@
+:root {
+    --tg-star: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA2UExURUdwTLKwsLOysrKvr7KwsLKwsL23t7OwsLKwsLaysrOxsbKwsLi4uLSxsbKwsLKysrKwsLOxsXlQQiAAAAASdFJOUwDcN8+u7A1smSN/+BVBxFZgSqlq9rcAAADHSURBVCjPdZDrEoUgCIQRIbySvf/LHus0hZX8cNB1lm8BMIUIswphpizMy0QSIplIvlb/raADcN8gobtJ+IYoAOUTRGg/LUjETVIgdbnu15qdUkiyYYSWfe/WGk+nJda1//W5AWy8vd3PR+T1qax8hojusQRx8UJxySrpVnocNVGDliFvvq4lj6mju3tr16vR3VN7rbbbHlaPFXs80hwJ0Y8UfRx5RE990MBRFYSPbIkFtNqQpHpyRVWyCyA2VI3JAg75yx/xB7RvBY8c8C9iAAAAAElFTkSuQmCC');
+    --tg-starFilled: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAGqADAAQAAAABAAAAGgAAAABMybYKAAAChklEQVRIDZ1WQWsTURD+Joka2oiKRSVCwVQTJEWKBrWaGr0o2LMn8aSof6I3/0Z/gVcV9BYbUKTeDNgSAxUsRqpFtKWazY4zL7vZxLwNuxl4vO/NzDff27fzNgFiGq/MXNARk4ZUXAI6eORxHsbhUpxkrhUOwnE2DSeVylJ57VdUfiJqoslz23cBzphhcHR2TKHesQFuH46gF1mIV85cknpzfTXn+HX+Yt96JIwshA77TRAUdN3HwWI0itQMvJo7hB1sgjExUI6wi0lkqdT8OeC3LKI90S7dGxLRYiqssQhGXC2cAndOIMHHhShDZtIZx8wMg6elVjqk3p7kfZZYSzgtwd+6MyluwdU5+VUurLMgSctwObi87JX05xAFz52WwnnBOvQpu8YCutgRjfvmHXE1d1uiTyUw+A48ztiTvkPgDlWaL3rNwNWZK7KFZyJ2ZOzC/UTCNjixSNcbb9TdE9IF104X4fBLQSd1Pb7RF6ToFpUbdb/GgJA6uZabhoNXAgt+Usx5TT7VN6nc1Abp2ZCQRng1P4Ud57kcY+SbbyoS3mEytUil9a2eggesQhrjejGDrb3v0u77/ydZ10R/MZU+SsX6b1s8/ML+6GQji2hl3ZByQixcyG3Ph3DC3SM44UJAfKERnHAh5svWrZP8EumwWRhHcq1CphGA2eFa9AHJxFUzIHjYZj3uUMQqJN2mbZ0MsukPiJaQOXxeLuFbHYqNDxILLOlxA4+H7EJMwbERVZHcd44qn55Q6X3br6BYfRoTwarvRz+35ww5OvlDMC/vYRuUeIBrjRu08HG9jzMATUxyTK5ylGsx+xMRNnBg4ixVGstE5H/4LfSuS3M0VzmywQ1b4j8RxMjFsTkcxwAAAABJRU5ErkJggg==')
+}
+
+.root {
+    width: 77px;
+    height: 15px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    background: var(--tg-star);
+    background-size: contain;
+}
+
+.starsFilled {
+    height: 100%;
+    width: 0;
+    background: var(--tg-starFilled);
+    background-size: contain;
+}
+
+
+@media (max-width: 767px) {
+    .root {
+        width: 75px;
+    }
+}

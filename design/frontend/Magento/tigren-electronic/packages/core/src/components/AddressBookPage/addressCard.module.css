@@ -1,0 +1,111 @@
+.badgeContainer {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.badgeContainer .badge {
+    padding: 6px 15px 7px;
+    border-radius: 5px;
+    background-color: var(--orange_color_ffe);
+
+    font-size: var(--global_M_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--orange_bold_color);
+}
+
+.headerDialog {
+    height: 25px;
+    padding: 9px 10px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr auto;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.rootDialog {
+    background-color: rgb(var(--venia-global-color-background));
+    height: 174px;
+    width: 100%;
+    min-width: 350px;
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    pointer-events: auto;
+    z-index: 4;
+}
+
+.dialogButtons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.dialogButtons button {
+    max-width: calc(50% - 5px);
+    flex-basis: calc(50% - 5px);
+    font-size: 14px;
+}
+
+.dialogButtons button:first-child {
+    color: var(--primary__color);
+}
+
+.dialogButtons button:first-child:hover {
+    background: var(--primary__color);
+    color: var(--white_text_color);
+}
+
+.textDelete {
+    max-width: 190px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.57;
+    color: var(--primary__color);
+}
+
+.telephone {
+    display: block;
+}
+
+@media (max-width: 960px) {
+
+    .dialog {
+        max-height: 90vh;
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 767px) {
+    .name {
+        grid-area: name;
+    }
+
+    .address {
+        grid-area: address;
+    }
+
+    .actionContainer {
+        grid-area: actions;
+    }
+}
+
+@media (max-width: 500px) {
+    .textDelete {
+        font-size: 13px;
+    }
+
+    .rootDialog {
+        min-width: 340px;
+    }
+
+    .dialogButtons button {
+        font-size: 13px;
+    }
+}

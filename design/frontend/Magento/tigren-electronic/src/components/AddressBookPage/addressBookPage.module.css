@@ -1,0 +1,155 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/AddressBookPage/addressBookPage.module.css';
+}
+
+.blockTitle {
+    composes: blockTitle from '@tigrensolutions/core/src/components/AddressBookPage/addressBookPage.module.css';
+}
+
+.blockContent {
+    composes: blockContent from '@tigrensolutions/core/src/components/AddressBookPage/addressBookPage.module.css';
+}
+
+.addButton {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    border: 0;
+    padding: 12px 18px;
+    text-transform: uppercase;
+}
+
+.addButton:hover {
+    border: 0;
+}
+
+.header {
+    composes: header from '@tigrensolutions/core/src/components/AddressBookPage/addressBookPage.module.css';
+    display: none;
+}
+
+.additionalAddresses {
+    composes: additionalAddresses from '@tigrensolutions/core/src/components/AddressBookPage/addressBookPage.module.css';
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.card {
+    padding: 20px 20px 25px;
+    border-radius: 10px;
+    background-color: var(--white_text_color);
+    border: none;
+}
+
+.card .heading {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.groupTitle,
+.blockTitle {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.blockTitle h1 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.groupTitle h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.editButton {
+    color: var(--text-global);
+    margin-top: 15px;
+}
+
+
+.iconEdit {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -272px -130px;
+    width: 21px;
+    height: 21px;
+}
+
+@media (max-width: 767px) {
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        background: #FFFFFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+
+    .groupTitle {
+        display: none;
+    }
+
+    .groupTitle,
+    .blockTitle {
+        border-bottom: none;
+    }
+
+    .blockContent {
+        margin-top: 10px;
+    }
+
+    .additionalAddresses {
+        flex-direction: column;
+    }
+
+    .blockTitle > div,
+    .addButton {
+        width: 100%;
+    }
+
+    .blockTitle {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .blockTitle h1 {
+        display: flex;
+        text-transform: capitalize;
+        margin-top: 30px;
+    }
+
+    .iconEdit ~ span {
+        display: none;
+    }
+
+    .iconEdit {
+        background-position: -420px -94px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .editButton {
+        margin-top: 0;
+    }
+
+    .card > div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}

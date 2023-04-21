@@ -1,0 +1,15 @@
+.root {
+    padding-top: 47px;
+}
+
+@media (max-width: 767px) {
+    .root {
+        padding-top: 38px;
+    }
+}
+
+@media (max-width: 575px) {
+    .root {
+        padding-top: 25px;
+    }
+}

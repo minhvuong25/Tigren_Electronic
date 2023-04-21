@@ -1,0 +1,110 @@
+
+.imageContainer {
+    justify-self: center;
+}
+
+.image {
+    padding: 0 2rem;
+}
+
+.productName {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.stockRow {
+    display: flex;
+    font-weight: 300;
+    font-size: 0.875rem;
+    justify-content: space-between;
+}
+
+.price {
+    font-weight: 600;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.sku {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    /* text-align: right; */
+    color: var(--gray_text_86);
+}
+
+.brand {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+}
+
+.brand .value {
+    color: var(--gray_black_color);
+}
+
+
+.productName {
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: var(--primary__color);
+}
+
+
+.rating {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    margin: 13px 0 22px 0;
+}
+
+.rating > span {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #868686;
+}
+
+@media (max-width: 1023px) {
+    .root {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    .productName {
+        font-size: 15px;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sku, .brand {
+        font-size: 13px;
+    }
+
+    .rating > span {
+        font-size: 12px;
+    }
+}

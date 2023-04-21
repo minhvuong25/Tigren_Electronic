@@ -1,0 +1,16 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.root div[class*='accordion-root'] {
+    border: none;
+    border-bottom: 1px solid #d6d6d6;
+    border-radius: 0;
+}
+
+.root span[class*='section-title'] {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333333;
+    text-transform: capitalize;
+}

@@ -1,0 +1,76 @@
+.root {
+    padding: 100px 15px 20px;
+    text-align: center;
+}
+
+.root .action {
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.root button {
+    width: 220px;
+}
+
+.root img {
+    max-width: 480px;
+    margin: 0 auto 25px;
+}
+
+.root .title {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    text-align: center;
+    color: #31353b;
+    margin-bottom: 10px;
+}
+
+.root .listOrder {
+    font-size: 16px;
+    font-weight: normal;
+    color: #31353b;
+    margin-bottom: 10px;
+}
+
+.root .listOrder span {
+    color: #ff6600;
+}
+
+.root .message {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.43;
+    color: #31353b;
+}
+
+@media (max-width: 767px) {
+    .root {
+        padding: 50px 15px 20px;
+    }
+
+    .root img {
+        max-width: 300px;
+    }
+
+    .root .action {
+        margin: 25px 0;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .root .title {
+        font-size: 14px;
+    }
+
+    .root .listOrder {
+        font-size: 13px;
+    }
+
+    .root .message {
+        font-size: 13px;
+    }
+}

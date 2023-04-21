@@ -1,0 +1,43 @@
+.root {
+
+}
+
+.button {
+    border: 0;
+    min-width: fit-content;
+    color: var(--button__color);
+    background: #D6D6D6;
+    border-radius: 20px;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.button a {
+    color: var(--button__color);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: capitalize;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.title {
+    color: #333333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.link {
+
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+}

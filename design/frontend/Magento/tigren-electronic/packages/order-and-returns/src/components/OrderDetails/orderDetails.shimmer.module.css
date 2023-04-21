@@ -1,0 +1,46 @@
+.rootShimmer {
+    max-width: 910px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.listing {
+    border-radius: 5px;
+    padding: 18px;
+}
+
+.root {
+    padding-bottom: 20px;
+}
+
+.root:last-child {
+    border-bottom: none;
+    padding: 0;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 4%;
+    padding: 18px;
+}
+
+.item {
+    width: 48%;
+}
+
+.header {
+    padding: 18px;
+}
+
+@media (max-width: 767px) {
+    .item {
+        width: 100%;
+    }
+}

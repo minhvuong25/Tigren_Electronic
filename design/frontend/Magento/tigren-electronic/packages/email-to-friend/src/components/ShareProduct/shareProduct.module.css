@@ -1,0 +1,79 @@
+.root {
+
+}
+
+.root_busy {
+    composes: root;
+    display: none;
+}
+
+.senderFields,
+.inviteeItemsContainer,
+.inviteeList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.senderFields h4,
+.inviteeItemsContainer h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #000000;
+}
+
+.inviteeItemsContainer h4 {
+    margin-top: 20px;
+}
+
+.senderFields label,
+.inviteeItemsContainer label {
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.senderInfo, .inviteeItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 11px;
+    position: relative;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actions > button {
+    width: 100%;
+    max-width: 300px;
+}
+
+.button {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.button > button {
+    margin-top: 8px;
+    border: 1px solid #D8D8D8;
+    width: 45%;
+    max-width: 150px;
+}
+
+.removeButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    color: var(--theme__base-color);
+}
+
+.removeButton:hover {
+    text-decoration: underline;
+}

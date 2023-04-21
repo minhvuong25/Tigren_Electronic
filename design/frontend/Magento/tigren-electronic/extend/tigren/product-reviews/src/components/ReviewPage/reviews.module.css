@@ -1,0 +1,33 @@
+.root {
+    composes: root from '@tigrensolutions/product-reviews/src/components/ReviewPage/reviews.module.css';
+}
+
+.item {
+    composes: item from '@tigrensolutions/product-reviews/src/components/ReviewPage/reviews.module.css';
+}
+
+.row {
+    composes: row from '@tigrensolutions/product-reviews/src/components/ReviewPage/reviews.module.css';
+}
+
+.header {
+    composes: header from '@tigrensolutions/product-reviews/src/components/ReviewPage/reviews.module.css';
+}
+
+.header p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.value {
+    composes: value from '@tigrensolutions/product-reviews/src/components/ReviewPage/reviews.module.css';
+}
+
+.item .row .value section[class*="rating-rating"] {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+
+}

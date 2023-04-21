@@ -1,0 +1,87 @@
+.lineItemLabel {
+    composes: lineItemLabel from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.price {
+    composes: price from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+    font-size: 16px;
+}
+
+.priceDiscount {
+    composes: priceDiscount from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+    font-size: 16px;
+}
+
+.lineItemLabelDiscount {
+    composes: lineItemLabelDiscount from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+}
+
+.checkoutButton_container {
+    composes: checkoutButton_container from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+}
+
+.lineItemsTotal {
+    composes: lineItemsTotal from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+}
+
+.totalPrice {
+    composes: totalPrice from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+}
+
+.title {
+    composes: title from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+    font-size: var(--global_XL_font_size_base);
+}
+
+span[class*="priceSummary-lineItemLabelDiscount"] {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.totalLabel {
+    composes: totalLabel from '@tigrensolutions/core/src/components/CartPage/PriceSummary/priceSummary.module.css';
+    font-size: 16px;
+}
+
+.lineItemLabel {
+
+}
+
+.link {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #333333;
+    margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+
+    .checkoutButton_container button {
+        width: 70%;
+        position: relative;
+    }
+
+    .checkoutButton_container {
+        z-index: 10;
+        position: fixed;
+        bottom: 55px;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 0 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 65px;
+    }
+
+    .lineItemsTotal .totalPrice {
+        font-size: 16px;
+    }
+
+}

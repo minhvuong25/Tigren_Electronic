@@ -1,0 +1,188 @@
+.root {
+
+}
+
+.topContent {
+    display: flex;
+    padding-top: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.wrapPrint {
+    display: flex;
+    align-items: center;
+}
+
+.itemsContainer {
+    padding: 0 24px;
+}
+
+.table {
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.info > div {
+    width: calc((100% - 20px) / 2);
+    padding: 20px 20px 45px;
+    border-radius: 10px;
+    border: solid 1px #e8e8e8;
+}
+
+.info > div:empty {
+    display: none;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #333;
+    padding-left: 10px;
+    border-left: 4px solid #31353b;
+    margin-bottom: 20px;
+}
+
+.info > div div[class*="heading"] {
+    font-weight: 600;
+    color: var(--primary__color);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray_color_ec);
+    margin-bottom: 15px;
+}
+
+.info > div div[class*="shippingMethod-tracking"] {
+    display: none;
+}
+
+.info > div > div {
+    font-weight: normal;
+    color: var(--primary__color);
+    display: grid;
+    gap: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header img {
+    margin: 0 auto 20px;
+    max-width: 160px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--primary__color);
+    margin-bottom: 10px;
+}
+
+.title span {
+    display: block;
+    white-space: nowrap;
+}
+
+.header p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--black-color-3a);
+}
+
+.orderNumber {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--checkout-order_color);
+    white-space: nowrap;
+}
+
+.orderNumber:hover {
+    color: var(--checkout-order_color);
+    text-decoration: underline;
+}
+
+.orderTotalContainer {
+    background-color: #f7f7f7;
+}
+
+.rootTotal {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 0;
+    border: none;
+    background-color: #f7f7f7;
+    width: 60%;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.headingTotal {
+    display: none;
+}
+
+.rootTotal > div:not(:first-child) {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    gap: 5%;
+    text-align: right;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 16px;
+    }
+
+    .title span {
+        white-space: normal;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .orderNumber {
+        font-size: 14px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .heading {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info > div {
+        width: 100%;
+        padding: 15px 15px 20px;
+    }
+
+    .info {
+        gap: 10px;
+        font-size: 13px;
+        padding-bottom: 40px;
+    }
+
+    .itemsContainer {
+        padding: 0 15px;
+    }
+}

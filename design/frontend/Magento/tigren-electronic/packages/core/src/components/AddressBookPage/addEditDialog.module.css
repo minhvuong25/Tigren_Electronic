@@ -1,0 +1,161 @@
+.root {
+    display: grid;
+    gap: 25px 0;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+}
+
+@media (min-width: 1028px) {
+    .root {
+        max-width: 740px;
+    }
+}
+
+.root select {
+    border-radius: 4px;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.default_billing_check > label span,
+.default_shipping_check > label span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+}
+
+.root p[class*="message-root"] {
+    font-size: var(--global_L_font_size_base);
+}
+
+.default_billing_check {
+    order: 10;
+}
+
+.default_shipping_check {
+    order: 9;
+}
+
+.telephone {
+    margin-bottom: 5px;
+}
+
+.saveButton {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    min-width: 180px
+}
+
+.backButton {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    composes: icon-sprite-before from global;
+    width: fit-content;
+    padding-left: 5px;
+}
+
+.backButton:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-position: -324px -301px;
+}
+
+.confirmButtonDialog {
+    order: 1;
+}
+
+.buttons {
+    margin-top: 40px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.buttons button {
+    width: fit-content;
+}
+
+.backButton {
+    margin-top: 14px;
+}
+
+.default_shipping_check {
+    margin-bottom: 10px;
+}
+
+.checkBoxes {
+    margin-top: 5px;
+}
+
+/*
+ *  Desktop-specific styles.
+ */
+@media (min-width: 768px) {
+    .root {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+        grid-column-gap: 20px;
+    }
+
+    .fullWidthField {
+        grid-column-end: span 2;
+    }
+
+    .street0,
+    .default_billing_check,
+    .default_shipping_check {
+        composes: fullWidthField;
+    }
+
+    .root > .firstname,
+    .root > .lastname {
+        grid-column-end: span 1;
+    }
+
+    .telephone {
+        grid-column: 1/2;
+    }
+
+    .checkBoxes {
+        grid-column: 1/3;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .heading {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .root p[class*="message-root"] {
+        font-size: var(--global_M_font_size_base);
+    }
+
+    .default_billing_check > label span,
+    .default_shipping_check > label span {
+        font-size: var(--global_M_font_size_base);
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+}

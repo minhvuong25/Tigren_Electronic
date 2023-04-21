@@ -1,0 +1,48 @@
+.sortbyText {
+    position: relative;
+    margin-right: 7px;
+}
+
+.menu {
+    composes: menu from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+    right: initial;
+}
+
+@media (max-width: 767px) {
+    .sortbyText {
+        display: none;
+    }
+
+    .root {
+        composes: root from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        display: none;
+    }
+
+    .menu {
+        left: 10px;
+    }
+
+    .mobileText {
+        composes: mobileText from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        display: block;
+    }
+
+    .desktopText {
+        composes: desktopText from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        display: none;
+    }
+
+    .sortButton {
+        composes: sortButton from '@tigrensolutions/core/src/components/ProductSort/productSort.module.css';
+        min-width: 50%;
+        color: #646464;
+        border: 1px solid #646464;
+        border-radius: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .root {
+        display: flex;
+    }
+}

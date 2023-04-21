@@ -1,0 +1,11 @@
+.shipping_address_button {
+    composes: root_highPriority from '~@magento/venia-ui/lib/components/Button/button.module.css';
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.shipping_address_button:hover {
+    background-color: var(--button__hover__background__tessttt, #8e0000);
+    border: var(--button__hover__border, 1px solid #8e0000)
+}

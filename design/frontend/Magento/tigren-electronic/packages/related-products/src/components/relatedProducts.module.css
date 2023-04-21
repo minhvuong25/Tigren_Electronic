@@ -1,0 +1,30 @@
+.root {
+    padding: 0 16px 32px 16px;
+}
+
+.products {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--theme__base-color);
+    margin: 0;
+    padding: 15px 0px;
+}
+
+.products :global(.slick-track) {
+    float: left;
+}
+
+@media (max-width: 767px) {
+    .products {
+        margin-bottom: 0;
+    }
+
+    .root {
+        padding: 0 12px 10px 12px;
+    }
+}

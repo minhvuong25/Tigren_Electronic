@@ -1,0 +1,57 @@
+.rootDialog {
+    composes: rootDialog from '@tigrensolutions/mobile-navigation/src/components/SearchPopup/searchPopup.module.css';
+    max-width: 100%;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .content_search {
+        composes: content_search from '@tigrensolutions/mobile-navigation/src/components/SearchPopup/searchPopup.module.css';
+    }
+
+    .content_search form[class*="searchBar-form"] input {
+        background: #FFFFFF;
+        border: 1px solid #BBBBBB;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .content_search form[class*="searchBar-form"] input::placeholder {
+        font-size: 14px;
+    }
+
+    .content_search form[class*="searchBar-form"] span svg {
+        stroke: #bbbbbb;
+    }
+
+    .content_search > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerText {
+        composes: headerText from '@tigrensolutions/mobile-navigation/src/components/SearchPopup/searchPopup.module.css';
+        color: #555555;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .rootDialog div[class*="dialog-header"] {
+        justify-items: center;
+        box-shadow: 0 2px 4px 0 rgb(228 228 228 / 50%);
+    }
+
+    .rootDialog button[class*="dialog-headerButton"] {
+        position: absolute;
+        left: 15px;
+        top: 18px;
+        background-position: -416px -25px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .rootDialog button[class*="dialog-headerButton"] span svg {
+        stroke: transparent;
+    }
+}

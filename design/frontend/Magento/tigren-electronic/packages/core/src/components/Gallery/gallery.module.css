@@ -1,0 +1,91 @@
+.root {
+    display: block;
+    line-height: 1.3;
+}
+
+.items {
+    display: grid;
+    grid-area: items;
+    grid-row-gap: 20px;
+    /*grid-column-gap: 20px;*/
+    grid-template-columns: repeat(4, 25%);
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.gridItems {
+    composes: items;
+}
+
+.listItem {
+    composes: items;
+    grid-template-columns: repeat(1, 100%);
+}
+
+:global(.grid-column-5) .items {
+    grid-template-columns: repeat(5, 20%);
+}
+
+@media (min-width: 1024px) {
+    :global(.grid-column-5) .items {
+        grid-template-columns: repeat(4, 25%);
+    }
+}
+
+@media (min-width: 1250px) {
+    :global(.grid-column-5) .items {
+        grid-template-columns: repeat(5, 20%);
+    }
+}
+
+@media (max-width: 1023px) {
+    :global(.grid-column-5) .items {
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+@media (max-width: 767px) {
+    :global(.grid-column-5) .items {
+        grid-template-columns: repeat(3, 50%);
+    }
+
+    .items {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .items {
+        grid-template-columns: repeat(3, 33.33%);
+        grid-row-gap: 10px;
+    }
+
+    .listItem {
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+
+@media (max-width: 640px) {
+    .items {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .listItem {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    :global(.grid-column-5) .items {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .items {
+        grid-template-columns: repeat(3, 33.33%);
+    }
+
+    .listItem {
+        grid-template-columns: repeat(1, 100%);
+    }
+}

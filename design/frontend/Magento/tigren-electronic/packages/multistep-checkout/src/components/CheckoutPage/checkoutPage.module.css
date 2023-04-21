@@ -1,0 +1,77 @@
+.payment_information_heading {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.heading {
+    composes: heading from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    font-weight: 600;
+    font-size: 32px;
+    color: #000000;
+}
+
+.heading_container {
+    composes: heading_container from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    grid-column-end: span 2;
+    justify-items: center;
+}
+
+.shipping_information_container {
+    composes: shipping_information_container from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+}
+
+.shipping_information_container button:focus {
+    box-shadow: none;
+}
+
+.signInContainer {
+    composes: signInContainer from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    grid-row-start: 2;
+    grid-column-start: 1;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: solid 1px var(--cart-border_color);
+}
+
+.signInButton {
+    composes: signInButton from '@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    text-transform: uppercase;
+}
+
+.place_order_button {
+    composes: place_order_button from '@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.place_order_button:hover {
+    background-color: var(--button__hover__background__tessttt, #8e0000);
+    border: var(--button__hover__border, 1px solid #8e0000)
+}
+
+.signInLabel {
+    composes: signInLabel from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.previous_button {
+    margin-top: 10px;
+    display: block;
+}
+
+.previous_button:hover {
+    text-decoration: underline;
+}
+
+.cartLink {
+    composes: root from '@magento/venia-ui/lib/components/LinkButton/linkButton.module.css';
+    margin-top: 10px;
+}

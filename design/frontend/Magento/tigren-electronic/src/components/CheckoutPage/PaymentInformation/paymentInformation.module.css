@@ -1,0 +1,16 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CheckoutPage/PaymentInformation/paymentInformation.module.css';
+    border: none;
+}
+
+.paymentTitle {
+    composes: paymentTitle from '@tigrensolutions/core/src/components/CheckoutPage/PaymentInformation/paymentInformation.module.css';
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .paymentTitle {
+        display: flex;
+        text-transform: capitalize;
+    }
+}

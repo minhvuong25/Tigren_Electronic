@@ -1,0 +1,135 @@
+.root {
+    composes: root from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.reviewRoot {
+    composes: reviewRoot from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.authorDetails {
+    composes: authorDetails from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.title {
+    composes: title from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.descriptionRoot {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.rating {
+    composes: rating from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.summary {
+    composes: summary from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.details {
+    composes: details from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.descriptionHeader {
+
+}
+
+.goToReviews {
+    composes: goToReviews from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.author {
+    composes: author from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.info {
+    composes: info from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+}
+
+.reviewTitle {
+    composes: reviewTitle from '@tigrensolutions/product-reviews/src/components/productReviews.module.css';
+    display: none;
+}
+
+.author {
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #333333;
+
+}
+
+.rating {
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.reviewRoot:last-child {
+    border-bottom: none;
+}
+
+@media (min-width: 768px) {
+
+
+    .summary {
+        width: auto;
+    }
+
+    .goToReviews {
+        margin-left: 50px;
+    }
+
+    .reviewRoot {
+        display: grid;
+        grid-template-areas:
+            'author description'
+            'author detail';
+        grid-template-columns: 170px;
+        justify-content: start;
+    }
+
+    .authorDetails {
+        grid-area: author;
+    }
+
+    .descriptionRoot {
+        grid-area: description;
+    }
+
+    .details {
+        margin: 1rem 0;
+        grid-area: detail;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .rating {
+        margin-left: 10px;
+    }
+
+    .details {
+        grid-area: detail;
+    }
+
+    .goToReviews {
+        grid-area: goto;
+        justify-content: center;
+    }
+
+    .summary {
+        display: grid;
+        grid-template-areas:
+            'info detail'
+            'goto goto';
+        align-items: center;
+    }
+}

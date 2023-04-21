@@ -1,0 +1,403 @@
+/* global tokens */
+@import '~@magento/venia-ui/lib/tokens.module.css';
+
+:global(:root) {
+    /*new color */
+    --venia-global-color-blue-700: 175 0 0;
+    --venia-global-color-gray-216: 216 216 216;
+    --venia-global-color-black: 0, 0, 0;
+    --global-color-black-50: 0, 0, 0, 0.5;
+    --venia-global-color-gray-51: 51, 51, 51;
+    --message_notice_color: #0272ba;
+    --background_message_notice_color: #daf1ff;
+    --message_warning_color: #c07600;
+    --background_message_warning_color: #ffedb4;
+    --message_error_color: #e02b27;
+    --background_message_error_color: #ffe8ea;
+
+    /* color by */
+    --gray_text_color: #d8d8d8;
+    --white_text_color: #fff;
+    --black_color_blur: rgba(var(--global-color-black-50));
+
+    /*theme color*/
+    --theme__base-color: #af0000;
+    --gray_text_6b: #6b6b6b;
+    --gray_color_f7: #f7f7f7;
+    --gray_color_6d: #6d6d6d;
+    --gray-color_e7: #e7e7e7;
+    --gray_color_ec: #ececec;
+    --gray_text_96: #969696;
+    --gray_text_86: #868686;
+    --gray_text-header: #222;
+    --orange_text_f60: #ff6600;
+    --orange_color_ffe: #ffe5dd;
+    --orange_bold_color: #ff2501;
+    --cate_pb_text_hover-color: var(--orange_text_f60);
+    --border_color: #f0f0f0;
+    --gray_text_a4: #a4a4a4;
+    --gray_text_ed: #ededed;
+    --gray_black_color: #333;
+    --black-color-31: #31353b;
+    --black-color-3a: #3a3a3a;
+
+    /*slider color*/
+    --slider_dots_active-color: var(--orange_text_f60);
+    --slider_dots_active-color-mobile: var(--gray_text_a4);
+    --slider_dots-color: #c2c2c2;
+    --slider_dots-color-mobile: var(--gray_text_ed);
+    --slider_dots-width: 10px;
+    --slider_dots-height: 10px;
+    --slider_dots_border-color: var(--orange_text_f60);
+    --slider_dots_border-width: 0px;
+    --slider_dots_border-style: solid;
+    --slider_dots_margin: 5px;
+    --slider_dots_border_radius: 50%;
+    --slider_arrow_button-bg: transparent;
+    --slider_arrow-opacity: 1;
+    --slider_arrow-height: 30px;
+    --slider_arrow-width: 16px;
+    --slider_arrow_left: -24px;
+    --slider_arrow_right: -24px;
+    --slider_arrow_prev-content: url("data:image/svg+xml,%3Csvg width='16' height='30' viewBox='0 0 16 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.335 14.177 14.049.324a1.135 1.135 0 0 1 1.616.028 1.163 1.163 0 0 1 0 1.604L2.76 14.993 15.665 28.03c.447.45.447 1.181 0 1.632-.446.45-1.17.45-1.616 0L.335 15.809a1.163 1.163 0 0 1 0-1.632z' fill='%23000' fill-rule='nonzero'/%3E%3C/svg%3E");
+    --slider_arrow_next-content: url("data:image/svg+xml,%3Csvg width='16' height='30' viewBox='0 0 16 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.665 14.177 1.951.324A1.135 1.135 0 0 0 .335.352a1.163 1.163 0 0 0 0 1.604L13.24 14.993.335 28.03a1.163 1.163 0 0 0 0 1.632c.446.45 1.17.45 1.616 0l13.714-13.853a1.163 1.163 0 0 0 0-1.632z' fill='%23000' fill-rule='nonzero'/%3E%3C/svg%3E");
+    --slider_arrow_top: 45%;
+
+    /*base color*/
+    --primary__color: #333333;
+    --secondary__color: #000;
+    --tigren-pwa-topbar-bg-color: #E9E7E4;
+    --tigren-pwa-header-bg-color: #fff;
+    --tigren-pwa-topmenu-text-color: #000;
+    --tigren-pwa-topmenu-text-color-hover: #000;
+    --tigren-pwa-topmenu-item-hover-color: #000;
+    --tigren-pwa-topmenu-bg-color: #fff;
+    --tigren-pwa-footer-bg-color: #FAFAFA;
+    --tigren-pwa-white-bg-color: #fff;
+
+    /* theme config variable */
+    --primary_text_color: var(--primary__color);
+    --topbar_background: var(--tigren-pwa-topbar-bg-color);
+    --header_background: var(--tigren-pwa-header-bg-color);
+    --topmenu_text_color: var(--tigren-pwa-topmenu-text-color);
+    --topmenu_text_color_hover: var(--tigren-pwa-topmenu-text-color-hover);
+    --topmenu_item_hover_color: var(--tigren-pwa-topmenu-item-hover-color);
+    --topmenu_bg_color: var(--tigren-pwa-topmenu-bg-color);
+    --footer_background: var(--tigren-pwa-footer-bg-color);
+
+    /* font family */
+    --venia-global-fontFamily-serif: 'Source Serif Pro', serif;
+
+    /* font size */
+    --global-font_size_base: 13px;
+    --global_S_font_size_base: 12px;
+    --global_M_font_size_base: 13px;
+    --global_L_font_size_base: 14px;
+    --global_XL_font_size_base: 15px;
+    --global_XLL_font_size_base: 16px;
+
+    --global-font_size_small: 11px;
+    --global-font_size_large: 18px;
+    --global-font_size_xlarge: 24px;
+    --global-font_size_heading_h1: 30px;
+    --global-font_size_heading_h2: 25px;
+    --global-font_size_heading_h3: 21px;
+    --global-font_size_heading_h4: 18px;
+    --global-font_size_heading_h5: 15px;
+    --global-font_size_heading_h6: 12px;
+
+    /* dimensions */
+    --layout_max_width: 1280px;
+    --layout_tablet_max_width: 960px;
+    --layout_large_desktop_max_width: 1440px;
+    --venia-global-maxWidth: 1280px;
+
+    /* button */
+    --button__height_high: 40px;
+    --button__height: 38px;
+    --button__height_small: 32px;
+    --button__padding: 7px;
+    --button__color: var(--white_text_color);
+    --button__background: var(--theme__base-color);
+    --button__border: 1px solid var(--theme__base-color);
+    --button__border__radius: 20px;
+    --button__hover__color: var(--white_text_color);
+    --button__hover__background: #8e0000;
+    --button__hover__border: 1px solid #8e0000;
+    --button__active__color: var(--white_text_color);
+    --button__active__background: #8e0000;
+    --button__active__border: 1px solid #8e0000;
+    --button_deactive_background_color: #d1d1d1;
+    --button_deactive_text_color: var(--white_text_color);
+    --button_deactive_border: 1px solid #f0f0f0;
+    --button-font-size: var(--global_L_font_size_base);
+    --button-font-weight: 600;
+
+    /*Button Info*/
+    --button__info__color: #fff;
+    --button__info__background: #ff9d14;
+    --button__info__border: 1px solid #FF9D14;
+
+    --button__info__hover__color: #fff;
+    --button__info__hover__background: #ed8a00;
+    --button__info__hover__border: 1px solid #ed8a00;
+
+    --button__info__deactive__color: var(--white_text_color);
+    --button__info__deactive__background: #d1d1d1;
+    --button__info__deactive__border: 1px solid #f0f0f0;
+
+
+    /*Button Danger*/
+    --button__danger__color: #fff;
+    --button__danger__background: #333;
+    --button__danger__border: 1px solid #333;
+
+    --button__danger__hover__color: #fff;
+    --button__danger__hover__background: #020202;
+    --button__danger__hover__border: 1px solid #020202;
+
+    --button__danger__deactive__color: var(--white_text_color);
+    --button__danger__deactive__background: #020202;
+    --button__danger__deactive__border: 1px solid #020202;
+
+    /*Button Warning*/
+    --button__warning__color: #333;
+    --button__warning__background: #fff;
+    --button__warning__border: solid 1px #333;
+
+    --button__warning__hover__color: #fff;
+    --button__warning__hover__background: #333;
+    --button__warning__hover__border: 1px solid #333;
+
+    --button__warning__deactive__color: #fff;
+    --button__warning__deactive__background: #333;
+    --button__warning__deactive__border: 1px solid #333;
+
+    /* icon image */
+    --background_image_icon: url('~@tigrensolutions/core/src/static/images/icon.png');
+    --background_image_size: 838px auto;
+
+    /*product price*/
+    --price_list_regular-color: var(--primary__color);
+    --price_list_regular-size: 16px;
+    --price_list_special-color: #ec1717;
+    --price_list_special-size: 16px;
+    --price_list_old-color: #9c9c9c;
+    --price_list_old-size: 12px;
+    --price_product_regular-color: var(--primary__color);
+    --price_product_regular-size: 16px;
+    --price_product_special-color: #ec1717;
+    --price_product_special-size: 16px;
+    --price_product_old-color: #acacac;
+    --price_product_old-size: 14px;
+    --price_font_weight: 600;
+    --price-discount_color: #ec1717;
+
+    /* breadcrumbs */
+    --breadcrumb_link_color: #7a7a7a;
+    --breadcrumb_text_color: #333;
+    --breadcrumb_link_font_size: 12px;
+    --breadcrumb_text_font_size: 12px;
+
+    /* filters */
+    --filter_modal_title_font_size: var(--global_XL_font_size_base);
+    --filter_modal_block_title_font_size: var(--global_L_font_size_base);
+
+    /* mask */
+    --mask_opacity: 0.7;
+
+    /* options */
+    --option_title_font_size: 14px;
+    --option_tille_color: #333;
+    --swatch_width: 25px;
+    --swatch_border: 1px solid #cdcdcd;
+    --swatch_selected_border: 1px solid #000000;
+    --tile_height: 34px;
+    --tile_font_size: 14px;
+    --tile_color: #868686;
+    --tile_selected_color: #333;
+    --tile_border: 1px solid #cdcdcd;
+    --tile_selected_border: solid 1px #333;
+
+    /*Search Autocomplete*/
+    --search-border-radius: 10px;
+    --search-box-shadow-color: 187, 187, 187, 0.5;
+    --search-border-width: 0px;
+    --search-border-style: solid;
+    --search-border-color: transparent;
+    --search-item-border-color: #f3f3f3;
+    --search-input-border-color: #e4e4e4;
+    --search-input-height: 42px;
+    --search-button-height: 34px;
+    --search-button-width: 92px;
+    --search-price_list_regular-size: 16px;
+    --search-price_list_special-size: 16px;
+    --search-price_list_old-size: 12px;
+
+    /* Product options */
+    --product_option_margin: 0;
+    --product_option_padding: 25px 0;
+    --product_option_border: 1px solid rgb(var(--venia-global-color-border));
+
+    /* Product full details */
+    --ralated_product_container_width: 260px;
+    --pfd_message_background: #fff4ec;
+    --pdf_message_color: #f60;
+    --pdf_name_font_size: 18px;
+    --pdf_primary_font_size: var(--global_L_font_size_base);
+    --pdf_heading_tile_font_size: 18px;
+
+    /* Product attributes */
+    --product_attribute_background_even: var(--gray_color_f7);
+
+    /*mark*/
+    --mask-active_opacity: 0.7;
+
+    /*cart page*/
+    --cart-text_color: var(--black-color-31);
+    --cart-border_color: var(--gray-color_e7);
+    --error-text_color: #ec1717;
+    --error-text_font-size: 12px;
+    --cart-price_list_regular-size: 14px;
+    --cart-price_list_special-size: 14px;
+    --cart-price_list_old-size: 12px;
+    --cart-price_font_weight: normal;
+
+    /*input*/
+    --input-label_color: var(--black-color-31);
+    --input-label_font-size: var(--global_L_font_size_base);
+    --input-label_font-weight: 400;
+    --input-label_padding-bottom: 5px;
+    --input_color: var(--black-color-31);
+    --input_font-size: var(--global_L_font_size_base);
+    --input_height: 40px;
+    --input-border_color: #d7d6d6;
+    --input-padding: 10px;
+    --input-border-radius: 5px;
+    --input-placeholder_color: var(--gray_text_86);
+    --input-placeholder_font-size: var(--global_L_font_size_base);
+    --input-error_color: #ec1717;
+    --input-error_font-size: 12px;
+
+    /*check box*/
+    --checkbox_border-color: #8f8f8f;
+    --checkbox_border-radius: 3px;
+    --checkbox_width: 16px;
+    --checkbox_height: 16px;
+    --checkbox-small_width: 14px;
+    --checkbox-small_height: 14px;
+    --checkbox-active_color: var(--primary__color);
+    --checkbox-small-active_color: #ec1717;
+    --checkbox-active-tick_color: var(--white_text_color);
+    --checkbox-active-tick_width: 9px;
+    --checkbox-active-tick_height: 5px;
+    --checkbox_gap: 15px;
+
+    /*sign-in & create account page*/
+    --sign-in_with: 500px;
+    --sign-in-title_font-size: 28px;
+    --sign-in_border: 1px solid var(--gray-color_e7);
+    --sign-in_border-radius: 10px;
+    --sign-in-link_color: var(--orange_text_f60);
+    --sign-in-border-color: #c9c9c9;
+    --or_color: #c9c9c9;
+    --sign-in-popup_content-width: 320px;
+
+
+    /* toast */
+    --toast_position_right: 50%;
+    --toast_position_left: auto;
+    --toast_position_bottom: auto;
+    --toast_position_top: 106px;
+    --toast_transfrom: translateX(50%);
+
+    /*password StrengthBar*/
+    --password-no_color: #f4f4f4;
+    --password-week_color: #ffafae;
+    --password-medium_color: #ffd6b3;
+    --password-strong_color: #c5eeac;
+    --password-very-strong_color: #81b562;
+    --password_font-size: 12px;
+    --password-text_color: #979797;
+    --password-has-text_color: #333;
+    --password-text_font-weight: normal;
+
+    /*checkout page */
+    --checkout-border_color: var(--gray-color_e7);
+    --checkout_border-radius: 5px;
+    --checkout-address_border: 1px solid transparent;
+    --checkout-address-select_border: 1px solid var(--orange_text_f60);
+    --checkout-address_border-radius: 0;
+    --checkout_font-size: var(--global_L_font_size_base);
+    --checkout-tick_bg-color: var(--orange_text_f60);
+    --checkout-tick_color: var(--white_text_color);
+    --checkout-order_color: var(--orange_text_f60);
+
+    /* My Account page */
+    --my_account_tab_width: 220px;
+    --my_account_tab_gap: 40px;
+
+    --my_account_personal_background_box: #f9f9f9;
+
+    /*radio input*/
+    --radio-input_color: #d7d6d6;
+    --radio-input-checked_color: #333;
+    --radio-input_width: 16px;
+    --radio-input_height: 16px;
+    --radio-input_border: 4px solid transparent;
+
+}
+
+@media (max-width: 767px) {
+    :global(:root) {
+        /*product price*/
+        --price_list_regular-size: 14px;
+        --price_list_special-size: 14px;
+        --price_list_old-size: 10px;
+        --price_product_regular-size: 16px;
+        --price_product_special-size: 16px;
+        --price_product_old-size: 10px;
+
+        /*Search Autocomplete*/
+        --search-input-border-color: #d7d6d6;
+        --search-input-height: 34px;
+        --search-button-height: 28px;
+        --search-button-width: 57px;
+        --search-price_list_regular-size: 13px;
+        --search-price_list_special-size: 13px;
+        --search-price_list_old-size: 11px;
+
+        /*input*/
+        --input-label_font-size: var(--global_M_font_size_base);
+        --input_font-size: var(--global_M_font_size_base);
+        --input_height: 38px;
+        --input-placeholder_font-size: var(--global_M_font_size_base);
+
+        /* button */
+        --button-font-size: 13px;
+
+        /*cart page*/
+        --cart-price_list_regular-size: 13px;
+        --cart-price_list_special-size: 13px;
+        --cart-price_list_old-size: 10px;
+        --cart-price_font_weight: 600;
+
+
+        --pdf_name_font_size: 15px;
+        --pdf_primary_font_size: var(--global_M_font_size_base);
+        --pdf_heading_tile_font_size: 15px;
+
+        /*sign-in & create account page*/
+        --sign-in-title_font-size: 18px;
+
+        /* toast */
+        --toast_position_right: auto;
+        --toast_position_left: auto;
+        --toast_position_bottom: auto;
+        --toast_position_top: 58px;
+        --toast_transfrom: auto;
+
+        /*checkout page */
+        --checkout_font-size: 13px;
+    }
+}

@@ -1,0 +1,188 @@
+.root {
+}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.lineItems {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr auto;
+    line-height: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.lineItemsTotal {
+    composes: lineItems;
+    padding: 17px 0;
+    border-top: 1px solid var(--cart-border_color);
+}
+
+.lineItemsDiscount {
+    composes: lineItems;
+    padding-bottom: 10px;
+}
+
+.lineItemLabel {
+    justify-self: start;
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    color: var(--cart-text_color);
+}
+
+.price {
+    justify-self: end;
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    color: var(--cart-text_color);
+}
+
+.priceDiscount {
+    composes: price;
+    color: var(--price-discount_color);
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+    font-weight: 500;
+}
+
+.totalPrice {
+    composes: price;
+    font-weight: var(--venia-global-fontWeight-semibold);
+    font-size: var(--global_XLL_font_size_base);
+}
+
+.priceUpdating {
+    composes: price;
+    opacity: 0;
+}
+
+.checkoutButton_container {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.checkoutButton_container button {
+    width: 100%;
+}
+
+.title {
+    font-size: var(--global_L_font_size_base);
+    font-weight: 600;
+    color: var(--cart-text_color);
+    padding: 15px 0;
+}
+
+.discount {
+    background: var(--gray_color_f7);
+    composes: lineItems;
+    padding: 10px;
+    display: none;
+    margin-bottom: 15px;
+}
+
+.discount.showDiscount {
+    display: grid;
+}
+
+.discount .lineItemLabel,
+.discount .price {
+    color: var(--gray_text_86);
+    font-size: var(--global_S_font_size_base);
+}
+
+.lineItemLabelDiscount {
+    composes: lineItemLabel;
+    composes: icon-sprite-after from global;
+    position: relative;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.lineItemLabelDiscount:after {
+    background-position: -133px -381px;
+    display: block;
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.lineItemLabelDiscount.show:after {
+    transform: rotate(180deg);
+}
+
+.root_highPriorityCart {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    text-transform: uppercase;
+    transition-duration: 256ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: var(--venia-global-anim-standard);
+}
+
+.root_highPriorityCart span {
+    padding-right: 28px;
+    position: relative;
+}
+
+.root_highPriorityCart span:before {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 14px;
+    background-position: -321px -444px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.root_highPriorityCart:disabled,
+.root_highPriorityCart:hover:disabled {
+    pointer-events: none;
+    background-color: var(--button_deactive_background_color);
+    color: var(--button_deactive_text_color);
+    border: var(--button_deactive_border);
+}
+
+
+@media (max-width: 767px) {
+    .root_highPriorityCart {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .checkoutButton_container {
+        margin: 0;
+        display: block;
+    }
+
+    .lineItemsTotal {
+        padding-bottom: 0;
+    }
+
+    .lineItemLabel {
+        font-size: var(--global-font_size_base);
+    }
+
+    .price {
+        font-size: var(--global-font_size_base);
+    }
+}

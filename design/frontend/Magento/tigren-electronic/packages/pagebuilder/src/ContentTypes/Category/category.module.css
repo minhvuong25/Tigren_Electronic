@@ -1,0 +1,63 @@
+.root {
+    word-wrap: break-word;
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+}
+
+.rootGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.rootGrid .item {
+    margin-bottom: 20px;
+}
+
+.image {
+    padding: 1rem;
+}
+
+.root .image a {
+    text-decoration: unset;
+}
+
+.image a img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 6/5;
+}
+
+.text {
+    display: block;
+    margin: 12px auto 10px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.46;
+    color: var(--primary__color);
+    text-align: center;
+}
+
+.image:hover .text {
+    color: var(--cate_pb_text_hover-color);
+}
+
+.root .image {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.root .text {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .text {
+        font-size: 12px;
+    }
+
+    .image {
+        padding: 10px;
+    }
+}

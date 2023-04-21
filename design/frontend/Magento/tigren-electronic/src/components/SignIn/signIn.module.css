@@ -1,0 +1,47 @@
+.rootBottom {
+    composes: rootBottom from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+    margin-top: 15px;
+    color: #555555;
+}
+
+.forgotPasswordButton {
+    composes: forgotPasswordButton from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+    top: 75px;
+    text-decoration-line: underline;
+    color: #888888;
+}
+
+.forgotPasswordButton:hover {
+    color: #333333;
+}
+
+.buttonsContainer {
+    composes: buttonsContainer from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+    margin-top: 20px;
+}
+
+.buttonsContainer button {
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.createAccount {
+    composes: createAccount from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+}
+
+.title {
+    composes: title from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+}
+
+.root {
+    composes: root from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+}
+
+.root label[class*="field-label"] {
+    font-weight: 600;
+    color: #333333;
+}
+
+@media (max-width: 767px) {
+
+}

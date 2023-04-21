@@ -1,0 +1,15 @@
+.root {
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 961px) {
+    .root {
+        margin-top: 0;
+        border: none;
+        border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+        border-radius: 0;
+        padding: 0 0 20px;
+    }
+}

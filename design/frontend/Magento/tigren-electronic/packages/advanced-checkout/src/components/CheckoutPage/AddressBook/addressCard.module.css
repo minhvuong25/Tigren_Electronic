@@ -1,0 +1,153 @@
+.root {
+    align-content: space-between;
+    border: var(--checkout-address_border);
+    border-radius: var(--checkout-address_border-radius);
+    box-shadow: none;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: var(--checkout_font-size);
+    line-height: 1.7;
+    padding: 15px 37px 15px 15px;
+    position: relative;
+    transition: border-color 384ms var(--venia-global-anim-in);
+    outline: none;
+}
+
+.root_selected {
+    composes: root;
+    border: var(--checkout-address-select_border);
+    cursor: default;
+    position: relative;
+}
+
+.root_selected:after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-color: var(--checkout-tick_bg-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.root_selected:before {
+    transform: rotate(-45deg);
+    border-left: 2px solid var(--checkout-tick_color);
+    border-bottom: 2px solid var(--checkout-tick_color);
+    content: '';
+    height: 6px;
+    width: 11px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+}
+
+.root_updated {
+    composes: root_selected;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.root:focus {
+    box-shadow: none;
+}
+
+.defaultBadge {
+    composes: defaultBadge from '~@magento/venia-ui/lib/components/CheckoutPage/AddressBook/addressCard.module.css';
+    display: none;
+    width: 100%;
+}
+
+.name {
+    composes: name from '~@magento/venia-ui/lib/components/CheckoutPage/AddressBook/addressCard.module.css';
+    display: block;
+    width: 100%;
+}
+
+.buttonContainer {
+    width: 100%;
+    order: 5;
+    padding-top: 20px;
+}
+
+.deliveryButton {
+    composes: root_lowPriority from '~@magento/venia-ui/lib/components/Button/button.module.css';
+    order: 10;
+    height: 32px;
+    width: 130px;
+    border-width: 1px;
+    text-transform: capitalize;
+    min-width: fit-content;
+    min-height: unset;
+    padding: 5px;
+}
+
+.editButton {
+    composes: root_lowPriority from '~@magento/venia-ui/lib/components/Button/button.module.css';
+    order: 10;
+    height: 32px;
+    width: 130px;
+    border-width: 1px;
+    text-transform: capitalize;
+    min-width: fit-content;
+    min-height: unset;
+    position: unset;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.editIcon {
+    display: none;
+}
+
+@media (min-width: 961px) {
+    .root {
+        padding: 15px 37px 15px 15px;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .buttonContainer {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 960px) {
+    .root {
+        border-color: rgb(var(--venia-global-color-gray-400));
+    }
+
+    .root_selected {
+        border: var(--checkout-address-select_border);
+    }
+
+    .root_selected:after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .root_selected:before {
+        right: 4px;
+    }
+}
+
+@media (max-width: 360px) {
+    .root {
+        min-width: 220px;
+    }
+}
+

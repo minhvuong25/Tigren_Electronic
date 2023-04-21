@@ -1,0 +1,29 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/OrderHistoryPage/orderHistoryPage.module.css';
+}
+
+.orderHistoryTable {
+    composes: orderHistoryTable from '@tigrensolutions/core/src/components/OrderHistoryPage/orderHistoryPage.module.css';
+}
+
+.heading {
+    composes: heading from '@tigrensolutions/core/src/components/OrderHistoryPage/orderHistoryPage.module.css';
+    font-weight: 600;
+}
+
+.wrapTitleTable {
+    composes: wrapTitleTable from '@tigrensolutions/core/src/components/OrderHistoryPage/orderHistoryPage.module.css';
+    padding: 15px 0;
+    border-top: 1px solid var(--background_gray);
+    border-bottom: 1px solid var(--background_gray);
+}
+
+.titleTable h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333333;
+}
+
+@media (max-width: 767px) {
+
+}

@@ -1,0 +1,138 @@
+:root {
+    --search-sidebar-width: 200px;
+}
+
+.root {
+    padding: 1rem;
+    gap: 40px;
+}
+
+.noResult {
+    display: flex;
+}
+
+.headerButtons {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+.heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.searchInfo {
+    line-height: var(--venia-global-typography-heading-lineHeight);
+    margin: 20px;
+    max-width: 75vw;
+}
+
+.totalPages {
+    margin-left: 0.5rem;
+}
+
+.headingHighlight {
+    font-weight: var(--venia-global-fontWeight-bold);
+}
+
+.sidebar {
+    display: none;
+}
+
+.sidebar div[class^='currentFilters-showMore'] + div > button {
+    text-decoration: none;
+    font-size: var(--global_L_font_size_base);
+}
+
+.sidebar ul[class^='currentFilters-root'] li > span > span {
+    font-size: var(--global_L_font_size_base);;
+}
+
+.currentFilterContainer {
+    composes: currentFilterContainer from '~@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+}
+
+.action button {
+    font-size: var(--global_L_font_size_base);
+}
+
+@media (max-width: 767px) {
+    .headerButtons {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .currentFilterContainer {
+        margin: 16px;
+    }
+
+    .searchInfo {
+        margin: 0;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .headerButtons {
+        justify-content: space-between;
+    }
+
+    .currentFilterContainer {
+        margin: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .root {
+        gap: 40px;
+        display: flex;
+    }
+
+    .sidebar {
+        flex-basis: var(--category-sidebar-width);
+    }
+
+    .sidebar:empty {
+        display: none;
+    }
+
+    .searchContent {
+        width: calc(100% - var(--category-sidebar-width) - 40px);
+    }
+
+    .heading {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .searchInfo {
+        margin: 0;
+    }
+
+    .searchInfo {
+        margin: 0;
+        flex-basis: 100%;
+    }
+
+    .headerButtons {
+        justify-content: flex-end;
+    }
+
+    .sidebar {
+        display: flex;
+        align-self: flex-start;
+        width: var(--search-sidebar-width);
+    }
+
+    .searchContent {
+        flex-grow: 1;
+    }
+
+}

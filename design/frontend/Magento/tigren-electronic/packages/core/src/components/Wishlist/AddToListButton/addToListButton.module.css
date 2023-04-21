@@ -1,0 +1,53 @@
+.root {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--primary__color);
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+    composes: icon-sprite-before from global;
+}
+
+.root_selected {
+    composes: root;
+    --selectedColor: rgb(var(--venia-global-color-red-400));
+    --fill: var(--selectedColor);
+    --stroke: var(--selectedColor);
+    text-decoration: none;
+}
+
+.root:before {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -615px -207px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+}
+
+.root_selected {
+    color: var(--orange_text_f60);
+}
+
+.root_selected:before {
+    background-position: -655px -207px;
+}
+
+@media (min-width: 768px) {
+    .root:hover {
+        color: var(--orange_text_f60);
+    }
+
+    .root:hover:before {
+        background-position: -655px -207px;
+    }
+}
+
+@media (max-width: 767px) {
+    .root {
+        font-size: 0;
+        padding-left: 22px;
+    }
+}

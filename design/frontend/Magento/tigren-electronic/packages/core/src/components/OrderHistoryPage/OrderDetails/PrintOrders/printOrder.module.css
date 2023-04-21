@@ -1,0 +1,137 @@
+.root {
+    padding: 0 20px;
+    display: none;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--black-color-31);
+}
+
+.logo {
+
+}
+
+.deleteAll {
+    font-size: 14px;
+    color: var(--primary__color);
+    display: flex;
+}
+
+.wrapBtnPrint {
+    display: flex;
+    align-items: center;
+}
+
+.deleteAll:hover, .wrapBtnPrint:hover {
+    color: var(--button__danger__hover__background);
+}
+
+.btnPrint {
+    font-size: 14px;
+    color: var(--primary__color);
+    padding: 0 15px;
+    margin-right: 15px;
+    display: flex;
+    position: relative;
+}
+
+.btnPrint:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    background: var(--gray_text_color);
+}
+
+.deleteIcon {
+    margin-right: 5px;
+    display: inline-block;
+    background-position: -527px -373px;
+    width: 20px;
+    height: 20px;
+    composes: icon-sprite from global;
+}
+
+.logo {
+    display: none;
+    --height: 52px;
+    --width: 236px;
+    width: var(--width);
+    height: var(--height);
+}
+
+.printIcon {
+    margin-right: 5px;
+    display: inline-block;
+    background-position: -607px -373px;
+    width: 21px;
+    height: 20px;
+    composes: icon-sprite from global;
+}
+
+.heading {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapBottom {
+    display: grid;
+    border-top: 1px solid var(--gray_color_ec);
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 50px;
+}
+
+.wrapBottom > div > div > div:first-child {
+    font-size: 14px;
+    color: var(--primary__color);
+    line-height: 20px;
+    font-weight: bold !important;
+}
+
+.wrapBottom > div div, .wrapBottom > div span {
+    font-size: 14px;
+    color: var(--primary__color);
+    font-weight: normal;
+    line-height: 20px;
+}
+
+@media (max-width: 1100px) {
+    .wrapBottom {
+        column-gap: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapBottom {
+        column-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wrapBottom > div > div > div:first-child,
+    .wrapBottom > div div, .wrapBottom > div span {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapBottom > div > div > div:first-child {
+        margin-top: 25px;
+    }
+
+    .wrapBottom > div:first-child > div > div:first-child {
+        margin-top: 0;
+    }
+}
+
+@media print {
+    .root {
+        display: block;
+    }
+}

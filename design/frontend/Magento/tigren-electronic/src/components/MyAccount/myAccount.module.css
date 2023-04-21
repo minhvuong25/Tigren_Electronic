@@ -1,0 +1,8 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/MyAccount/myAccount.module.css';
+}
+
+
+@media (max-width: 767px) {
+
+}

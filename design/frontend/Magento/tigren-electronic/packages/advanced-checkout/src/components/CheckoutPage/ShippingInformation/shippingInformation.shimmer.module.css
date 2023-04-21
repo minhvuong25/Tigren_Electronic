@@ -1,0 +1,23 @@
+.rootShimmer {
+
+}
+
+.listing {
+    border-radius: 5px;
+    padding: 18px;
+}
+
+.root {
+    padding-bottom: 20px;
+}
+
+.root:last-child {
+    border-bottom: none;
+    padding: 0;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}

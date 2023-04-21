@@ -1,0 +1,26 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CheckoutPage/ShippingInformation/shippingInformation.module.css';
+    border: none;
+}
+
+.root_editMode {
+    composes: root_editMode from '@tigrensolutions/core/src/components/CheckoutPage/ShippingInformation/shippingInformation.module.css';
+    border: none;
+}
+
+.editTitle {
+    composes: editTitle from '@tigrensolutions/core/src/components/CheckoutPage/ShippingInformation/shippingInformation.module.css';
+    display: none;
+}
+
+.editWrapper {
+    composes: editWrapper from '@tigrensolutions/core/src/components/CheckoutPage/ShippingInformation/shippingInformation.module.css';
+    padding: 0;
+}
+
+@media (max-width: 767px) {
+    .editTitle {
+        display: flex;
+        text-transform: capitalize;
+    }
+}

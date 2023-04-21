@@ -1,0 +1,77 @@
+.root {
+    padding: 50px 15px;
+    margin: 0 auto;
+}
+
+.signInContainer {
+    composes: signInContainer from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    grid-column-start: 2;
+    border-width: 1px;
+}
+
+.signInButton {
+    composes: root_normalPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    min-height: auto;
+    min-width: auto;
+    padding: 0.25rem 2rem;
+}
+
+.summaryContainer {
+    composes: summaryContainer from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+}
+
+.summaryContainer > div:last-child:not[class*="orderSummary"] {
+    padding: 20px 15px 25px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    margin-top: 30px;
+}
+
+.titleSummary {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black-color-3a);
+    margin-bottom: 20px;
+}
+
+.items_review_container {
+    composes: items_review_container from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    margin-bottom: 30px;
+}
+
+.price_adjustments_container {
+    composes: price_adjustments_container from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+}
+
+.price_adjustments_container div[class*="accordion-root"] {
+    border-width: 1px;
+}
+
+.checkoutContent {
+    composes: checkoutContent from '~@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+}
+
+.place_order_button {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    margin-top: 30px;
+    width: 100%;
+}
+
+.checkoutContent > .place_order_button {
+    grid-column: 1 / span 1;
+    max-width: 200px;
+    margin: auto;
+}
+
+@media (min-width: 961px) {
+    .signInContainerVisible {
+        grid-row: 2 / span 3;
+    }
+}
+
+@media (max-width: 960px) {
+    .signInContainer {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+}

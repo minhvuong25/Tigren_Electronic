@@ -1,0 +1,34 @@
+.heading {
+    color: rgb(var(--venia-global-color-text-alt));
+    font-size: 0.875rem;
+    padding-top: 0.75rem;
+    text-transform: uppercase;
+}
+
+.categories > ul {
+    border-top: none;
+    padding: 0;
+}
+
+.categories {
+    padding-bottom: 20px;
+}
+
+.products {
+
+}
+
+.viewAllResult {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--orange_text_f60);
+    text-decoration: underline;
+    padding: 20px 10px 10px;
+    border-top: 1px solid #e1e1e1;
+}
+
+@media (max-width: 767px) {
+    .viewAllResult {
+        padding: 15px 10px 5px;
+    }
+}

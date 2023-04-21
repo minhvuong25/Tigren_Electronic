@@ -1,0 +1,6 @@
+:global(:root) {
+    --category_page_grid-width: 180;
+    --category_page_grid-height: 180;
+    --category_page_list-width: 320;
+    --category_page_list-height: 400;
+}

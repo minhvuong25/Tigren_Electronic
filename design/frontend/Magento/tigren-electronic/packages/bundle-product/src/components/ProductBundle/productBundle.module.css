@@ -1,0 +1,37 @@
+.options {
+    font-size: var(--global_L_font_size_base);
+    grid-area: options;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    font-weight: normal;
+    overflow-y: auto;
+}
+
+.optionsCheckout {
+    font-weight: normal;
+    font-size: var(--global_L_font_size_base);
+    line-height: 1.5;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.optionLabel dt {
+    font-weight: 600;
+}
+
+.optionValue {
+    margin-left: 0.25rem;
+}
+
+.optionLabel * {
+    font-size: 13px;
+}
+
+.expandButton {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.expandButton:hover {
+    color: var(--orange_text_f60);
+}

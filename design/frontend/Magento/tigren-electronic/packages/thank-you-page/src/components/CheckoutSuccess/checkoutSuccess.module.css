@@ -1,0 +1,37 @@
+.root {
+    max-width: 910px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.button button {
+    min-width: 220px;
+    margin-top: 20px;
+}
+
+.button {
+    text-align: center;
+}
+
+:global(.recommended-products img) {
+    width: 100%;
+}
+
+:global(.recommended-products .main-title-content .main-title) {
+    text-align: left;
+}
+
+:global(.recommended-products .main-title-content .view-all-products) {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .button button {
+        margin-top: 20px;
+    }
+
+    :global(.recommended-products .main-title-content .view-all-products) {
+        display: block;
+        font-size: 12px;
+    }
+}

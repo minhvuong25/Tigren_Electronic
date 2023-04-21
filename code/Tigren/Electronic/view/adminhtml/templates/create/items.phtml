@@ -1,0 +1,54 @@
+<?php
+/*
+ * @author    Tigren Solutions <info@tigren.com>
+ * @copyright Copyright (c) 2022 Tigren Solutions <https://www.tigren.com>. All rights reserved.
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var Inventory $block */
+
+use Magento\InventoryShippingAdminUi\Block\Adminhtml\Shipment\Inventory;
+
+$sourceCode = $block->getSourceCode();
+?>
+
+<?php if ($sourceCode): ?>
+    <section class="admin__page-section inventory">
+        <div class="admin__page-section-title">
+            <span class="title"><?= $block->escapeHtml(__('Image')) ?></span>
+        </div>
+        <div class="admin__page-section-content">
+
+
+            <?php $customImage = $block->getCustomImage(); ?>
+            <div class="admin__field">
+                <label class="admin__field-label" for="custom_image">
+                    <span><?= $block->escapeHtml(__('Custom Image')) ?></span>
+                </label>
+                <div class="admin__field-control">
+                    <input type="file" id="custom_image"
+                           name="custom_image" />
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <input name="sourceCode" type="hidden" value="<?= /* @escapeNotVerified */
+    $sourceCode ?>">
+<?php endif; ?>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(window).on('load', function () {
+            $('#edit_form').attr('enctype', 'multipart/form-data');
+        });
+    });
+
+</script>
+
+

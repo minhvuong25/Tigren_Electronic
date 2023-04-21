@@ -1,0 +1,87 @@
+.root_open {
+    composes: root_open from '@tigrensolutions/core/src/components/SearchBar/searchBar.module.css';
+}
+
+.searchPageBar {
+    display: none;
+}
+
+.form {
+    composes: form from '@tigrensolutions/core/src/components/SearchBar/searchBar.module.css';
+    width: 100%;
+}
+
+.autocomplete {
+    composes: autocomplete from '@tigrensolutions/core/src/components/SearchBar/searchBar.module.css';
+}
+
+.search {
+    composes: search from '@tigrensolutions/core/src/components/SearchBar/searchBar.module.css';
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+.viewAllResult {
+    composes: viewAllResult from '@tigrensolutions/core/src/components/SearchBar/searchBar.module.css';
+    font-size: 0;
+    width: unset;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewAllResult:after {
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    content: '';
+    background-position: -154px -32px;
+}
+
+@media screen and (max-width: 767px) {
+    .root_open {
+        top: 80px;
+        justify-items: unset;
+    }
+
+    .searchPageBar {
+        display: block;
+    }
+
+    .searchPageBar .form .search {
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+    .searchPageBar .search .fieldIcons-input {
+        padding-left: 16px;
+    }
+
+    .searchPageBar .search span[class*='fieldIcons-input']::before {
+        content: '';
+        display: block;
+        background-position: -143px -27px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .searchPageBar .form .search input {
+        color: rgb(187, 187, 187);
+        font-size: 14px;
+        padding-left: 12px;
+    }
+
+    .searchPageBar .viewAllResult,
+    .searchPageBar .autocomplete {
+        display: none;
+    }
+}

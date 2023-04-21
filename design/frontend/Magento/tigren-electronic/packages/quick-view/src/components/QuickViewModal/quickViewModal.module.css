@@ -1,0 +1,258 @@
+.contents {
+    composes: contents from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    position: relative;
+    padding: 0 24px 55px 40px;
+}
+
+.optionRoot {
+    border-bottom: 1px solid #e9e9e9;
+    padding: 25px 0 20px 0;
+
+    --option_title_font_size: 14px;
+    --option_tille_color: #333;
+    --swatch_width: 25px;
+    --swatch_border: 1px solid #fff;
+    --swatch_selected_border: 1px solid #000000;
+    --tile_height: 34px;
+    --tile_font_size: 14px;
+    --tile_color: #868686;
+    --tile_selected_color: #333;
+    --tile_border: 1px solid #cdcdcd;
+    --tile_selected_border: solid 1px #333;
+
+}
+
+.quantityLabel {
+    font-size: var(--option_title_font_size);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+.quantityRoot {
+    composes: root from '~@tigrensolutions/core/src/components/CartPage/ProductListing/quantity.module.css';
+    grid-template-columns: auto 4rem auto;
+    justify-content: start;
+    padding: 0 1rem;
+}
+
+.loading {
+    composes: root from '~@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+    height: unset;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 125px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.dataError {
+    color: rgb(var(--venia-global-color-error));
+    display: inline-block;
+    padding-top: 1rem;
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.errorContainer {
+    padding-top: 1rem;
+}
+
+
+.dialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    width: 880px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.dialog_body {
+    composes: body from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    display: block;
+}
+
+.root {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+}
+
+.dialog_header {
+    composes: header from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    height: 35px;
+    border: none;
+    padding: 0 9px;
+}
+
+.dialog_form {
+    composes: form from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+}
+
+.dialog_header svg {
+    stroke-width: 1px;
+}
+
+.carousel_root {
+    composes: root from '~@magento/venia-ui/lib/components/ProductImageCarousel/carousel.module.css';
+    display: block !important;
+
+    --image_gallery_thumbnail_width: 80px;
+    --image_gallery_thumbnail_height: 80px;
+}
+
+.options .optionRoot:last-child {
+    border: none;
+}
+
+.actions {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.actions button {
+    border-width: 1px;
+}
+
+.gallery {
+    --thumbnail_border: 1px solid transparent;
+    --active_thumbnail_border: 1px solid #c2c2c2;
+}
+
+.gallery div[class*='fullscreen'] div[class^='image-gallery-slide'] {
+    aspect-ratio: unset;
+}
+
+.gallery div[class*='fullscreen'] div[class='image-gallery-thumbnails-container'] {
+    text-align: center !important;
+}
+
+.gallery div[class^='image-gallery-slide'] {
+    aspect-ratio: 1/1;
+}
+
+.gallery button[class='image-gallery-thumbnail'] div[class='image-gallery-thumbnail-inner'] {
+    border: var(--thumbnail_border);
+}
+
+.gallery button[class='image-gallery-thumbnail active'] div[class='image-gallery-thumbnail-inner'] {
+    border: var(--active_thumbnail_border);
+}
+
+.gallery button[class*='image-gallery-left-nav']::before, .gallery button[class*='image-gallery-right-nav']::before {
+    transform: scale(0.68)
+}
+
+.optionContainer {
+    max-height: 460px;
+    overflow-y: auto;
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dialog {
+        max-width: 100%;
+        width: 70vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .root {
+        gap: 10px;
+    }
+
+    .dialog {
+        width: 90vw;
+    }
+
+    .gallery button[class*='image-gallery-left-nav'], .gallery button[class*='image-gallery-right-nav'] {
+        padding: 0;
+    }
+
+    .gallery button[class*='image-gallery-left-nav']::before, .gallery button[class*='image-gallery-right-nav']::before {
+        transform: scale(0.4)
+    }
+}
+
+@media (max-width: 1023px) {
+    .dialog_form {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .carousel_root {
+        --image_gallery_thumbnail_width: 50px;
+        --image_gallery_thumbnail_height: 50px;
+    }
+
+    .optionContainer {
+        max-height: unset;
+        overflow: auto;
+    }
+
+    .dialog {
+        height: 80vh;
+    }
+
+    .dialog_header {
+        height: 25px;
+        padding: 8px;
+    }
+
+    .contents {
+        padding: 20px;
+    }
+
+    .root {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .optionRoot {
+        padding: 20px 0 20px 0;
+        --tile_font_size: 12px;
+        --option_title_font_size: 13px;
+        --tile_height: 30px;
+    }
+
+    .quantityLabel {
+        padding-top: 0;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        grid-auto-flow: row;
+        margin-bottom: 20px;
+        grid-gap: 5px;
+    }
+
+    .loading {
+        top: 25vh;
+    }
+
+    .gallery div[class^='image-gallery-slide'] {
+        aspect-ratio: unset;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel_thumbnailList {
+        composes: thumbnailList from '~@magento/venia-ui/lib/components/ProductImageCarousel/carousel.module.css';
+        align-content: start;
+        grid-gap: 1.5rem;
+        margin-top: 0;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(auto-fit, 80px) !important;
+        /* grid-template-rows: auto; */
+        overflow: auto;
+        min-width: max-content;
+    }
+
+    .optionContainer div[class*='productPrice-root'] {
+        align-items: baseline;
+    }
+}

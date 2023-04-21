@@ -1,0 +1,134 @@
+.root {
+    --name-column-width: 150px;
+    --column-gap: 60px;
+}
+
+.addButton {
+    composes: root_warningPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    min-width: 180px;
+    text-transform: initial;
+}
+
+.blockTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockTitle h1 {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.blockContent {
+    margin-top: 15px;
+}
+
+.header, .addressItem {
+    display: grid;
+    grid-template-columns: var(--name-column-width) auto max-content;
+    gap: var(--column-gap);
+    border-bottom: 1px solid var(--gray_color_f7);
+}
+
+.header span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+}
+
+.header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray_color_ec);
+}
+
+.addressItem {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray_color_f7);
+}
+
+.addressItem span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+}
+
+.addressActionContainer {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--orange_text_f60);
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+}
+
+.deleteButton {
+    padding-left: 10px;
+    border-left: 1px solid var(--gray_text_color);
+    margin-left: 10px;
+}
+
+.shimmerContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 70px);
+    row-gap: 10px;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 767px) {
+    .root {
+        --global_L_font_size_base: var(--global_M_font_size_base);
+    }
+
+    .header {
+        display: none;
+    }
+
+    .additionalAddresses {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .blockTitle {
+        margin-top: 20px;
+    }
+
+    .blockTitle h1 {
+        display: none;
+    }
+
+    .addressItem {
+        display: grid;
+        grid-template-areas:
+        "name actions"
+        "address .";
+        grid-template-columns: minmax(60%, 70%) 1fr;
+        column-gap: 34px;
+        row-gap: 8px;
+
+        padding: 15px 0 20px 0;
+    }
+
+    .blockContent {
+        margin-top: -15px;
+    }
+}
+
+
+

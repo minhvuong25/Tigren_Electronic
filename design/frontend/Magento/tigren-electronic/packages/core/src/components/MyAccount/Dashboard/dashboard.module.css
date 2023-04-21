@@ -1,0 +1,204 @@
+.root a {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--orange_text_f60);
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.title h3 {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+
+.title a {
+    text-align: right;
+}
+
+.myAccountTitle {
+    composes: title;
+}
+
+.groupTitle {
+    composes: title;
+    margin-top: 80px;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+
+.card {
+    padding: 20px 20px 25px;
+    border-radius: 10px;
+    border: solid 1px #e8e8e8;
+    background-color: var(--white_text_color);
+}
+
+
+.card .heading {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ececec;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.information .item {
+    display: grid;
+    grid-template-columns: minmax(88px, max-content) 1fr;
+}
+
+.information .item .label, .information .item .value {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.information .item .label {
+    color: var(--gray_text_86);
+}
+
+
+.information .actions {
+    display: flex;
+    margin-top: 5px;
+}
+
+.information .actions a, .information .actions .changePassword {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--orange_text_f60);
+}
+
+
+.information .actions .edit {
+    padding-right: 10px;
+    border-right: 1px solid var(--gray_text_color);
+    margin-right: 10px;
+}
+
+
+.subscribe {
+    display: block;
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+}
+
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skeleton .cardContainer:first-child .content {
+    height: 260px;
+}
+
+.skeleton .cardContainer:last-child .content {
+    height: 158px;
+}
+
+.skeleton .cardContainer:last-child {
+    margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+    .root {
+        --global_L_font_size_base: var(--global_M_font_size_base)
+    }
+
+    .card .heading {
+        padding-bottom: 10px;
+    }
+
+    .cardContainer {
+        grid-template-rows: max-content;
+        grid-template-columns: auto;
+        row-gap: 10px;
+    }
+
+    .card {
+        padding: 15px 15px 20px;
+    }
+
+    .information {
+        gap: 10px;
+    }
+
+    .groupTitle {
+        margin-top: 40px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .title h3 {
+        font-size: 15px;
+    }
+
+    .myAccountTitle {
+        display: none;
+    }
+
+    .card .heading {
+        font-size: 13px;
+    }
+
+    .root a {
+        font-size: 12px;
+    }
+
+    .skeleton .cardContainer:first-child .content {
+        height: 238px;
+    }
+
+    .skeleton .cardContainer:first-child .card:last-child .content {
+        height: 135px;
+    }
+
+    .skeleton .cardContainer:last-child .content {
+        height: 135px;
+    }
+}

@@ -1,0 +1,46 @@
+.titleContainer {
+    composes: titleContainer from '~@magento/venia-ui/lib/components/CheckoutPage/ShippingMethod/completedView.module.css';
+    padding: 25px 30px;
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+    align-items: center;
+}
+
+.heading {
+    composes: heading from '~@magento/venia-ui/lib/components/CheckoutPage/ShippingMethod/completedView.module.css';
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.editButton {
+    composes: editButton from '~@magento/venia-ui/lib/components/CheckoutPage/ShippingMethod/completedView.module.css';
+    color: rgb(var(--venia-brand-color-1-700));
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 100px;
+    margin: 0;
+}
+
+.editButton span[class*="icon-root"] {
+    display: none;
+}
+
+.editButtonText {
+    display: inline;
+}
+
+.contents {
+    composes: contents from '~@magento/venia-ui/lib/components/CheckoutPage/ShippingMethod/completedView.module.css';
+    padding: 25px 30px;
+    margin: 0;
+}
+
+@media (max-width: 960px) {
+    .titleContainer {
+        padding: 20px 15px;
+    }
+
+    .contents {
+        padding: 20px 15px;
+    }
+}

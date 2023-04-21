@@ -1,0 +1,127 @@
+.root {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.heading {
+    justify-self: left;
+    font-size: 22px;
+    color: var(--label-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.titleTable h5 {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: var(--gray_text_86);
+}
+
+.emptyHistoryMessage {
+    text-align: center;
+}
+
+.orderHistoryTable {
+    display: grid;
+}
+
+.wrapTitleTable {
+    display: grid;
+    align-items: center;
+    border-bottom: 1px solid var(--gray_color_ec);
+    grid-template-columns: 26% 14% 19% 16% 15% 10%;
+}
+
+.filterRow {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pageInfo {
+    font-size: var(--venia-typography-body-S-fontSize);
+}
+
+.search {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    width: 22rem;
+}
+
+.searchButton {
+    composes: root_highPriority from '../Button/button.module.css';
+
+    width: 5rem;
+    height: 2rem;
+    min-width: 5rem;
+}
+
+.submitIcon {
+    color: white;
+}
+
+.loadMoreButton {
+    composes: root_lowPriority from '../Button/button.module.css';
+    justify-self: center;
+}
+
+.wrapNoOrder {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.wrapNoOrder img {
+    display: block;
+    width: 100%;
+    max-width: 90px;
+    margin: 0 auto;
+}
+
+.emptyHistoryMessage {
+    font-size: 16px;
+    margin-top: 24px;
+    font-weight: bold;
+    color: var(--black-color-31);
+}
+
+
+@media (max-width: 991px) {
+    .wrapTitleTable {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    .root {
+
+    }
+
+    .filterRow {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .search {
+        gap: 0.5rem;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .heading {
+        display: none;
+    }
+
+    .emptyHistoryMessage {
+        font-size: 14px;
+    }
+}

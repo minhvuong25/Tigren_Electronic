@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="tigren_customer_question" resource="default" engine="innodb" comment="tigren_customer_questionTable">
+        <column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true" />
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="title" />
+        <column xsi:type="varchar" name="customer_name" length="255" nullable="false"
+                comment="Customer Name" />
+        <column xsi:type="varchar" name="content" nullable="false" length="255" comment="Content" />
+        <column xsi:type="timestamp" name="created_at" nullable="false" comment="Created at" default="CURRENT_TIMESTAMP" />
+        <column xsi:type="timestamp" name="updated_at" on_update="false" nullable="true"
+                comment="Update time" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id" />
+        </constraint>
+    </table>
+
+    <table name="existing_table" resource="default">
+        <column xsi:type="varchar" name="new_column" nullable="true" length="255" comment="New Column Comment" />
+    </table>
+</schema>

@@ -1,0 +1,58 @@
+.root {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    margin-top: 10px;
+    padding: var(--option_padding);
+    order: 2;
+}
+
+.root div[class='slick-list'] div[class='slick-track'] {
+    width: 100% !important;
+}
+
+.root div[class='slick-list'] div[class*='slick-active'] {
+    min-width: fit-content;
+}
+
+.item {
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    color: var(--primary__color);
+
+    padding: 3px 5px;
+    margin-right: 6px;
+    border-radius: 11px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    width: max-content !important;
+    min-width: 40px;
+}
+
+.itemSelected {
+    composes: item;
+    border: solid 1px #333;
+}
+
+.itemSelected:disabled, .item:disabled {
+    opacity: 0.22;
+}
+
+.missingArrow {
+    padding: 0;
+}
+
+
+.missingArrow > div[class*='slick-slider'] {
+    padding: 0;
+}
+
+.missingArrow > div[class*='slick-slider'] > div[class='slick-list'] > div[class='slick-track'] {
+    width: auto !important;
+}
+
+.missingArrow > div[class*='slick-slider'] > div[class='slick-list'] > div[class='slick-track'] > div {
+    width: auto !important;
+}

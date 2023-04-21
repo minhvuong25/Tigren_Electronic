@@ -1,0 +1,369 @@
+{
+    "__typename": "CustomerOrder",
+    "billing_address": {
+        "__typename": "OrderAddress",
+        "city": "Ha Noi",
+        "country_code": "AS",
+        "firstname": "Nguyễn Văn ",
+        "lastname": "Trí",
+        "postcode": "1000",
+        "region": "Norts",
+        "street": [
+            "115 Định Công"
+        ],
+        "telephone": "0971010422"
+    },
+    "id": "NTU3",
+    "invoices": [
+        {
+            "__typename": "Invoice",
+            "id": "MzI="
+        }
+    ],
+    "items": [
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ1Mg==",
+            "product_name": "Ripped High Waisted Denim Short",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 26.33
+            },
+            "product_sku": "RHWDS-S",
+            "product_url_key": "ripped-high-waisted-denim-short",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "S"
+                }
+            ],
+            "quantity_ordered": 1
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ1NA==",
+            "product_name": "Skinny Denim Short",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 32.33
+            },
+            "product_sku": "SDS-L",
+            "product_url_key": "skinny-denim-short",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "L"
+                }
+            ],
+            "quantity_ordered": 4
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ1Ng==",
+            "product_name": "Drop Shoulder Solid Teddy Jacket",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 59.12
+            },
+            "product_sku": "DSST-Pink-M",
+            "product_url_key": "drop-shoulder-solid-teddy-jacket",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Color",
+                    "value": "Pink"
+                },
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "M"
+                }
+            ],
+            "quantity_ordered": 2
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ1OA==",
+            "product_name": "Dual Pocket Zipper Drawstring Hem Jacket",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 49.88
+            },
+            "product_sku": "DPZD-S",
+            "product_url_key": "dual-pocket-zipper-drawstring-hem-jacket",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "S"
+                }
+            ],
+            "quantity_ordered": 2
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ2MA==",
+            "product_name": "Slim Denim Short",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 32.33
+            },
+            "product_sku": "SDS-M-Black",
+            "product_url_key": "slim-denim-short",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Color",
+                    "value": "Black"
+                },
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "M"
+                }
+            ],
+            "quantity_ordered": 1
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ2Mg==",
+            "product_name": "Utility Short ",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 26.79
+            },
+            "product_sku": "USS-M",
+            "product_url_key": "utility-short",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "M"
+                }
+            ],
+            "quantity_ordered": 1
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ2NA==",
+            "product_name": "Drop Shoulder Solid Teddy Jacket",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 59.12
+            },
+            "product_sku": "DSST-Pink-S",
+            "product_url_key": "drop-shoulder-solid-teddy-jacket",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Color",
+                    "value": "Pink"
+                },
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "S"
+                }
+            ],
+            "quantity_ordered": 3
+        },
+        {
+            "__typename": "OrderItem",
+            "id": "MTQ2Ng==",
+            "product_name": "Plaid Print Double Pockets Drawstring Jogger Pant",
+            "product_sale_price": {
+                "__typename": "Money",
+                "currency": "USD",
+                "value": 28.82
+            },
+            "product_sku": "PPDP-L",
+            "product_url_key": "plaid-print-double-pockets-drawstring-jogger-pant",
+            "selected_options": [
+                {
+                    "__typename": "OrderItemOption",
+                    "label": "Size",
+                    "value": "L"
+                }
+            ],
+            "quantity_ordered": 5
+        }
+    ],
+    "number": "000000612",
+    "order_date": "2021-07-02 02:34:12",
+    "payment_methods": [
+        {
+            "__typename": "OrderPaymentMethod",
+            "name": "Check / Money order",
+            "type": "checkmo",
+            "additional_data": []
+        }
+    ],
+    "shipments": [
+        {
+            "__typename": "OrderShipment",
+            "id": "MDAwMDAwMDE1",
+            "number": "000000015",
+            "tracking": [
+                {
+                    "__typename": "ShipmentTracking",
+                    "number": "jaskjdfjksdahfjk"
+                }
+            ],
+            "items": [
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "MzI=",
+                    "product_name": "Ripped High Waisted Denim Short",
+                    "product_sku": "RHWDS-S",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 26.33
+                    },
+                    "quantity_shipped": 1
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "MzM=",
+                    "product_name": "Skinny Denim Short",
+                    "product_sku": "SDS-L",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 32.33
+                    },
+                    "quantity_shipped": 4
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "MzQ=",
+                    "product_name": "Drop Shoulder Solid Teddy Jacket",
+                    "product_sku": "DSST-Pink-M",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 59.12
+                    },
+                    "quantity_shipped": 2
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "MzU=",
+                    "product_name": "Dual Pocket Zipper Drawstring Hem Jacket",
+                    "product_sku": "DPZD-S",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 49.88
+                    },
+                    "quantity_shipped": 2
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "MzY=",
+                    "product_name": "Slim Denim Short",
+                    "product_sku": "SDS-M-Black",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 32.33
+                    },
+                    "quantity_shipped": 1
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "Mzc=",
+                    "product_name": "Utility Short ",
+                    "product_sku": "USS-M",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 26.79
+                    },
+                    "quantity_shipped": 1
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "Mzg=",
+                    "product_name": "Drop Shoulder Solid Teddy Jacket",
+                    "product_sku": "DSST-Pink-S",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 59.12
+                    },
+                    "quantity_shipped": 3
+                },
+                {
+                    "__typename": "ShipmentItem",
+                    "id": "Mzk=",
+                    "product_name": "Plaid Print Double Pockets Drawstring Jogger Pant",
+                    "product_sku": "PPDP-L",
+                    "product_sale_price": {
+                        "__typename": "Money",
+                        "currency": "USD",
+                        "value": 28.82
+                    },
+                    "quantity_shipped": 5
+                }
+            ]
+        }
+    ],
+    "shipping_address": {
+        "__typename": "OrderAddress",
+        "city": "Ha Noi",
+        "country_code": "AS",
+        "firstname": "Nguyễn Văn ",
+        "lastname": "Trí",
+        "postcode": "1000",
+        "region": "Norts",
+        "street": [
+            "115 Định Công"
+        ],
+        "telephone": "0971010422"
+    },
+    "shipping_method": "Free Shipping - Free",
+    "status": "Complete",
+    "total": {
+        "__typename": "OrderTotal",
+        "discounts": [
+            {
+                "__typename": "Discount",
+                "amount": {
+                    "__typename": "Money",
+                    "currency": "USD",
+                    "value": 150.85
+                }
+            }
+        ],
+        "grand_total": {
+            "__typename": "Money",
+            "currency": "USD",
+            "value": 603.38
+        },
+        "subtotal": {
+            "__typename": "Money",
+            "currency": "USD",
+            "value": 754.23
+        },
+        "total_shipping": {
+            "__typename": "Money",
+            "currency": "USD",
+            "value": 0
+        },
+        "total_tax": {
+            "__typename": "Money",
+            "currency": "USD",
+            "value": 0
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/Newsletter/newsletter.module.css';
+    composes: max-w-desktop_xl from global;
+    display: flex;
+    justify-content: space-between;
+    height: 146px;
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 30px;
+}
+
+.titleSection .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--venia-secondary-color-text);
+}
+
+.titleSection .message {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    display: flex;
+    align-items: center;
+    width: 320px;
+    color: var(--venia-secondary-color-text);
+}
+
+.subscribe_link {
+    composes: subscribe_link from '@tigrensolutions/core/src/components/Newsletter/newsletter.module.css';
+    position: static;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 149px;
+    height: 50px;
+    background: #D77601;
+    border-radius: 4px;
+    min-height: 50px;
+}
+
+.subscribe_link span {
+    margin: auto;
+}
+
+
+.form {
+    composes: form from '@tigrensolutions/core/src/components/Newsletter/newsletter.module.css';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.root input[class*="textInput-input"] {
+    border: 1px solid #646464;
+    border-radius: 4px;
+    width: 522px;
+    height: 50px;
+}
+
+.form p[class*="message-root_error"] {
+    position: absolute;
+    bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .root {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

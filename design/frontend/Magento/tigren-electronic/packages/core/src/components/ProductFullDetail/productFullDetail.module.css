@@ -1,0 +1,539 @@
+.root {
+    padding: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        align-items: start;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-areas:
+            'images top'
+            'images title'
+            'images rating'
+            'images shortDescription'
+            'images price'
+            'images errors'
+            'images promotion'
+            'images tierPrices'
+            'images messages'
+            'images options'
+            'images quantity'
+            'images cart'
+            'images moreActions'
+            'images .';
+        grid-template-columns: 580px 1fr;
+        grid-template-rows: repeat(12, min-content) 1fr [fold];
+        padding: 2.5rem 1rem;
+        column-gap: 5%;
+    }
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    grid-area: top;
+    margin-bottom: 12px;
+}
+
+.brand, .sku {
+    font-size: var(--pdf_primary_font_size);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+}
+
+.brand span {
+    color: var(--gray_black_color);
+}
+
+.rating {
+    display: flex;
+    margin: 18px 0;
+    gap: 8px;
+    align-items: center;
+}
+
+.star {
+    width: 77px;
+    height: 15px;
+    overflow: hidden;
+    margin: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.rating span {
+    font-size: var(--global_L_font_size_base);
+    line-height: 1.43;
+    color: var(--gray_text_86);
+}
+
+.shortDescription {
+    grid-area: shortDescription;
+    font-size: var(--pdf_primary_font_size);
+    line-height: 1.71;
+    color: #8e8e8e;
+}
+
+.shortDescription div[class^='richText-root'] {
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.price {
+    display: block;
+    grid-area: price;
+    margin-bottom: 30px;
+}
+
+.section {
+    padding: 1.5rem 0;
+}
+
+.sectionTitle {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    align-items: center;
+    display: grid;
+    grid-area: title;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    line-height: 1.5;
+    padding: 0;
+}
+
+.productName {
+    font-size: var(--pdf_name_font_size);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+}
+
+
+.productPrice {
+    display: block;
+}
+
+.imageCarousel {
+    grid-area: images;
+    grid-column: 1 / 2;
+    grid-row: 1 / fold;
+    margin: 0 auto;
+    max-width: 640px;
+    position: relative;
+}
+
+.socialShare {
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 1px solid #e7e7e7;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialShare p {
+    font-size: var(--pdf_primary_font_size);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #333;
+}
+
+.moreActions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 5px;
+}
+
+.moreActions button[class^='addToListButton-root'] {
+    min-height: unset;
+    max-height: unset;
+    font-size: var(--pdf_primary_font_size);
+}
+
+@media (min-width: 1024px) {
+    .imageCarousel {
+        margin: 0;
+        max-width: 580px;
+    }
+}
+
+.options {
+    grid-area: options;
+    --swatch_width: 26px;
+    --tile_selected_border: 2px solid var(--gray_black_color);
+}
+
+.options > div:last-child {
+    border-bottom: unset;
+}
+
+.options > div:first-child {
+    padding-top: 10px;
+}
+
+.formErrors {
+    composes: section;
+    grid-area: errors;
+}
+
+.quantity {
+    composes: section;
+    grid-area: quantity;
+}
+
+.quantityTitle {
+    composes: title from '~@magento/venia-ui/lib/components/ProductOptions/option.module.css';
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-area: cart;
+
+    --button__height: 40px;
+}
+
+.actions button {
+    width: 100%;
+    font-size: 16px;
+    height: var(--button__height);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.moreActions {
+    grid-area: moreActions;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 25px;
+}
+
+.description {
+    composes: section;
+    grid-column: 1 / span 1;
+    grid-row: fold / span 1;
+}
+
+@media (min-width: 1024px) {
+    .description {
+        align-self: stretch;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.headingTitle {
+    font-size: var(--pdf_heading_tile_font_size);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+
+
+.descriptionTitle {
+    composes: sectionTitle;
+}
+
+.details {
+    composes: section;
+    grid-column: 2 / span 1;
+    grid-row: fold / span 1;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 1fr var(--ralated_product_container_width);
+    grid-gap: 50px;
+    padding: 0 20px;
+}
+
+.information .right {
+    clear: both;
+}
+
+.information .right:empty {
+    display: none;
+}
+
+.tierPrices {
+    padding: 15px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    margin: 10px 0;
+    grid-area: tierPrices;
+}
+
+.tierPrices .heading {
+    font-size: var(--global_L_font_size_base);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.tierPrices ul {
+    margin-top: 3px;
+}
+
+.tierPrices ul li {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #737373;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+.tierPrices ul li:before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #737373;
+    margin-top: 3px;
+}
+
+.price > div[class^='productPrice-root'] {
+    align-items: baseline;
+}
+
+@media (min-width: 1024px) {
+    .details {
+        align-self: stretch;
+        border-top-width: 1px;
+        margin: 0;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.detailsTitle {
+    composes: sectionTitle;
+}
+
+.related {
+    composes: section;
+    border-bottom-width: 0;
+    grid-column: 1 / span 2;
+}
+
+.relatedTitle {
+    composes: sectionTitle;
+}
+
+.quantityRoot {
+    composes: root from '~@tigrensolutions/core/src/components/CartPage/ProductListing/quantity.module.css';
+    grid-template-columns: auto 4rem auto;
+    justify-content: start;
+    width: 140px;
+    max-width: 140px;
+}
+
+.unavailableContainer {
+    align-items: center;
+    background-color: rgb(var(--venia-global-color-gray));
+    color: rgb(var(--venia-global-color-gray-700));
+    column-gap: 0.5rem;
+    display: grid;
+    font-style: italic;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.description div[class*='richContent-root'] div[class*='html-root'] {
+    font-size: var(--pdf_primary_font_size);
+}
+
+.compareButton {
+    composes: root_lowPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    color: var(--primary__color);
+}
+
+.imageCarousel button[class^='image-gallery-thumbnail'] {
+    width: var(--image_gallery_thumbnail_width);
+}
+
+.imageCarousel button[class*='image-gallery-icon']:before {
+    transform: scale(0.7);
+}
+
+@media (max-width: 767px) {
+    .root {
+        --image_gallery_thumbnail_width: 45px;
+        --image_gallery_thumbnail_height: 45px;
+    }
+
+    .imageCarousel {
+        grid-row: unset;
+        margin: unset;
+    }
+
+    .star {
+        width: 75px;
+    }
+}
+
+@media (min-width: 768px)  and (max-width: 1023px) {
+    .root {
+        --image_gallery_thumbnail_width: 90px;
+        --image_gallery_thumbnail_height: 90px;
+    }
+
+    .imageCarousel {
+        grid-row: unset;
+        margin: unset;
+        max-width: unset;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 15px;
+
+        --product_option_padding: 20px 0;
+        --tile_selected_border: 1.5px solid var(--gray_black_color);
+    }
+
+    .imageCarousel {
+        grid-row: unset;
+        margin: unset;
+    }
+
+    .imageCarousel div[class="image-gallery-thumbnails"] div[class="image-gallery-thumbnails-container"] {
+        text-align: left;
+    }
+
+    .information {
+        display: block;
+        padding: 0;
+    }
+
+    .rating span {
+        font-size: var(--global_S_font_size_base);
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rating {
+        margin: 11px 0 18px 0;
+    }
+
+    .options div[class*='option-root']:last-child {
+        border-bottom: none;
+    }
+
+    .actions {
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 12px;
+        grid-template-columns: auto;
+    }
+
+    .information {
+        margin: 0 12px;
+    }
+
+    .information .section {
+        padding: 0;
+    }
+
+    .headingTitle {
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+
+    .description {
+        margin-bottom: 20px;
+    }
+
+    .price {
+        margin-bottom: 20px;
+    }
+
+    .quantity {
+        padding: 10px 0 20px 0;
+    }
+}
+
+:global(.recommended-products img) {
+    width: 100%;
+}
+
+:global(.recommended-products .main-title-content .main-title) {
+    text-align: left;
+}
+
+:global(.recommended-products .main-title-content .view-all-products) {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .information {
+        display: block;
+    }
+
+    .information .right {
+        padding-bottom: 25px;
+        margin-top: 40px;
+        background: #f6f6f6;
+    }
+
+    :global(.recommended-products .main-title-content .view-all-products) {
+        display: block;
+        font-size: 12px;
+    }
+}
+
+.customize {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: root from '../Button/button.module.css';
+    composes: root_highPriority from '../Button/button.module.css';
+}
+
+.root.bundleItem .quantity {
+    display: none;
+}

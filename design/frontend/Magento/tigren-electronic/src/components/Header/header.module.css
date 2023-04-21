@@ -1,0 +1,262 @@
+.toolbar {
+    composes: toolbar from '@tigrensolutions/core/src/components/Header/header.module.css';
+    height: 120px;
+}
+
+.switchers {
+    composes: switchers from '@tigrensolutions/core/src/components/Header/header.module.css';
+    flex-direction: row-reverse;
+}
+
+.headerLink {
+    composes: headerLink from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.switchers > a {
+    font-size: 14px;
+}
+
+.switchers .headerLink {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: unset;
+    font-size: 14px;
+}
+
+.switchersContainer {
+    composes: switchersContainer from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.switchActions {
+    composes: switchActions from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.switchActions > a {
+    display: none;
+}
+
+.secondaryActions {
+    composes: secondaryActions from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.secondaryActions {
+    composes: hidden from global;
+}
+
+.headerBottom {
+    composes: headerBottom from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.messagePromo {
+    composes: messagePromo from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.headerBottom .messagePromo {
+    display: none;
+}
+
+.rightNav {
+    display: flex;
+}
+
+.headerBottom {
+    composes: headerBottom from '@tigrensolutions/core/src/components/Header/header.module.css';
+    height: 68px;
+}
+
+.menuBar {
+    composes: menuBar from '@tigrensolutions/core/src/components/Header/header.module.css';
+    height: 66px;
+}
+
+.menuBar a[class*="megaMenuLink"] {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.menuBar div[class*="megaMenuItem"]:hover a[class*="megaMenuLink"] {
+    text-shadow: none;
+}
+
+.menuBar a[class*="megaMenuLink"]:hover {
+    text-shadow: none;
+}
+
+.headerContact :global(.header-link):before {
+    content: '';
+    width: 37px;
+    height: 36px;
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -27px -25px;
+}
+
+.headerContact div[class*="cmsBlock-root"] {
+    margin: 0;
+    padding-right: 30px;
+}
+
+.headerContact :global(.header-link) {
+    display: flex;
+    column-gap: 10px;
+}
+
+.headerContact :global(.header-link__right) {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContact :global(.header-link__right) span {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+}
+
+.headerContact :global(.header-link__right) a {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.accountActions {
+    composes: accountActions from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.accountActions button[class*="accountTrigger-trigger"] {
+    padding-right: 30px;
+}
+
+.accountActions span[class*="accountTrigger-icon"] {
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -82px -31px;
+    width: 21px;
+    height: 21px;
+}
+
+.accountActions span[class*="accountTrigger-text"] {
+    font-size: 14px;
+    line-height: 19px;
+    row-gap: 5px;
+}
+
+.accountActions span[class*="accountTrigger-text"] * {
+    margin: 0;
+}
+
+.help div[class*="cmsBlock-root"] {
+    margin: 0;
+}
+
+.help :global(.header-help):before {
+    content: '';
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -120px -31px;
+    width: 21px;
+    height: 21px;
+}
+
+.help :global(.header-help) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+}
+
+.help :global(.header-help__right) {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+}
+
+.current {
+    composes: current from '@tigrensolutions/core/src/components/Header/header.module.css';
+}
+
+.current button[class*="currencySwitcher-trigger"] {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.current button[class*="currencySwitcher-trigger"]:after {
+    content: '';
+    display: block;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -236px -40px;
+    width: 8px;
+    height: 5px;
+}
+
+.current span[class*="currencySwitcher-symbol"] {
+    display: none;
+}
+
+.switchActions button[class*="storeSwitcher-trigger"] {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.switchActions div[class*="storeSwitcher-root"] button[class*="storeSwitcher-trigger"]:before {
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -236px -40px;
+    width: 8px;
+    height: 5px;
+}
+
+div[class*="header-messagePromo"] {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    [data-page="/"] div[class*="header-messagePromo"] {
+        display: block;
+    }
+
+    .messagePromo {
+        z-index: 10;
+        position: fixed;
+        bottom: 60px;
+        display: block;
+        --tw-bg-opacity: 1;
+        background-color: #ffffff;
+        font-weight: 400;
+        font-size: 14px;
+        color: #23334C;
+    }
+
+    span[class*="iconClosePromo"] {
+        background-image: var(--background_electronic_image_icon);
+        background-size: var(--background_electronic_image_size);
+        background-position: -362px -160px;
+        width: 20px;
+        height: 17px;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    div[class*="header-toolbar"] {
+        height: 75px !important;
+        justify-content: center;
+    }
+
+    div[class*="header-actions"] {
+        display: none;
+    }
+
+    img[class*="header-logo"] {
+        width: calc(var(--width) / 1.5);
+        height: calc(var(--height) / 1.5);
+    }
+
+    .switchersContainer .switchers {
+        display: none;
+    }
+}

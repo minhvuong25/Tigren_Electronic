@@ -1,0 +1,70 @@
+.contents {
+    display: block;
+    text-align: center;
+}
+
+.root {
+    composes: flex from global;
+    background-color: var(--gray_color_f7);
+    width: 100%;
+}
+
+.button {
+    width: 50%;
+    padding: 8px;
+    font-size: var(--global-font_size_base);
+    font-weight: 600;
+    line-height: 1.85;
+    color: var(--primary__color);
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+.button:nth-child(2) {
+    position: relative;
+}
+
+.button:nth-child(2):before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #e5e5e5;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.buttonSignIn {
+    composes: button;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding-left: 48px;
+}
+
+.buttonSignIn .contents {
+    text-align: left;
+}
+
+.buttonSignIn svg {
+    display: none;
+}
+
+.buttonSignIn {
+    composes: icon-sprite-before from global;
+}
+
+.buttonSignIn:before {
+    width: 18px;
+    height: 22px;
+    display: block;
+    background-position: -716px -61px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: scale(0.8);
+    margin-top: -12px;
+}

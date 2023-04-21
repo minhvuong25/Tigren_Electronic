@@ -1,0 +1,96 @@
+.counter {
+    top: -6px;
+    position: absolute;
+    left: 54%;
+    box-sizing: border-box;
+    padding: 0 0.25rem;
+    background-color: var(--orange_text_f60);
+    border-radius: 100px;
+    line-height: 17px;
+    height: 18px;
+    min-width: 18px;
+    font-size: 12px;
+    font-weight: normal;
+    color: var(--white_text_color);
+}
+
+.trigger {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.module.css';
+    align-content: center;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    min-width: 3rem;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--primary__color);
+}
+
+.trigger span[class*="icon-root"] {
+    width: 25px;
+    height: 23px;
+    display: block;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-position: -626px -61px;
+    margin-bottom: 10px;
+}
+
+.trigger span[class*="icon-root"] svg {
+    display: none;
+}
+
+.triggerContainer {
+    align-items: center;
+    display: grid;
+    /* The full height of the site header minus (box shadow height * 2). */
+    height: calc(5rem - 8px);
+}
+
+.triggerContainer_open {
+    composes: triggerContainer;
+    box-shadow: 0 4px rgb(var(--venia-brand-color-1-700));
+}
+
+.link {
+    composes: trigger;
+    display: none;
+}
+
+.linkAll {
+    composes: trigger;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+@media (max-width: 767px) {
+    .triggerContainer {
+        display: none;
+    }
+
+    .link {
+        display: flex;
+    }
+
+    .trigger span[class*="icon-root"] {
+        margin: 0;
+        transform: scale(0.8);
+    }
+
+    .trigger {
+        min-width: unset;
+        padding-left: 15px;
+    }
+
+    .counter {
+        display: none;
+    }
+
+    .linkAll {
+        font-size: 0;
+    }
+}

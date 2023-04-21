@@ -1,0 +1,3 @@
+.root {
+    composes: root from '@tigrensolutions/compare/src/components/ComparePage/comparePage.module.css';
+}

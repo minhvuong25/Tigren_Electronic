@@ -1,0 +1,32 @@
+{
+    "name": "TigrenPWA",
+    "short_name": "TigrenPWA",
+    "start_url": "/",
+    "theme_color": "#FFFFFF",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "description": "Tigren PWA Theme for Magento 2",
+    "icons": [
+        {
+            "src": "/local-static/icons/logo_144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/local-static/icons/logo_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/local-static/icons/logo_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/local-static/icons/logo_maskable_512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

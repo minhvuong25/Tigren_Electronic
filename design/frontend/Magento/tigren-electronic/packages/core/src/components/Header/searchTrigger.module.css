@@ -1,0 +1,62 @@
+.root {
+
+    composes: root from '~@magento/venia-ui/lib/components/clickable.module.css';
+    transition-property: color;
+    transition-duration: 224ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    width: 200px;
+}
+
+.root.navSearchMobile {
+    width: auto;
+}
+
+.label {
+    display: none;
+}
+
+.mobileDialogContent {
+    padding: 0 30px;
+}
+
+.searchIcon {
+    margin-bottom: 5px;
+}
+
+@media (min-width: 641px) {
+    .root {
+        font-size: 0;
+        composes: icon-sprite from global;
+        width: 19px;
+        height: 19px;
+        background-position: -33px -111px;
+    }
+
+    .label {
+        display: initial;
+        margin-inline-start: 0.25rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .root {
+        font-size: 0;
+        composes: icon-sprite from global;
+        width: 19px;
+        height: 19px;
+        background-position: -33px -111px;
+    }
+
+    .searchOpen {
+        background-position: -249px -370px;
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navSearchMobile.openDialog {
+        opacity: 1;
+    }
+}

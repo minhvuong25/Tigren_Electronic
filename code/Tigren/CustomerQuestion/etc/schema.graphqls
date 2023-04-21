@@ -1,0 +1,52 @@
+type Query {
+    question  : Questions @resolver(class: "Tigren\\CustomerQuestion\\Model\\Resolver\\Question")
+    @doc(description: "Return information question")
+    question_search(id : Int) : QuestionSearch
+    @resolver(class: "Tigren\\CustomerQuestion\\Model\\Resolver\\QuestionSearch")
+    @doc(description: "Return information question")
+    question_delete(id: Int ) : QuestionDeleteNotification
+    @resolver(class: "Tigren\\CustomerQuestion\\Model\\Resolver\\Delete")
+    @doc(description: "Delete information question")
+}
+type  QuestionDeleteNotification {
+    success_message: String @doc(description: "Success Message")
+}
+type Mutation {
+    questionCreate(title: String, content : String, customer_name : String): CreateQuestionOutput
+    @resolver(class: "\\Tigren\\CustomerQuestion\\Model\\Resolver\\SaveQuestion")
+    @doc(description: "Return information question")
+    #        questionEdit(id : Int = 3)(title: String, content : String, customer_name : String)
+    #        : EditQuestionOutput
+    #        @resolver(class: "\\Tigren\\CustomerQuestion\\Model\\Resolver\\SaveQuestion")
+    #        @doc(description: "Return information question")
+}
+type  QuestionSearch @doc(description: "Contains an array question items.")
+{
+    items: [QuestionSearchs] @doc(description: "An array of question.")
+}
+type QuestionSearchs @doc(description: "Contains details about a specific question.")
+{
+    title: String
+    customer_name: String
+    content: String
+    created_at: String
+    updated_at: String
+}
+
+type  CreateQuestionOutput {
+    success_message: String @doc(description: "Success Message")
+}
+
+type Questions @doc(description: "Contains an array question items.") {
+    items: [Question] @doc(description: "An array of question.")
+}
+
+type Question @doc(description: "Contains details about a specific question.")
+{
+    entity_id: String
+    title: String
+    customer_name: String
+    content: String
+    created_at: String
+    updated_at: String
+}

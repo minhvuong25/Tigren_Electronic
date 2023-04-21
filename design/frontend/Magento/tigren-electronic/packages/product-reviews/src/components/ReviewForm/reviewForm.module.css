@@ -1,0 +1,360 @@
+.root {
+    padding: 30px 11.6px 40px 35px;
+    background-color: var(--gray_color_f7);
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    position: relative;
+
+    --review_image_width: 90px;
+    --review_image_height: 90px;
+    --review_image_border: 1px solid #d7d6d6;
+    --review_image_border_radius: 3px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url('~@tigrensolutions/product-reviews/src/static/images/close-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.title {
+    composes: title from '../productReviews.module.css';
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.formTitle {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+}
+
+.formTitle .value {
+    font-weight: 600;
+}
+
+
+.ratingField {
+    composes: field;
+    margin-top: 20px;
+}
+
+.ratingField div[class*='field-root'] {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.ratingField div[class*='field-root'] p[class*='message-root_error'] {
+    margin: 0;
+    padding: 0;
+}
+
+.ratingField div[class*='field-root'] label[class*='field-label'] {
+    width: 50px;
+}
+
+.itemClose {
+    position: absolute;
+}
+
+.provinceSelect select {
+    outline: none;
+    height: 40px;
+    border: solid 1px #e9e8e8;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 0 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+.selectItemProvince {
+    width: 100%;
+    position: relative;
+}
+
+.selectItemProvince:before {
+    display: inline-block;
+    content: '';
+    width: 11px;
+    height: 6px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    background-position: -188px -83px;
+    background-size: 768px auto;
+    background-repeat: no-repeat;
+    background-image: var(--background_image_icon);
+}
+
+.fieldCheckbox {
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.fieldCheckbox + .fieldCheckbox {
+    padding-top: 0;
+}
+
+.fieldCheckbox label {
+    margin: 0 0 0.5rem 0;
+}
+
+.signInMessage {
+    margin: 2rem 0;
+    background: #f7f1de;
+    padding: 0.5rem;
+    color: #6f5f2f;
+}
+
+.successMessage {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    background: rgba(var(--venia-global-color-teal-light));
+    padding: 0.5rem;
+    color: var(--highlight__color);
+}
+
+.successMessage svg {
+    stroke: var(--highlight__color);
+    margin-right: 0.5rem;
+}
+
+.img {
+    width: var(--review_image_width);
+    height: var(--review_image_height);
+    border: var(--review_image_border);
+    border-radius: var(--review_image_border_radius);
+    object-fit: cover;
+    display: block;
+}
+
+.wrapImg {
+    display: flex;
+    align-items: center;
+}
+
+.helper {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #868686;
+    display: block;
+    margin-top: 12px;
+}
+
+.wrapImgPer {
+    margin-right: 10px;
+    position: relative;
+}
+
+.itemClose {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #cdcdcd;
+    right: -5px;
+    top: -5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.itemClose:before, .itemClose:after {
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    content: ' ';
+    height: 10px;
+    width: 1px;
+    background-color: #000;
+}
+
+.itemClose:before {
+    transform: rotate(45deg);
+}
+
+.itemClose:after {
+    transform: rotate(-45deg);
+}
+
+.placeHolderImg {
+    width: var(--review_image_width);
+    cursor: pointer;
+    height: var(--review_image_height);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--review_image_border_radius);
+    border: var(--review_image_border);
+}
+
+.placeHolderImg {
+    margin-right: 10px;
+    margin-top: 0 !important;
+    background: white;
+}
+
+.placeHolderImg > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.placeHolderImg > div > div[class*='indicator-root'] {
+    margin: 0;
+    height: max-content;
+    display: block;
+}
+
+.placeHolderImg h5 {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #f60;
+}
+
+.placeHolderImg:hover h5 {
+    border-bottom: 1px solid var(--highlight__color);
+
+}
+
+.inputHide {
+    display: none;
+}
+
+.button {
+    max-width: 200px;
+}
+
+.ratingNoMargin {
+    margin-top: 0 !important;
+}
+
+.guild {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: var(--venia-global-fontSize-base);
+    color: var(--tigren-pwa-color-999999);
+}
+
+.form > button {
+    min-width: 180px;
+}
+
+@media (max-width: 768px) {
+    .root {
+        max-width: inherit;
+        margin: 0;
+        padding: 0 15px 32px;
+    }
+
+    .helper {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .root label {
+        margin-right: 0;
+    }
+
+    .field textarea {
+        border-radius: 4px;
+        font-size: 15px;
+    }
+
+    .field:first-child label {
+        margin-top: 0;
+    }
+
+    .placeHolderImg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .placeHolderImg h5 {
+        font-size: 13px;
+    }
+
+    .placeHolderImg span {
+        width: 20px;
+        height: 20px;
+        background-position: -469px -164px;
+        background-size: 500px auto;
+    }
+
+    .guild {
+        font-size: 13px;
+    }
+
+    .wrapImg {
+        flex-wrap: wrap;
+        grid-gap: 10px;
+    }
+
+    .wrapImgPer {
+        margin-right: 0;
+        border: solid 1px #e9e8e8;
+        border-radius: 4px;
+        padding: 4px;
+        box-sizing: border-box;
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .closeButton {
+        transform: scale(0.7);
+    }
+
+    .formTitle {
+        font-size: 13px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        padding-top: 15px;
+        gap: 10px;
+    }
+
+    .placeHolderImg h5 {
+        font-size: 11px;
+    }
+
+    .placeHolderImg > div {
+        gap: 0;
+    }
+
+    .submitReview {
+        min-width: 150px;
+        font-size: 13px;
+    }
+}

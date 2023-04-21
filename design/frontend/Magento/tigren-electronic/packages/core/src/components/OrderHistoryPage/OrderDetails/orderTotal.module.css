@@ -1,0 +1,79 @@
+.root {
+    display: grid;
+    padding: 18px;
+    border-radius: 0 0 10px 10px;
+    background: #f7f7f7;
+    gap: 13px;
+}
+
+
+.discount, .subTotal, .tax, .shipping, .total {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.shipping span:last-child,
+.total span:last-child,
+.tax span:last-child,
+.discount span:last-child,
+.subTotal span:last-child {
+    flex-basis: 150px;
+    text-align: right;
+}
+
+.subTotal span,
+.total span,
+.tax span,
+.shipping span,
+.discount > span:first-child {
+    font-size: 14px;
+    color: var(--black-color-31);
+}
+
+.discount > span:last-child {
+    font-size: 14px;
+    color: var(--price_list_special-color);
+}
+
+.total .priceTotal span {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .root {
+        border: none;
+        border-radius: 0rem;
+        padding: 1rem 14px;
+    }
+
+    .shipping span:last-child,
+    .total span:last-child,
+    .tax span:last-child,
+    .discount span:last-child,
+    .subTotal span:last-child {
+        flex-basis: unset;
+    }
+
+    .discount, .subTotal, .tax, .shipping, .total {
+        justify-content: space-between;
+    }
+
+    .subTotal span,
+    .total span,
+    .tax span,
+    .shipping span,
+    .discount span {
+        font-size: 13px;
+    }
+
+    .total .priceTotal span {
+        font-size: 15px !important;
+        font-weight: 500;
+    }
+
+    .root > div:last-child {
+        margin-bottom: 0;
+    }
+}

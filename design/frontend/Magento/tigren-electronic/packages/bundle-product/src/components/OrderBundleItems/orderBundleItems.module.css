@@ -1,0 +1,49 @@
+.rootBundleItem {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.bundleOptions {
+
+}
+
+.bundleOptions + *[class*="options"] {
+    display: none;
+}
+
+.bundleOptions * {
+    font-size: 13px;
+}
+
+.wrapContent {
+
+}
+
+.wrapName {
+
+}
+
+.price {
+
+}
+
+.quantity {
+
+}
+
+.expandButton {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.expandButton:hover {
+    color: var(--orange_text_f60);
+}
+
+@media (max-width: 767px) {
+    .bundleOptions.open {
+        width: 100%;
+        border-bottom: 1px solid var(--gray_color_6d);
+    }
+}

@@ -1,0 +1,6 @@
+.root {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+}

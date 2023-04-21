@@ -1,0 +1,160 @@
+@value info: rgb(0, 104, 108);
+
+@value warning: rgb(var(--venia-global-color-orange));
+
+@value error: rgb(220, 20, 60);
+
+@value success: rgb(var(--venia-global-color-green-500));
+
+.root {
+    color: rgb(33, 33, 33);
+    display: grid;
+    gap: 0;
+    grid-template-areas: 'icon message controls';
+    grid-auto-columns: min-content auto min-content;
+    justify-items: start;
+    margin: 0 auto;
+    max-width: 80vw;
+
+
+    padding: 25px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px 0 rgba(143, 143, 143, 0.5);
+    background-color: #fff;
+    min-height: 78px;
+    align-items: center;
+    position: relative;
+}
+
+.icon {
+    grid-area: icon;
+}
+
+.infoToast {
+    composes: root;
+}
+
+.infoToast > .icon {
+    --stroke: info;
+}
+
+.infoToast > .icon {
+    background-position: -748px -293px;
+    width: 24px;
+    height: 24px;
+}
+
+.warningToast {
+    composes: root;
+}
+
+.warningToast > .icon {
+    background-position: -679px -372px;
+    width: 24px;
+    height: 24px;
+}
+
+.errorToast {
+    composes: root;
+}
+
+.errorToast > .icon {
+    background-position: -724px -372px;
+    width: 24px;
+    height: 24px;
+}
+
+.successToast {
+    composes: root;
+}
+
+.successToast > .icon {
+    background-position: -748px -293px;
+    width: 24px;
+    height: 24px;
+}
+
+.message {
+    grid-area: message;
+    display: flex;
+
+    font-size: var(--global_L_font_size_base);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    color: var(--primary__color);
+
+    /* For wrapping...*/
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    padding-left: 12px;
+}
+
+.actions {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.controls {
+    grid-area: controls;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -35px;
+}
+
+.controls:hover {
+    background-color: #ddd;
+}
+
+.controls:empty {
+    display: none;
+}
+
+.actionButton {
+    font-weight: 600;
+    text-decoration: underline;
+    color: rgb(33, 33, 33);
+}
+
+.dismissButton {
+    color: rgb(112, 112, 112);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .root {
+        padding: 13px 40px;
+    }
+
+    .controls {
+        top: -8px;
+        right: -35px;
+    }
+
+    .name, .message {
+        font-size: var(--global_S_font_size_base);
+    }
+
+    .infoToast > .icon {
+        transform: scale(0.8);
+    }
+}

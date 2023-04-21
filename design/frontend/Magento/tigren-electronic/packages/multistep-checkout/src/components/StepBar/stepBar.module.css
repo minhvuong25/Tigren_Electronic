@@ -1,0 +1,69 @@
+.root {
+
+}
+
+.content {
+
+}
+
+.button {
+    margin: auto;
+    border-radius: 0;
+    margin-top: 30px;
+    color: #FFFFFF;
+    background: var(--button_deactive_background_color);
+    font-size: var(--venia-global-fontSize-100);
+    font-weight: 700;
+    line-height: 1.25rem;
+    max-width: 100%;
+    min-width: 10rem;
+    min-height: 2.5rem;
+    outline: none;
+    padding: calc(0.5rem + 1px) 1.5rem calc(0.5rem - 1px);
+    text-transform: uppercase;
+    transition-duration: 256ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: var(--venia-global-anim-standard);
+}
+
+.button.shippingAddress {
+    clip-path: polygon(0% 0%, 100% 0, 100% 0%, 90% 100%, 0 100%, 0% 50%);
+}
+
+
+.button.shippingMethod {
+    -ms-transform: skewX(-30deg);
+    -webkit-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+}
+
+.button.payment {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
+    border-radius: 0;
+}
+
+.button.shippingMethod span {
+    -ms-transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    transform: skewX(15deg);
+    display: inline-block;
+}
+
+
+.button.review {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
+    border-radius: 0;
+    display: none;
+}
+
+.active {
+    background: var(--button__background);
+    border-color: var(--button__background);
+
+}
+
+@media (max-width: 767px) {
+    .root {
+        display: none;
+    }
+}

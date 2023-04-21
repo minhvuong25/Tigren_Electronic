@@ -1,0 +1,55 @@
+.root {
+    padding-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.root button {
+    min-width: 220px;
+}
+
+.img {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80px;
+}
+
+.wrapText {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.wrapText h3, .wrapText h5 {
+    font-size: 16px;
+    white-space: nowrap;
+    color: var(--black-color-31);
+}
+
+.wrapText h3 {
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .root {
+        padding-top: 20px;
+    }
+
+    .img {
+        max-width: 53px;
+    }
+
+    .wrapText {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .wrapText h3 {
+        font-size: 14px;
+    }
+
+    .wrapText h5 {
+        font-size: 13px;
+    }
+}

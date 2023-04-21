@@ -1,0 +1,33 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CartPage/ProductListing/productListing.module.css';
+    border: none;
+    border-bottom: solid 1px var(--cart-border_color);
+}
+
+.product {
+    composes: product from '@tigrensolutions/core/src/components/CartPage/ProductListing/productListing.module.css';
+}
+
+.price {
+    composes: price from '@tigrensolutions/core/src/components/CartPage/ProductListing/productListing.module.css';
+}
+
+@media (min-width: 768px) {
+    .title {
+        composes: title from '@tigrensolutions/core/src/components/CartPage/ProductListing/productListing.module.css';
+        grid-template-columns: 48% 15% 20% 17%;
+        padding: 0;
+    }
+
+    .price:last-child {
+        text-align: right;
+    }
+
+    .product {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

@@ -1,0 +1,59 @@
+.root {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #31353b
+
+}
+
+.categories {
+    margin-top: 10px;
+}
+
+.categories p {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #31353b;
+}
+
+.list {
+    margin-top: 1rem;
+    display: none;
+}
+
+.listItem {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.listItem:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.imageContainer {
+    margin-bottom: 22px;
+}
+
+.image {
+    height: 120px;
+    width: 120px;
+    max-width: 120px;
+}

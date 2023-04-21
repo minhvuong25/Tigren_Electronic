@@ -1,0 +1,189 @@
+.action {
+    composes: action from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.edit {
+    composes: edit from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+    text-decoration-line: underline;
+}
+
+.name {
+    composes: name from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    color: #333333;
+}
+
+.remove {
+    composes: remove from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.delete {
+    composes: delete from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.action .remove {
+    text-transform: capitalize;
+    margin-left: 10px;
+    text-decoration-line: underline;
+}
+
+.action .remove:before {
+    display: none;
+}
+
+.priceTotal {
+    composes: priceTotal from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    text-align: right;
+}
+
+.price {
+    composes: price from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.productPrice {
+    composes: productPrice from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.specialPrice {
+    composes: specialPrice from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.price .specialPrice {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.price .productPrice {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.action button[class*="addToListButton"] {
+    display: none;
+}
+
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.sku {
+    composes: sku from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.options {
+    composes: options from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.image {
+    composes: image from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.details {
+    composes: details from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+.quantity {
+    composes: quantity from '@tigrensolutions/core/src/components/CartPage/ProductListing/product.module.css';
+}
+
+@media (min-width: 768px) {
+    .root {
+        grid-template-columns: 48% 15% 20% 17%;
+        margin: 0 0;
+    }
+
+    .delete {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .root {
+        grid-template-areas:
+        'image product'
+        'image product'
+        'image price'
+        'quantity delete';
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .name {
+        grid-area: name;
+    }
+
+    .sku {
+        grid-area: sku;
+    }
+
+    .options {
+        grid-area: options;
+    }
+
+    .details .action {
+        grid-area: action;
+        display: none;
+    }
+
+    .price {
+        grid-area: price;
+    }
+
+    .delete {
+        grid-area: delete;
+    }
+
+    .quantity {
+        grid-area: quantity;
+        margin-left: 20px;
+    }
+
+    .edit {
+        background-position: -420px -96px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 28px;
+        display: flex;
+    }
+
+    .edit span {
+        text-indent: -9999px;
+    }
+
+    .edit:before {
+        background-position: -351px -104px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 500px;
+    }
+
+    .image {
+        height: 110px;
+        width: 140px;
+    }
+
+    .remove span {
+        display: none;
+    }
+
+    .remove:before {
+        background-position: -420px -126px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .price .productPrice,
+    .price .specialPrice {
+        font-weight: 400;
+        font-size: 14px;
+        color: #888888;
+    }
+}

@@ -1,0 +1,216 @@
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    --font_size: 14px;
+    --gray_color: #a3a3a3;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: var(--primary_text_color);
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+.title span {
+    font-size: 0;
+}
+
+.title span:after {
+    content: '*';
+    display: inline-block;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: var(--input-error_color);
+    font-size: var(--input_font-size);
+}
+
+.optionRenderRadio label {
+    cursor: pointer;
+}
+
+.optionRenderRadio input + label {
+    height: 42px;
+    margin: 0 15px 15px 0;
+    padding: 12px 20px;
+    border: solid 1px #d5d5d5;
+    font-size: var(--font_size);
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: var(--primary_text_color);
+}
+
+.optionRenderRadio input:focus + label,
+.optionRenderRadio input:checked + label {
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+.optionRenderRadio input {
+    display: none;
+}
+
+.optionRenderCheckbox {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.optionRenderCheckbox input {
+    display: none;
+}
+
+.optionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: var(--font_size);
+    cursor: pointer;
+}
+
+.optionRenderCheckbox label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.optionRenderCheckbox label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+}
+
+.optionRenderCheckbox input:checked + label:after,
+.optionRenderCheckbox input:focus + label:after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(var(--venia-global-color-black));
+    position: absolute;
+    left: 3px;
+}
+
+.optionRenderDowndown {
+    max-width: 500px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.optionRenderMutiSelect div[class$='multiValue'] div:nth-child(2):hover {
+    background-color: var(--primaryColor);
+    color: var(--hoverColor);
+}
+
+.optionRenderMutiSelect {
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.optionRenderMutiSelect div[class$='placeholder'],
+.optionRenderDowndown div[class$='placeholder'] {
+    font-size: var(--font_size);
+
+}
+
+.optionRenderMutiSelect div[class$='option'],
+.optionRenderDowndown div[class$='option'] {
+    font-size: var(--font_size);
+}
+
+.optionRenderMutiSelect div[class$='control'],
+.optionRenderDowndown div[class$='control'] {
+    border-color: var(--gray_color);
+    border-radius: 0;
+}
+
+.optionRenderMutiSelect div[class$='singleValue'],
+.optionRenderDowndown div[class$='singleValue'] {
+    font-size: var(--font_size);
+}
+
+.optionRenderDowndown div[class$='indicatorContainer'] svg,
+.optionRenderMutiSelect div[class$='indicatorContainer'] svg {
+    width: 15px;
+    height: 15px;
+}
+
+.optionRenderMutiSelect div[class$='IndicatorsContainer'] span[class$='indicatorSeparator'],
+.optionRenderDowndown div[class$='IndicatorsContainer'] span[class$='indicatorSeparator'] {
+    display: none;
+}
+
+.optionRenderMutiSelect div[class$='MenuList']:empty {
+    display: none;
+}
+
+.optionRenderMutiSelect div[class$='menu']:empty {
+    display: none;
+}
+
+.noOptionsMessage {
+    padding-left: 10px;
+    font-size: var(--font_size);
+    color: #505050;
+}
+
+.exclPrice {
+    font-size: var(--price_list_old-size);
+    color: var(--price_list_old-color);
+}
+
+@media screen and (max-width: 767px) {
+    .root {
+        --font_size: 12px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .optionRenderRadio input + label {
+        height: 37px;
+        padding: 10px 14px;
+        margin: 0 10px 10px 0;
+    }
+
+    .optionRenderMutiSelect, .optionRenderDowndown {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .optionLabel {
+        gap: 5px;
+    }
+
+    .optionRenderCheckbox label:before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .optionRenderCheckbox input:checked + label:after,
+    .optionRenderCheckbox input:focus + label:after {
+        width: 12px;
+        height: 12px;
+        left: 2px;
+    }
+}

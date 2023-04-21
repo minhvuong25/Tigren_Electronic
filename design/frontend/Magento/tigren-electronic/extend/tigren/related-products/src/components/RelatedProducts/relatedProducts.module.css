@@ -1,0 +1,20 @@
+.title {
+    composes: title from '@tigrensolutions/related-products/src/components/relatedProducts.module.css';
+}
+
+.title:before {
+    display: inline-block;
+    content: '';
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -270px -161px;
+    width: 18px;
+    height: 15px;
+    margin-right: 6px;
+}
+
+@media (max-width: 767px) {
+    .title:before {
+        display: none;
+    }
+}

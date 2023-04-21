@@ -1,0 +1,30 @@
+@media (max-width: 767px) {
+    .root {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .root {
+        flex-basis: 30%;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .root {
+        composes: root_button from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+        border-radius: 5px;
+        height: 34px;
+        min-height: 34px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .root {
+        border-radius: 0;
+        height: 34px;
+        width: 180px;
+    }
+}

@@ -1,0 +1,52 @@
+.submenu {
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 50%);
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    padding: 20px 10px;
+    right: 0;
+    top: 100%;
+    border-radius: 10px;
+}
+
+.submenu::before {
+    box-shadow: inset 0 2px rgb(var(--venia-global-color-gray-100));
+    content: '';
+    height: 10px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.submenu_active {
+    composes: submenu;
+    display: flex;
+}
+
+.submenuItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--venia-global-maxWidth);
+    width: 100%;
+}
+
+
+.submenuItems > div > a {
+    font-size: 16px;
+}
+
+.submenuItems a {
+    font-size: 14px;
+}
+
+.submenuItems > div {
+    width: 25%;
+}

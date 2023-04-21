@@ -1,0 +1,21 @@
+{
+  "name": "@tigrensolutions/buildpack",
+  "version": "1.1.1",
+  "description": "Extend for the @magento/pwa-buildpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@principalstudio/html-webpack-inject-preload": "~1.2.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-minimizer-webpack-plugin": "^1.0",
+    "mini-css-extract-plugin": "^1.6",
+    "sass-loader": "~10.1.0"
+  },
+  "devDependencies": {
+    "@magento/pwa-buildpack": "~11.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

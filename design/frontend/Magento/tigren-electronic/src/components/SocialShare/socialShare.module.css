@@ -1,0 +1,14 @@
+.socialShare {
+    composes: socialShare from '@tigrensolutions/core/src/components/SocialShare/socialShare.module.css';
+
+}
+
+.socialShare .iconLinkedin button span {
+    background-image: var(--background_electronic_image_icon);
+    background-position: -490px -175px;
+}
+
+.socialShare .iconEmail button span {
+    background-image: var(--background_electronic_image_icon);
+    background-position: -326px -228px;
+}

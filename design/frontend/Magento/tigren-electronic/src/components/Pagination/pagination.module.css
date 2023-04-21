@@ -1,0 +1,13 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/Pagination/pagination.module.css';
+}
+
+.root button[aria-label="move to the first page"],
+.root button[aria-label="move to the previous page"],
+.root button[aria-label="move to the next page"],
+.root button[aria-label="move to the last page"] {
+    border: 1px solid #D6D6D6;
+    border-radius: 0;
+    height: 40px;
+    width: 40px;
+}

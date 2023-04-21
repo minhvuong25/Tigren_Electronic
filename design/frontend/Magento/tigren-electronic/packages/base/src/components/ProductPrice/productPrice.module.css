@@ -1,0 +1,97 @@
+.root {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.root p {
+    margin: 0;
+}
+
+.productPrice {
+    font-size: var(--price_list_regular-size);
+    color: var(--price_list_regular-color);
+    font-weight: var(--price_font_weight);
+    margin: 0;
+}
+
+.specialPrice {
+    font-size: var(--price_list_special-size);
+    color: var(--price_list_special-color);
+    font-weight: var(--price_font_weight);
+    margin: 0;
+}
+
+.oldPrice {
+    font-size: var(--price_list_old-size);
+    color: var(--price_list_old-color);
+    text-decoration: line-through;
+}
+
+.priceList .productPrice {
+    font-size: var(--price_list_regular-size);
+}
+
+.priceList .specialPrice {
+    font-size: var(--price_list_special-size);
+}
+
+.priceList .oldPrice {
+    font-size: var(--price_list_old-size);
+}
+
+.price .productPrice {
+    font-size: var(--price_product_regular-size);
+}
+
+.price .specialPrice {
+    font-size: var(--price_product_special-size);
+}
+
+.price .oldPrice {
+    font-size: var(--price_list_old-size);
+}
+
+.priceSearch .productPrice {
+    font-size: var(--search-price_list_regular-size);
+}
+
+.priceSearch .specialPrice {
+    font-size: var(--search-price_list_special-size);
+}
+
+.priceSearch .oldPrice {
+    font-size: var(--search-price_list_old-size);
+}
+
+.priceCart .productPrice {
+    font-size: var(--cart-price_list_regular-size);
+    font-weight: var(--cart-price_font_weight);
+}
+
+.priceCart .specialPrice {
+    font-size: var(--cart-price_list_special-size);
+    font-weight: var(--cart-price_font_weight);
+}
+
+.priceCart .oldPrice {
+    font-size: var(--cart-price_list_old-size);
+}
+
+.priceCart {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.exclPrice {
+    font-size: var(--price_list_old-size);
+    color: var(--price_list_old-color);
+}
+
+@media (max-width: 767px) {
+
+}
+

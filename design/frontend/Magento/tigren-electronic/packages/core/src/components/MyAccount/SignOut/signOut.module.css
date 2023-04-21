@@ -1,0 +1,27 @@
+.root {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: var(--global_L_font_size_base);
+}
+
+@media (max-width: 767px) {
+    .root {
+        margin: 20px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 122x;
+    }
+}

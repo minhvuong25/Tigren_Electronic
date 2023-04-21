@@ -1,0 +1,55 @@
+.root {
+    color: rgb(var(--venia-global-color-text));
+    display: grid;
+    align-content: start;
+}
+
+.label {
+    align-items: center;
+    display: flex;
+    font-size: var(--input-label_font-size);
+    color: var(--input-label_color);
+    font-weight: var(--input-label_font-weight);
+    justify-content: flex-start;
+    line-height: normal;
+    padding-bottom: var(--input-label_padding-bottom);
+}
+
+.input {
+    background: white;
+    border: 1px solid var(--input-border_color);
+    border-radius: var(--input-border-radius);
+    color: var(--input_color);
+    display: inline-flex;
+    flex: 0 0 100%;
+    font-size: var(--input_font-size);
+    height: var(--input_height);
+    line-height: var(--input_height);
+    margin: 0;
+    max-width: 100%;
+    padding: 0 var(--input-padding);
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+.input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.optional {
+    color: rgb(var(--venia-global-color-gray-700));
+    font-size: var(--venia-global-fontSize-100);
+    font-weight: var(--venia-global-fontWeight-normal);
+    text-align: right;
+    flex-grow: 1;
+}
+
+.requiredSymbol {
+    color: var(--input-error_color);
+    font-size: var(--input_font-size);
+}
+
+.hidden {
+    display: none;
+}

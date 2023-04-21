@@ -1,0 +1,182 @@
+.root {
+}
+
+.imageContainer {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    height: 100%;
+}
+
+.currentImage {
+    background-color: rgb(var(--venia-grey));
+    border-radius: 2px;
+    width: 100%;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.chevron-left,
+.chevron-right {
+    display: flex;
+    outline: none;
+    z-index: 1;
+}
+
+.chevron-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.fullscreen button.image-gallery-custom-action {
+    display: block;
+}
+
+button.image-gallery-custom-action {
+    display: none;
+}
+
+button.image-gallery-custom-action .zoom-in {
+    color: red;
+}
+
+@media (min-width: 1024px) {
+    .imageContainer {
+        display: block;
+    }
+
+    .imageContainer img {
+    }
+}
+
+@media (max-width: 1023px) {
+    .imageContainer {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .imageContainer img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    /*.imageContainer > div[class*='fullscreen-modal'] div[class*='image-gallery-custom-action'] {*/
+    /*    top: 10px !important;*/
+    /*}*/
+    /*.imageContainer > div[class*='fullscreen-modal'] div[class*='image-gallery-custom-action'] button {*/
+    /*    margin-bottom: 20px;*/
+    /*}*/
+    div[class*='fullscreen'] div[class*='image-gallery-custom-action'] {
+        display: none !important;
+    }
+
+    div[class*='fullscreen-modal'] button[class*='image-gallery-fullscreen-button'] {
+        width: 25px !important;
+        height: 25px !important;
+        background-image: url('~@tigrensolutions/gallery-zoom/src/extendStyles/images/scale-down.svg') !important;
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        top: 50px;
+        right: 27px !important;
+    }
+
+    div[class*='fullscreen-modal'] button[class*='image-gallery-fullscreen-button'] svg {
+        display: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .imageContainer div[class*='image-gallery-bullets'] {
+        z-index: 2;
+    }
+
+    .imageContainer svg[class*='image-gallery-svg'] {
+        background-image: url('~@tigrensolutions/gallery-zoom/src/extendStyles/images/scale-up.svg');
+        background-repeat: no-repeat;
+    }
+
+    .imageContainer svg[class*='image-gallery-svg'] path {
+        display: none !important;
+    }
+
+}
+
+@media print {
+    .imageContainer {
+        min-height: 0;
+    }
+}
+
+.sliderWrapper {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.sliderPrevArrow,
+.sliderNextArrow {
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease-in-out;
+    transition-duration: 0.3s;
+    transition-property: transform, opacity, background-color;
+    width: 50px;
+    display: none;
+}
+
+.sliderWrapper:hover .sliderPrevArrow,
+.sliderWrapper:hover .sliderNextArrow {
+    display: block;
+}
+
+.prevArrButton,
+.nextArrButton {
+    outline: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    color: #cccccc;
+}
+
+.sliderPrevArrow {
+    left: 0;
+}
+
+.sliderNextArrow {
+    right: 0;
+}
+
+.galleryImages {
+    display: grid;
+    grid-area: items;
+    grid-gap: 0.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 0.5rem;
+}
+
+.imageZoomt {
+    display: block;
+}
+
+.image-gallery-custom-action {
+
+}

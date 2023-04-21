@@ -1,0 +1,27 @@
+.contained {
+    composes: contained from '@magento/pagebuilder/lib/ContentTypes/Row/row.module.css';
+}
+
+.contained:global(.homepage-tag) div[class*="columnGroup-root"] {
+    margin-top: 30px;
+    border: 1px solid #D6D6D6;
+    padding: 34px 100px;
+    column-gap: 50px;
+    margin-bottom: 24px;
+}
+
+.contained:global(.homepage-tag) div[class*="columnGroup-root"] > *:not(:last-child) {
+    border-right: 1px solid #D6D6D6;
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+    .contained:global(.homepage-tag) {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .contained:global(.homepage-tag) {
+        display: none;
+    }
+}

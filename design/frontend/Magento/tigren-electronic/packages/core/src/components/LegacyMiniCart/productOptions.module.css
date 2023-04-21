@@ -1,0 +1,61 @@
+.options {
+    font-size: 13px;
+    grid-area: options;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+    max-height: 54px;
+    overflow-y: auto;
+}
+
+.optionLabel {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.optionLabel,
+.optionLabel * {
+    font-size: 13px;
+}
+
+.optionValue {
+    margin-left: 0.25rem;
+}
+
+.expandButton {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: left;
+}
+
+.expandButton:hover {
+    color: var(--orange_text_f60);
+}
+
+*[class*="optionLabel"].showLabel * {
+    font-size: 13px;
+}
+
+*[class*="optionLabel"].showLabel {
+    display: flex;
+}
+
+*[class*="optionLabel"].hideLabel {
+    display: none;
+}
+
+*[class*="productBundle-display"] + *[class*="product-option"] .expandButton,
+*[class*="productBundle-display"] + *[class*="item-option"] .expandButton {
+    display: none;
+}
+
+*[class*="productBundle-options"] + *[class*="product-option"] *[class*="optionLabel"],
+*[class*="productBundle-options"] + *[class*="item-option"] *[class*="optionLabel"] {
+    display: none;
+}
+
+*[class*="productBundle-display"] + *[class*="product-option"] *[class*="optionLabel"],
+*[class*="productBundle-display"] + *[class*="item-option"] *[class*="optionLabel"] {
+    display: flex;
+}

@@ -1,0 +1,30 @@
+.root {
+    border-bottom: var(--product_option_border);
+    margin: var(--product_option_margin);
+    padding: var(--product_option_padding);
+}
+
+.title {
+    font-size: var(--option_title_font_size);
+    color: var(--option_tille_color);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.selection {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.selectionLabel {
+    margin-right: 1rem;
+}
+
+.swatchShimmer .title {
+    width: 50px;
+    height: 50px;
+}

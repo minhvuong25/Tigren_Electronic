@@ -1,0 +1,150 @@
+.root {
+    --content-width: var(--sign-in-popup_content-width);
+
+    height: 0;
+    overflow: visible;
+    left: -100vw;
+    opacity: 0;
+    top: 100%;
+    transition: opacity 192ms var(--venia-global-anim-out),
+    visibility 192ms var(--venia-global-anim-out),
+        /* Adding delay to move container off the screen after previous transitions happened */ left 0s 192ms;
+    visibility: hidden;
+    /* max-width wider than header to let dropdown to move left on wider screens while still staying near the trigger */
+    max-width: calc(var(--venia-global-maxWidth) + var(--content-width) * 2 - 8rem);
+    z-index: 3;
+}
+
+.root_open {
+    composes: root;
+    left: 50%;
+    opacity: 1;
+    transition: opacity 224ms var(--venia-global-anim-in),
+    visibility 224ms var(--venia-global-anim-in), left 0s;
+    visibility: visible;
+}
+
+.contents {
+    background-color: rgb(var(--venia-global-color-background));
+    border-radius: 5px;
+    display: grid;
+    /* These heights may change based on PWA-605 and should be based on 1.5 and 2.5 visible items. */
+    min-height: 20rem;
+    max-height: 35rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: translate3d(0, -8px, 0);
+    transition-duration: 192ms;
+    transition-property: transform;
+    transition-timing-function: var(--venia-global-anim-out);
+    width: var(--content-width);
+    box-shadow: 0 2px 6px 0 rgba(175, 175, 175, 0.5);
+    padding: 20px;
+    z-index: 1;
+}
+
+.contents:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgba(175, 175, 175, 0.2);
+    position: absolute;
+    top: -11px;
+    right: 50px;
+    margin-right: -1px;
+    display: block;
+    z-index: 0;
+    margin-top: -1px;
+}
+
+.contents:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid #fff;
+    position: absolute;
+    top: -10px;
+    right: 50px;
+    display: block;
+    z-index: 1;
+}
+
+.contents_open {
+    composes: contents;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 224ms;
+    transition-timing-function: var(--venia-global-anim-in);
+    z-index: 4;
+}
+
+.createAccount {
+    display: grid;
+    gap: 0.9375rem;
+    justify-items: stretch;
+    padding: 1rem 1.5rem;
+}
+
+.forgotPassword {
+    padding: 2rem;
+}
+
+.loading {
+    padding: 2rem;
+}
+
+.contents span[class*="socialButtons-text"] {
+    display: none;
+}
+
+.contents button[class*="socialButtons-button"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.contents div[class*="socialAuthentication-root"] {
+    margin-bottom: 30px;
+}
+
+.contents span[class*="signIn-title"] {
+    font-size: 16px;
+    color: var(--black-color-31);
+    padding-bottom: 15px;
+    padding-top: 0;
+    border-bottom: 1px solid var(--sign-in-border-color);
+}
+
+.contents div[class*="signIn-root"] {
+    gap: 18px;
+}
+
+.contents form[class*="signIn-form"] {
+    gap: 20px;
+}
+
+.contents div[class*="socialButtons-list"] {
+    justify-content: space-around;
+    max-width: 200px;
+    margin: auto;
+}
+
+.contents button[class*="signIn-createAccount"] {
+    color: var(--theme__base-color);
+}
+
+.close {
+    font-size: 0;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    composes: icon-sprite from global;
+    background-position: -253px -371px;
+}

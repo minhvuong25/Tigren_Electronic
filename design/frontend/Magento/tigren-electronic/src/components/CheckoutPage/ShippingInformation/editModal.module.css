@@ -1,0 +1,52 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/CheckoutPage/ShippingInformation/editModal.module.css';
+}
+
+.root_open {
+    composes: root_open from '@magento/venia-ui/lib/components/CheckoutPage/ShippingInformation/editModal.module.css';
+}
+
+.header {
+    composes: header from '@magento/venia-ui/lib/components/CheckoutPage/ShippingInformation/editModal.module.css';
+}
+
+.headerText {
+    composes: headerText from '@magento/venia-ui/lib/components/CheckoutPage/ShippingInformation/editModal.module.css';
+}
+
+
+@media (max-width: 767px) {
+    .root {
+
+    }
+
+    .root_open {
+        max-width: initial;
+    }
+
+    .header {
+        box-shadow: 0 2px 4px 0 rgb(228 228 228 / 50%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerText {
+        font-size: var(--filter_modal_title_font_size);
+        font-weight: 600;
+        color: #31353b;
+        justify-content: center;
+    }
+
+    .header button {
+        position: absolute;
+        left: 5px;
+        top: 15px;
+        background-position: -416px -25px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .header button span svg {
+        stroke: transparent;
+    }
+}

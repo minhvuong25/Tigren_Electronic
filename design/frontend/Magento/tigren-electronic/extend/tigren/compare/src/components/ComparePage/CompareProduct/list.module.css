@@ -1,0 +1,46 @@
+.heading {
+    composes: heading from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/list.module.css';
+}
+
+.heading {
+    display: block;
+    flex-direction: unset;
+}
+
+.title {
+    composes: title from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/list.module.css';
+}
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapBtnPrint {
+    composes: wrapBtnPrint from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/list.module.css';
+}
+
+.wrapBtnPrint {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .title {
+        position: fixed;
+        top: 1px;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        min-height: 70px;
+        max-width: 100%;
+        font-size: 18px;
+
+    }
+}

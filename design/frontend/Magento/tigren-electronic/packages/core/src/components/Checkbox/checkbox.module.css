@@ -1,0 +1,79 @@
+.root {
+    align-items: flex-start;
+    color: var(--primary__color);
+    display: grid;
+    gap: var(--checkbox_gap);
+    grid-auto-flow: column;
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+    justify-items: center;
+    line-height: 1.5;
+}
+
+.input {
+    -webkit-appearance: none;
+    background: none;
+    border: 1px solid var(--checkbox_border-color);
+    border-radius: var(--checkbox_border-radius);
+    cursor: pointer;
+    grid-area: input;
+    height: var(--checkbox_height);
+    width: var(--checkbox_width);
+    position: relative;
+    margin-top: 4px;
+}
+
+.input:checked {
+    background: var(--checkbox-active_color);
+    border-color: var(--checkbox-active_color);
+}
+
+.input:checked:after {
+    -webkit-transform: rotate(-55deg);
+    -moz-transform: rotate(-55deg);
+    -ms-transform: rotate(-55deg);
+    transform: rotate(-55deg);
+    border-left: 2px solid var(--checkbox-active-tick_color);
+    border-bottom: 2px solid var(--checkbox-active-tick_color);
+    content: '';
+    height: var(--checkbox-active-tick_height);
+    width: var(--checkbox-active-tick_width);
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.input:focus {
+    box-shadow: none;
+}
+
+.label {
+    cursor: pointer;
+    font-size: var(--input_font-size);
+    color: var(--input_color);
+    grid-area: label;
+    justify-self: start;
+}
+
+.input:disabled {
+    cursor: default;
+}
+
+/* When the input is disabled, update the cursor on the sibling label element. */
+.input:disabled ~ .label {
+    cursor: default;
+}
+
+.input:active:enabled,
+.input:focus:enabled {
+    box-shadow: none;
+    outline: none;
+}
+
+.unCheck {
+
+}
+
+.icon {
+    display: none;
+}

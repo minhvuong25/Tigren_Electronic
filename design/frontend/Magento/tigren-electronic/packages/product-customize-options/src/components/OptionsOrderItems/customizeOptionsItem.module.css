@@ -1,0 +1,70 @@
+.optionValue {
+    margin-left: 0.25rem;
+}
+
+.options {
+    grid-area: options;
+    font-size: var(--global_L_font_size_base);
+    display: grid;
+    grid-gap: 0.125rem;
+    font-weight: normal;
+    line-height: 1.43;
+    color: var(--gray_text_86);
+    margin-bottom: 10px;
+}
+
+.optionLabel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+
+.optionLabel * {
+    font-size: 13px;
+}
+
+.optionLabel dt {
+    font-weight: 600;
+}
+
+.expandButton {
+    font-weight: 500;
+    font-size: 13px;
+    text-align: left;
+}
+
+.expandButton:hover {
+    color: var(--orange_text_f60);
+}
+
+*[class*="optionLabel"].showLabel {
+    display: flex;
+}
+
+*[class*="optionLabel"].hideLabel {
+    display: none;
+}
+
+*[class*="productBundle-display"] + *[class*="item-option"] .expandButton {
+    display: none;
+}
+
+*[class*="productBundle-options"] + *[class*="item-option"] .optionLabel {
+    display: none;
+}
+
+*[class*="productBundle-display"] + *[class*="item-option"] .optionLabel {
+    display: flex;
+}
+
+*[class*="orderBundleItems-open"] + *[class*="item-option"] .expandButton {
+    display: none;
+}
+
+*[class*="productBundle-options"] + *[class*="item-option"] .optionLabel {
+    display: none;
+}
+
+*[class*="orderBundleItems-open"] + *[class*="item-option"] .optionLabel {
+    display: flex;
+}

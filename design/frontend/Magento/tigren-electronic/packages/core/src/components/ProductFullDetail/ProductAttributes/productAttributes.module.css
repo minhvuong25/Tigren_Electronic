@@ -1,0 +1,20 @@
+.root {
+    display: grid;
+    grid-template-columns: minmax(100px, max-content) 1fr;
+}
+
+.root span {
+    line-height: 1.86;
+    letter-spacing: normal;
+    min-height: 34px;
+    font-size: var(--global_L_font_size_base);
+    padding: 4px 0 4px 20px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.root span:nth-child(4n), .root span:nth-child(4n - 1) {
+    background: var(--product_attribute_background_even);
+}

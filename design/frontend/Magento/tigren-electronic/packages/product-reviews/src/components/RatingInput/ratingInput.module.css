@@ -1,0 +1,41 @@
+.root {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.inputRadio {
+    display: none;
+}
+
+.star:hover .icon,
+.star:hover ~ .star .icon,
+.inputRadio:checked ~ .star .icon {
+    background-image: var(--tg-starFilled);
+}
+
+.star {
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    width: 31px;
+    height: 25px;
+    background-image: var(--tg-star);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.inputRadio:checked ~ .star .icon {
+    background-image: var(--tg-starFilled);
+}

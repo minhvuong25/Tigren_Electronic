@@ -1,0 +1,44 @@
+.itemActionLoading {
+    width: 100%;
+    height: 200px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 102%;
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: 16px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.empty {
+    display: table;
+    width: 100%;
+    min-height: 200px;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.print {
+    text-align: right;
+    max-width: 100px;
+}
+
+.empty p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.printLink {
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--venia-global-color-black);
+}
+

@@ -1,0 +1,127 @@
+@media (min-width: 768px) {
+    .root .header, .root .item {
+        display: grid;
+        grid-template-columns: 15% 30% 15% auto 10%;
+    }
+
+    .item .row .label {
+        display: none;
+    }
+}
+
+.root {
+    margin-top: 19px;
+}
+
+.header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray_color_ec);
+}
+
+.header p {
+    font-size: var(--global_L_font_size_base);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+}
+
+.reviewList .item:last-child {
+    border-bottom: 0;
+}
+
+.item {
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray_color_ec);
+}
+
+.item .row:last-child .value {
+    text-align: right;
+}
+
+
+.item .row .value {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.rating {
+    width: 75px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.value a {
+    color: var(--orange_text_f60);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .reviewList {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .reviewList {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .root {
+        --global_L_font_size_base: var(--global_M_font_size_base);
+    }
+
+    .root .header {
+        display: none;
+    }
+
+    .root .item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: initial;
+    }
+
+    .root .item .row {
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        column-gap: 34px;
+    }
+
+    .root .item .row:last-child .label {
+        display: none;
+    }
+
+    .root .item .row:last-child .value {
+        display: block;
+        text-align: left;
+    }
+
+    .item .row .label {
+        display: inline-block;
+        font-size: var(--global_M_font_size_base);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: var(--gray_text_86);
+    }
+
+    .item .row:last-child {
+        grid-template-columns: 1fr 1fr;
+    }
+}

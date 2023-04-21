@@ -1,0 +1,163 @@
+.root {
+    color: var(--primary__color);
+    font-size: var(--global-font_size_base);
+    line-height: var(--venia-global-lineHeight-300);
+    margin: 0 auto;
+    /*max-width: var(--venia-global-maxWidth);*/
+    min-height: 15rem;
+    padding-top: 4rem;
+    width: 100%;
+}
+
+.footerTop {
+    background-color: #f9f9f9;
+}
+
+.linkFooter > div {
+    margin: 0;
+}
+
+.root .links {
+    margin: 30px auto 0;
+}
+
+/*new letter*/
+.newsletters {
+
+}
+
+@media (max-width: 960px) {
+    .root {
+        grid-template-areas: 'links' 'brand';
+        max-width: 960px;
+    }
+}
+
+.links {
+    display: grid;
+    gap: 2rem;
+    grid-area: links;
+    grid-template-columns: 2fr 1fr;
+    composes: max-w-desktop_xl from global;
+}
+
+@media (max-width: 960px) {
+    .links {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+}
+
+.linkGroup {
+    align-content: start;
+    display: grid;
+    gap: 1em;
+}
+
+.linkItem:first-child {
+    color: rgb(var(--venia-global-color-gray-900));
+    font-weight: 600;
+}
+
+.callout {
+    font-size: var(--venia-typography-body-S-fontSize);
+    justify-self: center;
+    line-height: var(--venia-global-lineHeight-300);
+    max-width: 20rem;
+    min-width: 20rem;
+}
+
+@media (max-width: 960px) {
+    .callout {
+        justify-self: start;
+    }
+}
+
+.calloutHeading {
+    color: rgb(var(--venia-global-color-gray-900));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: 600;
+}
+
+.calloutBody {
+    margin: 1rem 0;
+}
+
+.socialLinks {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-content: start;
+}
+
+.branding {
+    width: 100%;
+    padding: 18px 0;
+}
+
+.legal {
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-area: c;
+    grid-auto-flow: column;
+    justify-content: end;
+}
+
+@media (max-width: 960px) {
+    .legal {
+        justify-content: center;
+    }
+}
+
+.copyright {
+    text-align: left;
+    font-size: 12px;
+    color: var(--gray_text_96);
+    composes: max-w-desktop_xl from global;
+}
+
+.logo {
+    grid-area: a;
+}
+
+.social > div[class*="cmsBlock-root"] {
+    margin: 0;
+}
+
+@media (max-width: 960px) {
+    .logo {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .callout {
+        min-width: 10rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .links {
+        padding: 0 1rem;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
+    .callout {
+        min-width: 100%;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    .root .links {
+        margin-top: 10px;
+    }
+
+    .root {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+}

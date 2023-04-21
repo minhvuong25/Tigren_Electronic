@@ -1,0 +1,77 @@
+.compareBtn {
+    composes: compareBtn from '@tigrensolutions/compare/src/components/ComparePopup/comparePopup.module.css';
+}
+
+div[class*="header-rightNav"] .compareBtn {
+    display: block;
+}
+
+.itemCount {
+    composes: itemCount from '@tigrensolutions/compare/src/components/ComparePopup/comparePopup.module.css';
+    position: relative;
+}
+
+.compareBtn:hover {
+    background-color: var(--electronic-secondary);
+    border: 0;
+}
+
+.iconCompare {
+    composes: iconCompare from '@tigrensolutions/compare/src/components/ComparePopup/comparePopup.module.css';
+}
+
+.compareBtn .iconCompare {
+    width: 26px;
+    height: 26px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -191px -29px;
+}
+
+.textLabel {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    right: 0;
+    transform: translate(-2px, 2px);
+    display: block;
+    width: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    background: #F52832;
+    font-size: 10px;
+}
+
+@media (min-width: 1025px) {
+    .compareBtn {
+        bottom: unset;
+        left: unset;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        position: relative;
+        height: 66px;
+        border-radius: 0;
+        border: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .compareBtn {
+        height: 46px;
+        max-width: 50px;
+        padding: 3px 2px 0 6px;
+        width: 47px;
+    }
+
+    :global(html[data-show-nav-mobile="true"] div > button[name="compareLink"]) {
+        bottom: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .compareBtn {
+        bottom: 120px;
+    }
+}

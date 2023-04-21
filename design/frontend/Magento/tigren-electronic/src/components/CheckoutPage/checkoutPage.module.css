@@ -1,0 +1,167 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CheckoutPage/checkoutPage.module.css';
+}
+
+.checkoutContent {
+    composes: checkoutContent from '@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+    grid-template-columns: 47% 47%;
+    column-gap: 6%;
+}
+
+.cartLink {
+    composes: cartLink from '@tigrensolutions/multistep-checkout/src/components/CheckoutPage/checkoutPage.module.css';
+    text-decoration: underline;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.previous_button {
+    composes: previous_button from '@tigrensolutions/multistep-checkout/src/components/CheckoutPage/checkoutPage.module.css';
+    text-decoration: underline;
+}
+
+.signInContainer {
+    composes: signInContainer from '@tigrensolutions/core/src/components/CheckoutPage/checkoutPage.module.css';
+    grid-row-start: 2;
+    grid-column-start: 1;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: solid 1px var(--cart-border_color);
+    padding: 1rem 0;
+}
+
+.signInButton {
+    composes: signInButton from '@tigrensolutions/multistep-checkout/src/components/CheckoutPage/checkoutPage.module.css';
+    color: #ffffff;
+    background-color: var(--button__background);
+    border-color: var(--button__background);
+    border-radius: 4px;
+    padding: 8px 0;
+    width: 50%;
+}
+
+.signInButton:hover {
+    background-color: var(--button__hover__background);
+    border-color: var(--button__hover__background);
+}
+
+.titleSummary {
+    composes: titleSummary from '@tigrensolutions/core/src/components/CheckoutPage/checkoutPage.module.css';
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.place_order_button {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    margin-top: 16px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.root h1[class*="guestSignIn-header"] {
+    display: none;
+}
+
+.root div[class*="guestSignIn-contentContainer"] {
+    border: none;
+    padding: 16px 24px;
+}
+
+.price_adjustments_container {
+    display: none;
+}
+
+.summary_bottom_container {
+    background: #fafafa;
+    padding: 10px 40px 30px;
+}
+
+@media (max-width: 960px) {
+    .signInContainer {
+        grid-column: 1 / span 2;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 960px) {
+    .checkoutContent {
+        grid-template-columns: 1fr;
+        gap: 1rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .root {
+        padding: 15px 15px;
+    }
+
+    .previous_button,
+    .cartLink {
+        background-position: -416px -19px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 15px;
+        z-index: 11;
+        left: 2px;
+        text-indent: -9999px;
+        margin-top: 0;
+    }
+
+    .place_order {
+        z-index: 10;
+        position: fixed;
+        bottom: 55px;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px 20px 18px;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 70px;
+    }
+
+    .place_order_button {
+        margin: 0;
+    }
+
+    .heading {
+        composes: heading from '@magento/venia-ui/lib/components/CheckoutPage/checkoutPage.module.css';
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        min-height: 70px;
+        font-size: 18px;
+        max-width: 100%;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--primary__color);
+    }
+
+    .checkoutContent {
+        padding-bottom: 70px;
+    }
+
+    .summary_bottom_container {
+        padding: 10px 20px 20px;
+    }
+}

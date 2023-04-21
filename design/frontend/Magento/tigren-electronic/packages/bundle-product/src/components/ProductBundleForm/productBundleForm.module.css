@@ -1,0 +1,87 @@
+.root {
+    align-items: start;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-areas: 'options summary';
+    grid-template-columns: 1fr 0.5fr;
+    padding: 0;
+    margin: 20px 15px;
+    grid-gap: 1rem;
+}
+
+.options {
+    width: 80%;
+    min-width: fit-content;
+}
+
+.title, .subtitle {
+    padding-bottom: 15px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.subtitle {
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray-400));
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.priceBox {
+    margin: 20px 0;
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--primary__color)
+}
+
+.bundleInfo .cartActions {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.bundleSummary ul li {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bundleSummary ul:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.bundleSummary ul li strong {
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.bundleSummary ul li span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.bundleItem:last-child div[class*="bundleItem-root"] {
+    margin-bottom: 0;
+}
+
+.exclPrice {
+    font-size: var(--price_list_old-size);
+    color: var(--price_list_old-color);
+}
+
+@media (max-width: 769px) {
+    .root {
+        display: block;
+        margin: 0 1rem;
+        padding: 1rem 0;
+    }
+
+    .options {
+        width: 100%;
+        min-width: fit-content;
+    }
+}

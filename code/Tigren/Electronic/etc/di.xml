@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+  ~ @author    Tigren Solutions <info@tigren.com>
+  ~ @copyright Copyright (c) 2022 Tigren Solutions <https://www.tigren.com>. All rights reserved.
+  ~ @license   Open Software License ("OSL") v. 3.0
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Mail sending with attachment -->
+    <preference for="Magento\Framework\Mail\Template\TransportBuilder" type="Tigren\Electronic\Model\Mail\Template\TransportBuilder" />
+
+
+    <type name="Magento\Sales\Model\Order\Email\Sender">
+        <plugin name="after_save_shipment_send_email" type="Tigren\Electronic\Plugin\BeforeSend" sortOrder="1" disabled="false" />
+    </type>
+
+
+    <type name="Magento\Shipping\Controller\Adminhtml\Order\Shipment\Save">
+        <plugin name="before_save_shipment_plugin" type="Tigren\Electronic\Plugin\BeforeSaveShipmentPlugin" sortOrder="1" disabled="false" />
+    </type>
+</config>

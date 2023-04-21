@@ -1,0 +1,24 @@
+.root {
+
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.skeleton {
+    margin-top: 15px;
+}
+
+.errorContainer {
+
+}
+
+.fetchError {
+
+}

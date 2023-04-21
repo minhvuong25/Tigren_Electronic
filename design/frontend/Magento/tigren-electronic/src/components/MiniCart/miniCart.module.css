@@ -1,0 +1,47 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/MiniCart/miniCart.module.css';
+}
+
+.root_open {
+    composes: root_open from '@tigrensolutions/core/src/components/MiniCart/miniCart.module.css';
+    --content-width: 30rem;
+}
+
+.contents {
+    composes: contents from '@tigrensolutions/core/src/components/MiniCart/miniCart.module.css';
+}
+
+.contents_open {
+    composes: contents_open from '@tigrensolutions/core/src/components/MiniCart/miniCart.module.css';
+    padding: 5px;
+}
+
+.header {
+    composes: header from '@tigrensolutions/core/src/components/MiniCart/miniCart.module.css';
+    border-bottom: none;
+}
+
+.editCartButton {
+    composes: root_lowPriority from '@tigrensolutions/core/src/components/Button/button.module.css';
+    grid-column: 1 / span 1;
+    width: 100%;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+.checkoutButton {
+    composes: checkoutButton from '@tigrensolutions/core/src/components/MiniCart/miniCart.module.css';
+    width: 100%;
+}
+
+.checkoutButton svg {
+    display: none;
+}
+
+.root_open .contents {
+    display: grid;
+}
+
+@media (max-width: 767px) {
+
+}

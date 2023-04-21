@@ -1,0 +1,46 @@
+.root {
+    composes: root from '@tigrensolutions/base/src/components/ProductPrice/productPrice.module.css';
+}
+
+.price {
+    composes: price from '@tigrensolutions/base/src/components/ProductPrice/productPrice.module.css';
+}
+
+.oldPrice {
+    composes: oldPrice from '@tigrensolutions/base/src/components/ProductPrice/productPrice.module.css';
+}
+
+.specialPrice {
+    composes: specialPrice from '@tigrensolutions/base/src/components/ProductPrice/productPrice.module.css';
+}
+
+.specialPrice {
+    grid-area: specialPrice;
+}
+
+.oldPrice {
+    grid-area: oldPrice;
+}
+
+.root .priceContainer {
+    display: grid;
+    align-items: center;
+    grid-template-areas: 'specialPrice oldPrice salePercent';
+    gap: 10px;
+}
+
+.salePercent {
+    grid-area: salePercent;
+    background: #F52832;
+    color: #ffffff;
+    margin-left: 15px;
+    font-weight: 600;
+    padding: 1px 5px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+
+}

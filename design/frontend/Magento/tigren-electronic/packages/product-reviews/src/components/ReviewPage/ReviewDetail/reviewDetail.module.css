@@ -1,0 +1,227 @@
+.wrapDetailContent {
+    display: block;
+}
+
+.reviewDetails {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 300px 1fr;
+}
+
+.rating {
+    width: 75px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.ratingContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    gap: 10px;
+}
+
+.ratingContainer a {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--orange_text_f60);
+    padding-left: 10px;
+}
+
+.ratingContainer button {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--orange_text_f60);
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.ratingContainer button span {
+    color: var(--orange_text_f60);
+}
+
+.ratingContainer span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+}
+
+.myReview {
+    margin-top: 58px;
+}
+
+.reviewTitle {
+    font-size: var(--global_XLL_font_size_base);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray_color_ec);
+    margin-bottom: 15px;
+}
+
+.review {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.reviewText, .reviewDetail {
+    margin-top: 16px;
+    font-size: var(--global_L_font_size_base);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+}
+
+.reviewText {
+    font-weight: 600;
+}
+
+.reviewDetail {
+    margin-top: 10px;
+}
+
+.date {
+    font-size: var(--global_M_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #808080;
+
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+    margin-bottom: 30px;
+}
+
+.nameProduct {
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+}
+
+.goBack {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    composes: icon-sprite-before from global;
+    width: fit-content;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+
+
+.goBack:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-position: -324px -301px;
+}
+
+.ratingComment {
+    width: 90px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.wrapImg img {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.skeleton .wrapImg {
+    width: 300px;
+    height: 300px;
+}
+
+@media (max-width: 1023px) {
+    .root {
+        --global_L_font_size_base: var(--global_M_font_size_base);
+    }
+
+    .skeleton .wrapImg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .title {
+        font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .reviewDetails {
+        grid-template-columns: 120px 1fr;
+        gap: 15px;
+    }
+
+    .nameProduct {
+        font-size: var(--global_XL_font_size_base);
+    }
+
+    .ratingContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ratingContainer a {
+        padding-left: 0px;
+    }
+
+    .myReview {
+        margin-top: 50px;
+    }
+
+    .reviewTitle {
+        font-size: 15px;
+    }
+
+    .reviewText {
+        margin-top: 12px;
+    }
+
+    .reviewDetail, .date {
+        margin-top: 8px;
+    }
+}

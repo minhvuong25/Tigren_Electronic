@@ -1,0 +1,59 @@
+.socialShare {
+    --social_background_image: var(--background_image_icon);
+    --social_background_size: var(--background_image_size);
+    --social_icon_height: 18px;
+    --social_icon_width: 18px;
+    --social_faebook_position: -34px -140px;
+    --social_twitter_position: -67.1px -139px;
+    --social_line_position: -105.1px -138px;
+}
+
+.socialShare .title {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.socialShare ul {
+    height: var(--social_icon_height);
+}
+
+.socialShare ul li {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000000;
+}
+
+.socialShare ul .icon span {
+    display: block;
+    width: var(--social_icon_width);
+    height: var(--social_icon_height);
+    background-image: var(--social_background_image);
+    background-size: var(--social_background_size);
+    background-repeat: no-repeat;
+}
+
+.socialShare ul .icon.iconFacebook span {
+    background-position: var(--social_faebook_position);
+}
+
+.socialShare ul .icon.iconTwitter span {
+    background-position: var(--social_twitter_position);
+}
+
+.socialShare ul .icon.iconLine span {
+    background-position: var(--social_line_position);
+}
+
+.socialShare ul li:last-child {
+    margin-right: 0;
+}
+
+
+@media (max-width: 767px) {
+    .socialShare {
+        text-align: center;
+    }
+}

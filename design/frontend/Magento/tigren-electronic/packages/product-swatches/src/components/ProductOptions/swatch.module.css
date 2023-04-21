@@ -1,0 +1,39 @@
+.root {
+    composes: root from '~@magento/venia-ui/lib/components/clickable.module.css';
+    background: var(--venia-swatch-bg);
+    background-size: cover;
+    width: var(--swatch_width);
+    height: var(--swatch_width);
+    border: var(--swatch_border);
+    border-radius: 50%;
+    padding: 0;
+    --venia-swatch-bg: var(--venia-global-color-gray);
+}
+
+.root:disabled {
+    opacity: 0.4;
+}
+
+.root_selected {
+    composes: root;
+    border: var(--swatch_selected_border);
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.2), transparent),
+    var(--venia-swatch-bg);
+    background-size: cover;
+}
+
+.root_focused {
+    composes: root;
+}
+
+.root_selected_focused {
+    composes: root_selected;
+}
+
+.iconClose {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-position: -163px -441px;
+}

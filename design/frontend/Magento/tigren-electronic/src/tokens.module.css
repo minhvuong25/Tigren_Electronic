@@ -1,0 +1,47 @@
+/* global tokens */
+@import '~@tigrensolutions/core/src/tokens.module.css';
+
+:global(:root) {
+
+
+    /* font family */
+    --venia-font: 'Open Sans', sans-serif;
+    --venia-global-fontFamily-serif: 'Source Serif Pro', serif;
+
+    /*base color*/
+    --theme__base-color: #23334C;
+    --venia-global-color-text: 35 51 76;
+    --venia-secondary-color-text: 51 51 51;
+    --search-input-height: 45px;
+    /* search autocomplete */
+
+
+    /* new theme variables */
+    --electronic-secondary: #D77601;
+    --background_electronic_image_icon: url('src/static/images/icon.png');
+    --background_electronic_image_size: 600px auto;
+
+    /* product price */
+    --price_list_regular_font-weight: 700;
+    --price_list_special_font-weight: 700;
+    --price_list_regular-color: #646464;
+    --price_list_regular-size: 18px;
+    --price_list_special-color: #646464;
+    --price_list_special-size: 18px;
+    --price_list_old-color: #646464;
+    --price_list_old-size: 14px;
+    --checkbox-active_color: #D77601;
+    --filter_modal_title_font_size: 18px;
+    --button__hover__background: #23334C;
+    --button__background: #D77601;
+    --button__hover__border: 1px solid #23334C;
+    --button__border__radius: 4px;
+    --sign-in-link_color: #2F80ED;
+    --radio-input-checked_color: #D77601;
+    --radio-input_width: 20px;
+    --radio-input_height: 20px;
+    --background_gray: #D6D6D6;
+    --text-global: #333333;
+    --my_account_tab_width: 300px;
+    --button__border: none;
+}

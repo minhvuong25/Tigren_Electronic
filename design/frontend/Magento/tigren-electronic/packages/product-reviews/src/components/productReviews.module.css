@@ -1,0 +1,533 @@
+.root {
+    composes: section from '~@magento/venia-ui/lib/components/ProductFullDetail/productFullDetail.module.css';
+    padding: 1.5rem 0;
+}
+
+:root {
+    --am-activeColor: #ed9d00;
+}
+
+.reviewRoot {
+    padding: 20px 0;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-bottom: 1px solid rgba(var(--venia-global-color-gray));
+}
+
+.wrapTopTitle {
+}
+
+.wrapForm {
+    border-bottom: 1px solid #e9e8e8;
+    padding-bottom: 20px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.ratingValue {
+    margin-right: 1rem;
+    font-size: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: var(--primary__color);
+}
+
+.count {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+    margin-top: 10px;
+}
+
+.ratingRoot {
+    width: 75px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    background: var(--tg-star);
+    background-size: contain;
+}
+
+.starsFilled {
+    height: 100%;
+    width: 0;
+    background: var(--tg-starFilled);
+    background-size: contain;
+}
+
+.summary {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    width: 100%;
+}
+
+.details {
+    margin: 1rem auto;
+}
+
+.detailsItem {
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0;
+    outline: none;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: var(--gray_text_86);
+}
+
+.detailsItem:hover {
+    color: var(--am-activeColor);
+}
+
+.detailsItem:disabled {
+    cursor: unset;
+}
+
+.detailsItem:disabled:hover {
+    color: var(--gray_text_86);
+}
+
+.detailsStars {
+    min-width: 3.125rem;
+    text-align: right;
+}
+
+.detailsBar {
+    width: 120px;
+    height: 6px;
+    background: #f0f0f0;
+    margin: 0 1.25rem;
+}
+
+.detailsBarValue {
+    background: var(--am-activeColor);
+    height: 100%;
+    display: block;
+}
+
+.goToReviews {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.goToReviews button {
+    margin-right: 0.5rem;
+    min-width: 180px;
+}
+
+.goToReviewsLabel {
+    max-width: 9rem;
+    color: rgb(var(--venia-global-color-gray-darker));
+    padding: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .goToReviews {
+        margin-left: 2rem;
+    }
+
+    .count {
+        margin-top: 6px;
+    }
+}
+
+.closeReview {
+    display: inline-block;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-position: -19.2px -18px;
+    background-size: 768px auto;
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: var(--background_image_icon);
+}
+
+.imgNoReview {
+    width: 80px;
+}
+
+.reviewTitle {
+    font-size: var(--pdf_heading_tile_font_size);
+    font-weight: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.reviewContent {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    background: var(--tigren-pwa-header-bg-color);
+}
+
+.title {
+    composes: sectionTitle from '~@magento/venia-ui/lib/components/ProductFullDetail/productFullDetail.module.css';
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.reviewsRoot {
+    margin-top: 10px;
+}
+
+.reviewsRoot div[class*='pagination-root'] {
+    width: fit-content;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.reviewSkeletonContainer {
+    composes: reviewsRoot;
+    padding: 0;
+}
+
+
+.list {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.loadingIndicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(var(--venia-global-color-gray));
+    margin-bottom: 3rem;
+}
+
+.authorDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.authorIcon {
+    display: block;
+    margin-right: 0.5rem;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -2px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMTcyNiAxOC40MzcxQzIxLjMxOTQgMTYuOTI2NiAyMiAxNS4wNDI4IDIyIDEzQzIyIDguMDI5NDQgMTcuOTcwNiA0IDEzIDRDOC4wMjk0NCA0IDQgOC4wMjk0NCA0IDEzQzQgMTUuMDQyOCA0LjY4MDU4IDE2LjkyNjYgNS44MjczNiAxOC40MzcxQzcuMDU3NDcgMTYuNTA3MyA5LjA0NTg3IDE1LjEwNjYgMTEuMzczNSAxNC42NTU1QzkuOTc0OTQgMTQuMDMyMiA5IDEyLjYzIDkgMTFDOSA4Ljc5MDg2IDEwLjc5MDkgNyAxMyA3QzE1LjIwOTEgNyAxNyA4Ljc5MDg2IDE3IDExQzE3IDEyLjYzIDE2LjAyNTEgMTQuMDMyMiAxNC42MjY1IDE0LjY1NTVDMTYuOTU0MSAxNS4xMDY2IDE4Ljk0MjUgMTYuNTA3MyAyMC4xNzI2IDE4LjQzNzFaTTE5LjQ4ODkgMTkuMjM2NUMxOC4xODk1IDE3LjAwMTIgMTUuNzY5NyAxNS41IDEzIDE1LjVDMTAuMjMwMyAxNS41IDcuODEwNTEgMTcuMDAxMiA2LjUxMTA5IDE5LjIzNjVDOC4xNDg2NSAyMC45Mzk5IDEwLjQ1MDUgMjIgMTMgMjJDMTUuNTQ5NSAyMiAxNy44NTE0IDIwLjkzOTkgMTkuNDg4OSAxOS4yMzY1Wk0xMyAyM0MxOC41MjI4IDIzIDIzIDE4LjUyMjggMjMgMTNDMjMgNy40NzcxNSAxOC41MjI4IDMgMTMgM0M3LjQ3NzE1IDMgMyA3LjQ3NzE1IDMgMTNDMyAxOC41MjI4IDcuNDc3MTUgMjMgMTMgMjNaTTEzIDE0QzE0LjY1NjkgMTQgMTYgMTIuNjU2OSAxNiAxMUMxNiA5LjM0MzE1IDE0LjY1NjkgOCAxMyA4QzExLjM0MzEgOCAxMCA5LjM0MzE1IDEwIDExQzEwIDEyLjY1NjkgMTEuMzQzMSAxNCAxMyAxNFoiIGZpbGw9IiMyMTIxMjEiLz4KPC9zdmc+Cg==);
+}
+
+.author {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+}
+
+.date {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #808080;
+}
+
+@media (min-width: 768px) {
+    .toolbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.filter {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .filter {
+        display: block;
+    }
+}
+
+.toolbarLabel {
+    composes: label from '~@magento/venia-ui/lib/components/Checkbox/checkbox.module.css';
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(var(--venia-global-color-gray-darker));
+    white-space: nowrap;
+}
+
+.toolbarCheckboxRoot {
+    composes: root from '~@magento/venia-ui/lib/components/Checkbox/checkbox.module.css';
+    line-height: 1;
+    justify-items: initial;
+    gap: 0.2rem;
+    display: inline-grid;
+}
+
+@media (min-width: 768px) {
+    .toolbarCheckboxRoot {
+        margin-left: 1rem;
+    }
+}
+
+.toolbarCheckbox {
+    composes: input from '~@magento/venia-ui/lib/components/Checkbox/checkbox.module.css';
+    width: 1rem;
+    height: 1rem;
+}
+
+.toolbarCheckIcon {
+    composes: icon from '~@magento/venia-ui/lib/components/Checkbox/checkbox.module.css';
+    width: 1rem;
+    height: 1rem;
+}
+
+.toolbarCheckIcon svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .sort {
+        margin-left: 1rem;
+    }
+}
+
+.sort .toolbarLabel {
+    margin-right: 0.5rem;
+}
+
+.sort .toolbarLabel + span {
+    width: max-content;
+}
+
+.toolbarSelect {
+    composes: input from '~@magento/venia-ui/lib/components/Select/select.module.css';
+    height: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0.75rem;
+}
+
+.arrowBtn {
+    outline: none;
+    margin-left: 0.25rem;
+}
+
+.arrowBtn:hover {
+    color: rgb(var(--venia-global-color-teal));
+}
+
+.arrow {
+    display: block;
+    width: 1rem;
+    text-align: right;
+}
+
+.arrow:after {
+    content: ' \2193';
+}
+
+.arrow.ASC:after {
+    content: ' \2191';
+}
+
+.pagination {
+    composes: root from '~@magento/venia-ui/lib/components/Pagination/pagination.module.css';
+    padding-top: 0;
+    border: none;
+}
+
+.empty {
+    text-align: center;
+    padding: 68px 0 50px 0;
+    font-size: 20px;
+}
+
+.empty h5 {
+    text-align: center;
+    padding: 20px 0;
+    line-height: 1.56;
+    font-size: var(--global-font_size_large);
+    color: var(--tigren-pwa-color-999999);
+}
+
+.showAllBtn {
+    margin-left: 0.2rem;
+    font-size: 0.75rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
+    color: rgb(var(--venia-global-color-teal));
+    outline: none;
+}
+
+.showAllBtn:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 1rem;
+    margin-right: 0.2rem;
+    background: rgb(var(--venia-global-color-border));
+}
+
+.showAllBtn:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .showAllBtn {
+        margin-left: 0.5rem;
+    }
+
+    .showAllBtn:before {
+        margin-right: 0.5rem;
+    }
+}
+
+.wrapReviews {
+    background: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.root {
+    position: relative;
+    border-bottom: unset;
+    margin: 0;
+}
+
+.textLabel h4,
+.textLabel p {
+    display: inline;
+}
+
+.wrapBtn {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .reviewContent {
+        z-index: 0;
+    }
+
+    .wrapTopTitle {
+        position: relative;
+    }
+
+    .wrapBtn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textLabel {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .textLabel h4,
+    .textLabel p {
+        display: inline;
+        font-size: 16px;
+        line-height: 1.47;
+    }
+
+    .wrapBtn .btnWrite {
+        margin-left: 0;
+        font-size: 18px;
+        padding: 0 10px;
+        min-width: 155px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+    }
+
+    .list {
+        padding: 0 12px;
+    }
+
+    .empty h5 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .closeReview {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+    }
+
+    .reviewsRoot {
+        margin-top: 0;
+    }
+
+    .reviewSkeletonContainer .list {
+        margin-top: 20px;
+        padding: 0;
+    }
+}

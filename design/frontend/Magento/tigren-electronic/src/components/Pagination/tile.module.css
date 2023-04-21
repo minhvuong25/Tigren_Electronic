@@ -1,0 +1,13 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/Pagination/tile.module.css';
+    border: 1px solid #D6D6D6;
+    border-radius: 0;
+    height: 40px;
+    width: 40px;
+}
+
+.root_active {
+    composes: root;
+    background: #23334C;
+    color: #FFFFFF;
+}

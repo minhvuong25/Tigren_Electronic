@@ -1,0 +1,33 @@
+.customerTabClass {
+    composes: customerTabClass from '@tigrensolutions/core/src/components/Tabs/tabs.module.css';
+}
+
+.tabList {
+    composes: tabList from '@tigrensolutions/core/src/components/Tabs/tabs.module.css';
+}
+
+.verticalTabContainer {
+    composes: verticalTabContainer from '@tigrensolutions/core/src/components/Tabs/tabs.module.css';
+    background-color: var(--theme__base-color);
+    color: #FFFFFF;
+    border-radius: 0;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    padding: 11px 0 11px 19px;
+    border-left: 6px solid transparent;
+    height: 60px;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .customerTabClass .tabList {
+        grid-template-columns: 25vw 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+
+}

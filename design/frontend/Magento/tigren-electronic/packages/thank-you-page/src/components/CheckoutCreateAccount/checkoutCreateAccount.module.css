@@ -1,0 +1,72 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    padding-top: 46px;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #333;
+    padding-left: 10px;
+    border-left: 4px solid #31353b;
+    margin-bottom: 10px;
+}
+
+.title {
+    line-height: 1.6;
+    color: var(--primary__color);
+    margin-bottom: 10px;
+}
+
+.title p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 4%;
+}
+
+.form > div {
+    width: 48%;
+}
+
+.form > div.subscribe {
+
+}
+
+.form > div.actions {
+    width: 100%;
+    text-align: center;
+}
+
+.actions button {
+    min-width: 220px;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+    .form > div {
+        width: 100%;
+    }
+
+    .form {
+        gap: 20px;
+    }
+
+    .heading {
+        font-size: 15px;
+    }
+
+    .title p {
+        font-size: 12px;
+    }
+
+    .actions button {
+        margin-top: 10px;
+    }
+}

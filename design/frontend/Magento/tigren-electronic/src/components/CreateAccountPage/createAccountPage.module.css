@@ -1,0 +1,15 @@
+.contentContainer {
+    composes: contentContainer from '@tigrensolutions/core/src/components/CreateAccountPage/createAccountPage.module.css';
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        composes: header from '@tigrensolutions/core/src/components/CreateAccountPage/createAccountPage.module.css';
+        text-align: start;
+    }
+}

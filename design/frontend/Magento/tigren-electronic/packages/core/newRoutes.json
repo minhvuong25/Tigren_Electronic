@@ -1,0 +1,108 @@
+[
+    {
+        "name": "Cart",
+        "pattern": "/checkout/cart",
+        "exact": true,
+        "path": "@tigrensolutions/core/src/components/CartPage"
+    },
+    {
+        "name": "Cart",
+        "pattern": "/cart",
+        "exact": true,
+        "path": "@tigrensolutions/core/src/components/CartPage"
+    },
+    {
+        "name": "SignInPage",
+        "pattern": "/sign-in",
+        "exact": true,
+        "path": "@tigrensolutions/core/src/components/SignInPage"
+    },
+    {
+        "name": "Create Account",
+        "pattern": "/create-account",
+        "exact": true,
+        "path": "@tigrensolutions/core/src/components/CreateAccountPage"
+    },
+    {
+        "name": "My Downloadable Products",
+        "pattern": "/downloadable-orders",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "My Account",
+        "pattern": "/customer/account",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "Account Information",
+        "pattern": "/customer/account/edit",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "My Order",
+        "pattern": "/sales/order/history",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "My Product Reviews",
+        "pattern": "/review/customer",
+        "path": "@tigrensolutions/core/src/components/MyAccount"
+    },
+    {
+        "name": "Logout",
+        "pattern": "/customer/account/logout",
+        "path": "@tigrensolutions/core/src/components/MyAccount/SignOut"
+    },
+    {
+        "name": "My Order Details",
+        "pattern": "/sales/order/view/order_id/:id",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "Review Details",
+        "pattern": "/review/customer/view/review_id/:id",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "My Downloadable Products",
+        "pattern": "/downloadable/customer/products/",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "My Address",
+        "pattern": "/customer/address/",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "Wishlist Page",
+        "pattern": "/wishlist",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "Saved Payments",
+        "pattern": "/saved-payments",
+        "path": "@tigrensolutions/core/src/components/MyAccount",
+        "exact": true
+    },
+    {
+        "name": "SignInPage",
+        "pattern": "/customer/account/login",
+        "exact": true,
+        "path": "@tigrensolutions/core/src/components/SignInPage"
+    },
+    {
+        "name": "Create Account",
+        "pattern": "/customer/account/create",
+        "exact": true,
+        "path": "@tigrensolutions/core/src/components/CreateAccountPage"
+    }
+]

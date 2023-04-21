@@ -1,0 +1,98 @@
+
+.root {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.customerNav {
+    text-align: left;
+}
+
+.pathWay {
+    padding-top: 18px;
+    padding-bottom: 30px;
+}
+
+.customerNav button:hover {
+    background: var(--black_color_blur);
+    border-bottom: 1px solid var(--black_color_blur);
+    color: #fff;
+}
+
+.customerNav button:first-child {
+    border-top: 1px solid #e8e8e8;
+}
+
+
+@media (min-width: 770px) {
+
+    .customerNavButtonOpen,
+    .customerNavButtonClosed {
+        display: none;
+    }
+
+    .customerNavClosed {
+        display: block;
+    }
+
+    .customerNavOpen {
+        display: block;
+    }
+
+    .customerTabIcon:before {
+        width: 40px;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1199px) {
+    .root {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .root {
+        padding-bottom: 50px;
+        position: relative;
+    }
+
+    .customerNav {
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .customerNavButtonOpen,
+    .customerNavButtonClosed {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .customerNavClosed {
+        display: none;
+    }
+
+    .customerNavOpen {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        background: #fff;
+    }
+
+    .customerPages {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .pathWay {
+        display: none;
+    }
+
+    .pathWay {
+        padding-top: 18px;
+        padding-bottom: 30px;
+    }
+}

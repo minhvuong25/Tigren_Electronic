@@ -1,0 +1,122 @@
+.root {
+    display: grid;
+    gap: 25px;
+    justify-items: stretch;
+    padding: 0;
+}
+
+.root div[class*="errorMessage-root"] {
+    text-align: left;
+    font-size: var(--error-text_font-size);
+    color: var(--error-text_color);
+}
+
+.forgotPassword {
+    display: block;
+    text-decoration: underline;
+    color: rgb(var(--venia-global-color-error));
+    font-size: 0.8rem;
+}
+
+.form {
+    display: grid;
+    row-gap: 25px;
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--venia-global-color-gray));
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+}
+
+.buttonsContainer {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.buttonsContainer button {
+    width: 100%;
+}
+
+.forgotPasswordButtonContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-self: start;
+    text-align: center;
+}
+
+.forgotPasswordButton {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: var(--global_S_font_size_base);
+    color: var(--sign-in-link_color);
+    display: inline-block;
+}
+
+.forgotPasswordButton:hover {
+    color: var(--sign-in-link_color);
+    text-decoration: none;
+}
+
+.createAccount {
+    padding: 0 0 0 5px;
+    font-size: inherit;
+    color: var(--sign-in-link_color);
+    font-weight: 600;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.createAccount:hover {
+    color: var(--sign-in-link_color);
+    text-decoration: none;
+}
+
+.title {
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--primary__color);
+}
+
+.password {
+    width: 100%;
+    position: relative;
+}
+
+.rootBottom {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    color: var(--primary__color);
+    text-align: center;
+    line-height: 1.4
+}
+
+@media (max-width: 767px) {
+    .form {
+        gap: 20px;
+    }
+
+    .buttonsContainer {
+        margin: 0;
+    }
+
+    .rootBottom {
+        font-size: var(--global-font_size_base);
+    }
+}

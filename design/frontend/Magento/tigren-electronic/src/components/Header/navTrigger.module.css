@@ -1,0 +1,13 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/Header/navTrigger.module.css';
+}
+
+.root .text {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .root {
+        display: none;
+    }
+}

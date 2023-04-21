@@ -1,0 +1,16 @@
+.skeleton .heading {
+    height: 43px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.skeleton .details {
+    height: 300px;
+}
+
+.skeleton .footer {
+    height: 150px;
+    margin-top: 30px;
+}
+
+

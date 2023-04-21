@@ -1,0 +1,19 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/CartPage/ProductListing/quantity.module.css';
+    border-radius: 0;
+}
+
+
+.root button[class*="quantity-button"] {
+    height: 36px;
+    border-radius: 0;
+    width: 66px;
+}
+
+.root button[class*="quantity-button_decrement"] {
+    border-right: 1px solid #D6D6D6;
+}
+
+.root button[class*="quantity-button_increment"] {
+    border-left: 1px solid #D6D6D6;
+}

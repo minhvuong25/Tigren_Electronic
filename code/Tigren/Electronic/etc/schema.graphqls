@@ -1,0 +1,15 @@
+type Mutation {
+    checkLoginPopup(email: String! @doc(description: "The customer's email address."),
+        password: String! @doc(description: "The customer's password."))
+    : CustomerToken @resolver(class: "\\Tigren\\Electronic\\Model\\Resolver\\CheckSigninPopup")
+    @doc(description:"Generate a token for specified customer.")
+}
+type CustomerToken @doc(description: "Contains a customer authorization token.") {
+    status: Boolean @doc(description: "The customer authorization token.")
+}
+type StoreConfig {
+    passwordpopup : String @doc(description: "The landing page that is associated with the base URL.")
+    userpopup : String @doc(description: "The name of the CMS page that identifies the home page for the store.")
+    enablepopup : Boolean @doc(description: "The default page that displays when a 404 'Page not Found' error occurs.")
+}
+

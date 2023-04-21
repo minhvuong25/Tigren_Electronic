@@ -1,0 +1,49 @@
+.filterButton {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .filterButton {
+        flex-basis: 50%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .filterButton {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .filterButton {
+        display: block;
+    }
+
+    .filterButton {
+        display: block;
+        border-radius: 5px;
+        border: solid 1px var(--gray-color_e7);
+        background-color: var(--white_text_color);
+        height: 34px;
+        font-size: 13px;
+        color: var(--primary__color);
+        text-align: left;
+        padding: 0 10px;
+        position: relative;
+        composes: icon-sprite-before from global;
+    }
+
+    .filterButton:before {
+        display: block;
+        position: absolute;
+        top: 9px;
+        width: 15px;
+        height: 15px;
+        background-position: -66px -115px;
+    }
+
+    .filterButton > span {
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,65 @@
+.customerTabClass .tabList,
+.customerTabClass .tabList {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: var(--my_account_tab_gap);
+    grid-template-areas: 'customerNav pageContent';
+    grid-template-columns: var(--my_account_tab_width) 1fr;
+}
+
+.customerTabClass {
+    text-align: left;
+    margin-top: 42px;
+}
+
+.customerTabClass .tabList .tabHead a[class*='verticaltab-tabListItem']:nth-last-child(1) {
+    padding-top: 20px;
+    border-top: 1px #dfdfdf solid;
+    margin-top: 10px;
+}
+
+.verticalTabContainer {
+    padding: 10px 0 15px;
+    border-radius: 10px;
+    background-color: var(--gray_color_f7);
+    height: fit-content;
+}
+
+.verticalTabContainer a[class^="verticaltab-tabListItem"]:last-child {
+    padding-top: 10px;
+    border-top: 1px solid #dfdfdf;
+    margin-top: 10px;
+}
+
+.tabList > div[class*="optionTab-root"] {
+    padding: 0;
+}
+
+.tabList > div[class*="optionTab-root"] > select {
+    padding: 12px 13px 13px 15px;
+    border-radius: 5px;
+}
+
+.tabList > div[class*="optionTab-root"] > select:focus,
+.tabList > div[class*="optionTab-root"] > select:hover,
+.tabList > div[class*="optionTab-root"] > select:active,
+.tabList > div[class*="optionTab-root"] > select {
+    outline: none;
+    border: none;
+}
+
+.tabList > div[class*="optionTab-root"] > select:focus {
+    background-color: #ddd;
+}
+
+@media (max-width: 767px) {
+    .customerTabClass .tabList {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .customerTabClass {
+        margin-top: 15px;
+    }
+}

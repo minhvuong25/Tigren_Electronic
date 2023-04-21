@@ -1,0 +1,68 @@
+.rootDialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-height: 100vh;
+    border-radius: 0;
+    width: 90vw;
+}
+
+.headerText {
+    composes: headerText from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    color: var(--primary__color);
+    font-size: var(--global-font_size_xlarge);
+}
+
+.contents {
+    composes: contents from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    padding: 0;
+}
+
+.content_search {
+    height: 100%;
+}
+
+.content_search > div {
+    padding: 25px;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.content_search div[class*="autocomplete-root"] {
+    box-shadow: none;
+    border: none;
+    position: unset;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.content_search form[class*="searchBar-form"] {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.content_search form[class*="searchBar-form"] > div {
+    width: 100%;
+}
+
+.content_search li {
+    padding-bottom: 20px;
+}
+
+.content_search h2 {
+    color: var(--primary__color);
+    padding-bottom: 15px;
+}
+
+.content_search div[class*="autocomplete-message"] {
+    text-align: left;
+    color: var(--primary__color);
+    padding: 0 0 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content_search ul[class*="suggestedCategories-root"] {
+    border-top: none;
+}

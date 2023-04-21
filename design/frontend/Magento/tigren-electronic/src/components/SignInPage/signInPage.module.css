@@ -1,0 +1,19 @@
+.contentContainer {
+    composes: contentContainer from '@tigrensolutions/core/src/components/SignInPage/signInPage.module.css';
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.rootBottom {
+    composes: rootBottom from '@tigrensolutions/core/src/components/SignIn/signIn.module.css';
+    margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+    .header {
+        composes: header from '@tigrensolutions/core/src/components/SignInPage/signInPage.module.css';
+        text-align: start;
+    }
+}

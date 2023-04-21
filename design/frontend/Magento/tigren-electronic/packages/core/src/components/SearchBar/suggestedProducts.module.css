@@ -1,0 +1,51 @@
+.products {
+    border-top: 1px solid rgb(var(--venia-global-color-border));
+    display: grid;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+}
+
+.products:empty {
+    display: none;
+}
+
+.root {
+    max-height: 320px;
+    overflow: auto;
+    padding-right: 10px;
+}
+
+.root::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: #e8e8e8;
+    margin-right: 8px;
+}
+
+.root::-webkit-scrollbar {
+    border-radius: 3px;
+    background-color: #e8e8e8;
+    width: 5px;
+}
+
+.root::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #818181;
+}
+
+.root > li:last-child > div {
+    border-bottom: none;
+}
+
+.root > li:first-child > div {
+    padding-top: 0;
+}
+
+@media (max-width: 767px) {
+    .root {
+        padding-right: 6px;
+    }
+
+    .root::-webkit-scrollbar {
+        width: 0;
+    }
+}

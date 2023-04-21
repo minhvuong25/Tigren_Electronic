@@ -1,0 +1,6 @@
+.input {
+    composes: input from '~@tigrensolutions/core/src/components/Field/field.module.css';
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+}

@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    .root {
+        composes: root from '@magento/venia-ui/lib/components/FilterModal/filterFooter.module.css';
+    }
+
+    aside[class*="filterModal-root"] .root .button {
+        background-color: var(--electronic-secondary);
+        border-radius: 10px;
+        border: none;
+    }
+
+    aside[class*="filterModal-root"] .root .button:disabled {
+        background-color: var(--electronic-secondary);
+        border-radius: 10px;
+        border: none;
+    }
+}

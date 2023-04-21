@@ -1,0 +1,86 @@
+.icon-sprite {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.icon-sprite-after:after,
+.icon-sprite-before:before {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.max-w-desktop_xl {
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--gray_text_86);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--gray_text_86);
+}
+
+::placeholder {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    color: var(--gray_text_86);
+}
+
+form input:focus {
+    box-shadow: none;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+body *::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e3e3e3;
+    opacity: 0.8;
+    margin-right: 8px;
+}
+
+body *::-webkit-scrollbar {
+    border-radius: 10px;
+    background-color: #e3e3e3;
+    opacity: 0.8;
+    width: 6px;
+}
+
+body *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+@media (max-width: 767px) {
+    ::-webkit-input-placeholder { /* Edge */
+        font-size: var(--global-font_size_small);
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-size: var(--global-font_size_small);
+    }
+
+    ::placeholder {
+        font-size: var(--global-font_size_small);
+    }
+}

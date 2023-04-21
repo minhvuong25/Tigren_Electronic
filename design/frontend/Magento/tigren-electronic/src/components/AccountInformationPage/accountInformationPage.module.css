@@ -1,0 +1,48 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/AccountInformationPage/accountInformationPage.module.css';
+}
+
+.formFields {
+    composes: formFields from '@tigrensolutions/core/src/components/AccountInformationPage/accountInformationPage.module.css';
+}
+
+.goBack {
+    composes: goBack from '@tigrensolutions/core/src/components/AccountInformationPage/accountInformationPage.module.css';
+}
+
+.buttonSave {
+    composes: buttonSave from '@tigrensolutions/core/src/components/AccountInformationPage/accountInformationPage.module.css';
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+    .root, .skeleton {
+        width: auto;
+    }
+
+    .root .formFields {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .goBack {
+        background-position: -416px -19px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 18px;
+        z-index: 11;
+        left: 2px;
+        display: block;
+        text-indent: -9999px;
+        background-color: #ffffff;
+    }
+
+    .buttonSave {
+        width: 100%;
+    }
+}

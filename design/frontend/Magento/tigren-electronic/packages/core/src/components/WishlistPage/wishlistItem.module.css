@@ -1,0 +1,190 @@
+.root {
+    align-content: flex-start;
+    flex-direction: column;
+    display: flex;
+    row-gap: 5px;
+}
+
+.root_disabled {
+    composes: root;
+    opacity: 0.5;
+}
+
+.root form + .addToCart {
+    display: none;
+}
+
+.root form[class*="bundleRoot"] {
+    width: 100%;
+}
+
+.root form[class*="bundleRoot"] div[class*="addToCartButton-actions"] {
+    display: block;
+}
+
+.root form[class*="bundleRoot"] button {
+    width: 100%;
+}
+
+.actionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.space {
+
+}
+
+.name {
+    font-size: var(--global_M_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    display: -webkit-box;
+    color: var(--primary__color);
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 33px;
+}
+
+.detail {
+    color: rgb(var(--venia-global-color-text-alt));
+    font-size: var(--venia-typography-detail-L-fontSize);
+}
+
+.option {
+    composes: detail;
+}
+
+.outOfStock {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-detail-L-fontSize);
+}
+
+.priceContainer {
+    font-size: var(--venia-typography-detail-XL-fontSize);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image_disabled {
+    composes: image;
+    opacity: 0.6;
+}
+
+.addToCart {
+    composes: root_highPriority from '~@tigrensolutions/core/src/components/Button/button.module.css';
+    width: 100%;
+    margin-top: 10px;
+    height: 38px;
+}
+
+.deleteItem {
+    font-size: var(--global_M_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    display: flex;
+    margin-top: 13px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.actionWrap {
+    display: flex;
+    align-items: flex-start;
+}
+
+.linkContainer {
+    position: relative;
+}
+
+.outOfStockMessage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.75;
+    height: 83%;
+    background-color: var(--white_text_color);
+}
+
+.outOfStockMessage span {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4f4f4f;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+
+    .root {
+        border: solid 1px var(--border_color);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .deleteItem {
+        font-size: var(--global_S_font_size_base);
+    }
+
+    .addToCart {
+        font-size: 0;
+        composes: icon-sprite-before from global;
+    }
+
+    .addToCart:before {
+        content: "";
+        width: 24px;
+        height: 22px;
+        background-position: -121px -440px;
+    }
+
+    .outOfStockMessage {
+        height: 74%;
+    }
+
+    .outOfStockMessage span {
+        font-size: var(--global_M_font_size_base);
+    }
+
+    .root form[class*="bundleRoot"] button {
+        font-size: 0;
+    }
+
+    .root form[class*="bundleRoot"] button:after {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-image: var(--background_image_icon);
+        background-size: var(--background_image_size);
+        background-color: transparent;
+        background-repeat: no-repeat;
+        content: "";
+        width: 24px;
+        height: 22px;
+        background-position: -121px -440px;
+    }
+}

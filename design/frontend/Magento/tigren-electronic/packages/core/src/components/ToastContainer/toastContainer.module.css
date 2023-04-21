@@ -1,0 +1,27 @@
+.root {
+    position: fixed;
+    display: grid;
+    grid-row-gap: 1rem;
+
+    /* Necessary to display over page contents */
+    z-index: 6;
+
+    /* Show toasts on bottom of screen */
+    top: var(--toast_position_top);
+    left: var(--toast_position_left);
+    right: var(--toast_position_right);
+    bottom: var(--toast_position_bottom);
+
+    /* Display in center */
+    min-width: 100%;
+}
+
+/* On desktop, display on right */
+@media (min-width: 768px) {
+    .root {
+        composes: root;
+        right: var(--toast_position_right);
+        transform: var(--toast_transfrom);
+        min-width: auto;
+    }
+}

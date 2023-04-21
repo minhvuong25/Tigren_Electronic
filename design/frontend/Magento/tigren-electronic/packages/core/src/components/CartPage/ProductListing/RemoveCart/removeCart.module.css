@@ -1,0 +1,62 @@
+.root {
+    composes: root from '~@tigrensolutions/core/src/components/Dialog/dialog.module.css';
+}
+
+.dialog {
+    composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    width: 350px;
+    max-width: 90vw;
+    min-height: unset;
+    border-radius: 0;
+}
+
+.buttons {
+    composes: buttons from '~@tigrensolutions/core/src/components/Dialog/dialog.module.css';
+    padding: 25px 20px 30px;
+    gap: 10px;
+    grid-template-columns: 50% 50%;
+}
+
+.header {
+    composes: header from '~@tigrensolutions/core/src/components/Dialog/dialog.module.css';
+    border-bottom: none;
+    height: auto;
+    padding: 9px 9px 0;
+}
+
+.contents {
+    composes: contents from '~@tigrensolutions/core/src/components/Dialog/dialog.module.css';
+    padding: 0 20px;
+}
+
+.buttons button {
+    min-width: 150px;
+}
+
+.text {
+    font-size: var(--global_L_font_size_base);
+    font-weight: normal;
+    line-height: 1.57;
+    text-align: center;
+    color: var(--primary__color);
+    margin: auto;
+}
+
+.text span {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .text {
+        font-size: 13px;
+    }
+
+    .buttons {
+        padding: 20px 23px 25px;
+    }
+
+    .buttons button {
+        min-width: 100px;
+        font-size: var(--global-font_size_base);
+    }
+}

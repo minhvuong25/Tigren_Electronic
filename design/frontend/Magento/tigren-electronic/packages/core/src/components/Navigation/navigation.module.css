@@ -1,0 +1,429 @@
+/* animation helpers */
+
+.enter {
+    transition-duration: 384ms;
+    transition-timing-function: var(--venia-global-anim-in);
+}
+
+.exit {
+    transition-duration: 192ms;
+    transition-timing-function: var(--venia-global-anim-out);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* module */
+
+.root {
+    composes: exit hidden;
+    background-color: white;
+    bottom: 0;
+    display: block;
+    left: 0;
+    max-width: 300px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    transform: translate3d(-100%, 0, 0);
+    transition-property: opacity, transform, visibility;
+    z-index: 2;
+    width: 85vw;
+}
+
+.root::-webkit-scrollbar {
+    width: 0;
+}
+
+.root_open {
+    composes: root enter visible;
+    box-shadow: 1px 0 rgb(var(--venia-global-color-border));
+    transform: translate3d(0, 0, 0);
+}
+
+.header {
+    position: absolute;
+    height: 40px;
+    background: transparent;
+    display: block;
+    z-index: 2;
+    width: 42px;
+    cursor: pointer;
+    top: 0;
+}
+
+.header button:before {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    content: '';
+    width: 10px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -5px;
+    background-position: -200px -299px;
+    z-index: 2;
+}
+
+.header button {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.header button span {
+    display: block;
+    text-align: center;
+    padding: 0;
+}
+
+.header button svg {
+    display: none;
+}
+
+.header > span {
+    display: none;
+}
+
+.orderLink {
+    height: auto;
+    padding: 8px 20px;
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    line-height: 1.85;
+    color: rgb(var(--am-mega-menu-text-color));
+    display: block;
+}
+
+.body {
+    composes: exit visible;
+    min-height: 0;
+    overflow: auto;
+    transition-property: opacity, visibility;
+}
+
+.body_masked {
+    composes: body enter hidden;
+}
+
+.footer {
+    padding-top: 10px;
+}
+
+.switchers {
+    background-color: transparent;
+    width: 100%;
+}
+
+.store {
+    display: block;
+}
+
+.store div[class*="storeSwitcher-root"] > span {
+    font-size: var(--global-font_size_small);
+    font-weight: normal;
+    line-height: 2.18;
+    color: var(--gray_text_86);
+    display: block;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+.store button[class*="storeSwitcher-trigger"] {
+    display: none;
+}
+
+.store div[class*="storeSwitcher-menu"] {
+    display: block;
+    visibility: visible;
+    box-shadow: none;
+    position: unset;
+    opacity: 1;
+    border: none;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+}
+
+.store > div {
+    padding: 0;
+}
+
+.store div[class*="storeSwitcher-menu"] button {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    line-height: 1.85;
+    color: var(--primary__color);
+}
+
+.store div[class*="storeSwitcher-menu"] button > span {
+    padding: 8px 20px;
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    line-height: 1.85;
+    color: var(--primary__color);
+}
+
+.store div[class*="storeSwitcher-menu"] button:disabled > span {
+    color: var(--theme__base-color);
+}
+
+.store div[class*="storeSwitcher-menu"] button:disabled svg {
+    stroke: var(--theme__base-color);
+}
+
+.store div[class*="storeSwitcher-menu"] ul {
+    padding: 0;
+}
+
+.close {
+    composes: icon-sprite from global;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: fixed;
+    left: 310px;
+    top: 10px;
+    background-position: -163px -441px;
+    z-index: 3;
+}
+
+.topLink {
+
+}
+
+/*add icon arrow in menu mobile without module mega-menu*/
+.body button[class*="categoryBranch-target"] {
+    position: relative;
+    padding-right: 30px;
+}
+
+.body button[class*="categoryBranch-target"]:after {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-position: -290px -299px;
+    width: 14px;
+    height: 14px;
+}
+
+.body span[class*="categoryBranch-text"],
+.body span[class*="categoryLeaf-text"] {
+    font-size: 13px;
+}
+
+.cate > div > ul > li:first-child:not(:global(.shimmer)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--global-font_size_base);
+    padding: 10px 10px 10px 42px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.85;
+    margin: 0;
+    background: #fff;
+}
+
+.cate > div > ul > li:first-child a {
+    height: auto;
+    padding: 0;
+    display: block;
+    margin: 0;
+    line-height: normal;
+}
+
+@media (max-width: 360px) {
+    .close {
+        left: calc(85vw + 10px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .switchers {
+        display: none;
+    }
+}
+
+.modal {
+    composes: exit hidden;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate3d(-100%, 0, 0);
+    transition-property: opacity, transform, visibility;
+}
+
+.modal_open {
+    composes: modal enter visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.modal > header {
+    height: 44px;
+}
+
+.modal div[class*="authModal-root"] {
+    padding: 70px 20px 20px;
+}
+
+.modal span[class*="signIn-title"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--global-font_size_base);
+    padding: 10px 10px 10px 42px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.85;
+}
+
+.modal form[class*="createAccount-root"] > h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: var(--global-font_size_base);
+    padding: 10px 10px 10px 42px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 1.85;
+}
+
+.modal span[class*="socialButtons-text"] {
+    display: none;
+}
+
+.modal button[class*="socialButtons-button"] {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+.modal div[class*="socialAuthentication-root"] {
+    margin-bottom: 30px;
+}
+
+.modal div[class*="socialButtons-list"] {
+    justify-content: space-around;
+    max-width: 200px;
+    margin: auto;
+}
+
+.modal div[class*="accountMenuItems-root"] {
+    padding: 0;
+}
+
+.modal .header.account {
+    height: 40px;
+}
+
+.header.account > span {
+    display: flex;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 300px;
+    width: 85vw;
+    padding: 10px 10px 10px 45px;
+    background: var(--gray_color_f7);
+    font-size: var(--global-font_size_base);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.header.account span[class*="icon-root"] {
+    display: none;
+}
+
+/*// style currencySwitcher address*/
+.switchers div[class*="currencySwitcher-root"] > span {
+    font-size: var(--global-font_size_small);
+    font-weight: normal;
+    line-height: 2.18;
+    color: var(--gray_text_86);
+    display: block;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+.switchers button[class*="currencySwitcher-trigger"] {
+    display: none;
+}
+
+.switchers div[class*="currencySwitcher-menu"] {
+    display: block;
+    visibility: visible;
+    box-shadow: none;
+    position: unset;
+    opacity: 1;
+    border: none;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+}
+
+.switchers > div {
+    padding: 0;
+    display: block;
+}
+
+.switchers div[class*="currencySwitcher-menu"] ul li {
+    border: none;
+}
+
+.switchers div[class*="currencySwitcher-menu"] button {
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    line-height: 1.85;
+    color: var(--primary__color);
+}
+
+.switchers div[class*="currencySwitcher-menu"] button > span {
+    padding: 8px 20px;
+    font-size: var(--global-font_size_base);
+    font-weight: normal;
+    line-height: 1.85;
+    color: var(--primary__color);
+}
+
+.switchers div[class*="currencySwitcher-menu"] button:disabled > span {
+    color: var(--theme__base-color);
+}
+
+.switchers div[class*="currencySwitcher-menu"] button:disabled svg {
+    stroke: var(--theme__base-color);
+}
+
+.switchers div[class*="currencySwitcher-menu"] ul {
+    padding: 0;
+}

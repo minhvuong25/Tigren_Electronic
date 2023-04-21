@@ -1,0 +1,18 @@
+.root {
+    background-color: white;
+    display: grid;
+    gap: 0.25rem;
+    grid-auto-columns: minmax(2rem, auto);
+    grid-auto-flow: column;
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.root button[aria-label="move to the first page"], .root button[aria-label="move to the last page"] {
+    display: none !important;
+}
+
+.root > button > span[class*='navButton-icon'] svg {
+    stroke-width: 1px;
+}

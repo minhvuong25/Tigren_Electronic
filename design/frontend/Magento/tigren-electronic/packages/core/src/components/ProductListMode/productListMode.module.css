@@ -1,0 +1,41 @@
+.displayMode {
+    display: flex;
+}
+
+.displayMode button {
+    padding: 5px 6px;
+    background-color: #fff;
+    color: #000;
+    height: 36px;
+    outline: none;
+    border: 1px solid #d8d8d8;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --stroke: #000;
+}
+
+.displayMode button:last-child {
+    margin-right: 0;
+}
+
+.displayMode button[disabled] {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    --stroke: #fff;
+}
+
+@media (max-width: 767px) {
+    .displayMode button {
+        padding: 5px;
+        margin-right: 10px;
+        height: auto;
+        opacity: 0.5;
+    }
+
+    .displayMode button[disabled] {
+        opacity: 1;
+    }
+}

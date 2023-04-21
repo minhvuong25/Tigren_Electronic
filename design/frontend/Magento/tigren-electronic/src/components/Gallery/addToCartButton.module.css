@@ -1,0 +1,41 @@
+.actions button[data-action='addToCart'] {
+    background-color: var(--electronic-secondary);
+    border-radius: 1px;
+    border: 0;
+    min-width: 135px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .actions button[data-action='addToCart']:hover {
+        background-color: var(--theme__base-color);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .actions button[data-action='addToCart'] {
+        min-width: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    form .actions button[data-action='addToCart']:after {
+        background-image: var(--background_electronic_image_icon);
+        background-size: var(--background_electronic_image_size);
+        background-position: -215px -251px;
+    }
+
+    form .actions button[data-action='addToCart'] {
+        background-color: transparent;
+    }
+
+    form .actions button[data-action='addToCart']:hover:disabled,
+    form .actions button[data-action='addToCart']:disabled,
+    form .actions button[data-action='addToCart']:focus,
+    form .actions button[data-action='addToCart']:hover {
+        color: transparent;
+        background-color: transparent;
+        border: none;
+        opacity: 0.5;
+    }
+}

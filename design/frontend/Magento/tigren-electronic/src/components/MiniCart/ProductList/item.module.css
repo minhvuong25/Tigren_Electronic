@@ -1,0 +1,15 @@
+.thumbnail {
+    composes: thumbnail from '@tigrensolutions/core/src/components/MiniCart/ProductList/item.module.css';
+    border: none;
+    width: 110px;
+    height: 110px;
+}
+
+.name {
+    composes: name from '@tigrensolutions/core/src/components/MiniCart/ProductList/item.module.css';
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+
+}

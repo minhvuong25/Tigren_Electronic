@@ -1,0 +1,142 @@
+.root {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-template-columns: 65px 1fr;
+    width: calc(100% - 70px);
+    padding-right: 10px;
+}
+
+.image {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    height: 65px;
+    max-height: 65px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.name {
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 33px;
+    line-height: 1.3;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--search-item-border-color);
+}
+
+.item > div[class*="bundleRoot"],
+.item > form {
+    width: 70px;
+}
+
+.item > div[class*="bundleRoot"] button,
+.item > form button {
+    font-size: 0;
+    padding: 6px 7px;
+    min-width: unset;
+    width: 70px;
+}
+
+.item > div[class*="bundleRoot"] button:after,
+.item > form button:after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-image: var(--background_image_icon);
+    background-size: var(--background_image_size);
+    background-position: -121px -440px;
+}
+
+.item > div[class*="bundleRoot"] button span[class*="button-content"],
+.item > form button span[class*="button-content"] {
+    font-size: 0;
+}
+
+.item > div[class*="bundleRoot"] button:hover,
+.item > div[class*="bundleRoot"] button:focus,
+.item > form button:hover,
+.item > form button:focus {
+    background-color: var(--button__background) !important;
+}
+
+.price {
+    display: block;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.highlight {
+    font-weight: 600;
+}
+
+.images {
+    position: relative;
+}
+
+.outOfStock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.78);
+    font-size: 10px;
+    color: #4f4f4f;
+}
+
+@media (max-width: 767px) {
+    .root {
+        width: calc(100% - 50px);
+        grid-template-columns: 50px 1fr;
+    }
+
+    .thumbnail {
+        height: 50px;
+        max-height: 50px;
+    }
+
+    .item > form button span {
+        display: none;
+    }
+
+    .item > form {
+        width: 47px;
+    }
+
+    .item > form button {
+        padding: 4px 6px;
+    }
+
+    .item > form button:after {
+        transform: scale(0.8);
+    }
+
+    .name {
+        min-height: 28px;
+    }
+
+    .item {
+        padding: 10px 0;
+    }
+}

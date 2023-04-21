@@ -1,0 +1,134 @@
+.price {
+    composes: price from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+    display: flex;
+    flex-direction: column;
+}
+
+.price span {
+    font-size: 18px;
+}
+
+.name {
+    composes: name from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+    -webkit-box-orient: unset;
+    text-align: center;
+}
+
+.root {
+    composes: root from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+}
+
+.wishlist {
+    composes: wishlist from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+}
+
+.wishlist span {
+    display: none;
+}
+
+.wishlist {
+    position: absolute;
+    top: -20px;
+    right: 15px;
+}
+
+.wishlist button[class*="addToListButton-root"]:hover:before {
+    background-position: -290px -187px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: 450px;
+}
+
+.wishlist button[class*="addToListButton-root"]:before {
+    background-position: -264px -187px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: 450px;
+    margin-top: -10px;
+}
+
+.wrapRemove {
+    composes: wrapRemove from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+}
+
+.textRemove {
+    composes: textRemove from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+}
+
+.wrapRemove .textRemove {
+    display: none;
+}
+
+.wrapRemove {
+    position: absolute;
+    top: -15px;
+    right: 0;
+}
+
+.wrapCart {
+    composes: wrapCart from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/item.module.css';
+}
+
+.wrapCart form button {
+    text-transform: uppercase;
+}
+
+.wrapCart form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapCart div[class*="addToCartButton-quantity"] {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .addToCartAction {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .addToCartAction .wrapCart button {
+        min-width: 160px;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .name {
+        text-align: left;
+    }
+
+    .addToCartAction {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .price {
+        align-items: flex-start;
+    }
+
+    .root .addToCartAction .wrapCart button:after {
+        background-image: var(--background_electronic_image_icon);
+        background-size: var(--background_electronic_image_size);
+        background-position: -219px -251px;
+    }
+
+    .addToCartAction .wrapCart button {
+        min-width: 47px;
+        background: #ffffff;
+        border: none;
+    }
+
+    .wishlist {
+        top: -4px;
+        right: 25px;
+    }
+
+    .wrapRemove {
+        top: -14px;
+        right: 0;
+    }
+}

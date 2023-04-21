@@ -1,0 +1,29 @@
+.shimmerRoot {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    display: block;
+    margin-bottom: 10px;
+    min-height: 120px;
+}
+
+.rootGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.rootGrid .item {
+    margin-bottom: 20px;
+}
+
+.root :global(.slick-slide) {
+    padding: 10px 16px;
+}
+
+@media (max-width: 767px) {
+    .shimmerRoot {
+        min-height: unset;
+    }
+
+    .root :global(.slick-slide) {
+        padding: 10px;
+    }
+}

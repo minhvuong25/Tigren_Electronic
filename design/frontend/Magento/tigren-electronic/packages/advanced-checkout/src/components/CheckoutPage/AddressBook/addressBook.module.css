@@ -1,0 +1,53 @@
+.root_active {
+    composes: root_active from '~@magento/venia-ui/lib/components/CheckoutPage/AddressBook/addressBook.module.css';
+    display: block;
+}
+
+.content {
+    composes: content from '~@magento/venia-ui/lib/components/CheckoutPage/AddressBook/addressBook.module.css';
+    border-top: none;
+    padding-top: 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contentLoading {
+    composes: content;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.addButton {
+    padding: 7px 20px;
+    margin-top: 20px;
+    border: 1px solid var(--primary__color);
+    height: var(--button__height_high);
+    min-width: 200px;
+    border-radius: var(--button__border__radius);
+}
+
+.addButton:hover {
+    color: var(--white_text_color);
+    background: var(--primary__color);
+    border-color: var(--primary__color)
+}
+
+.addButton rect {
+    display: none;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 960px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}

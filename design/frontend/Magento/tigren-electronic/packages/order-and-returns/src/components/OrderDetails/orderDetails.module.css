@@ -1,0 +1,208 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 910px;
+    margin: auto;
+}
+
+.orderInformation {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+}
+
+.heading {
+    font-size: var(--global-font_size_heading_h4);
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--tigren-pwa-topmenu-text-color);
+    line-height: 1.3;
+}
+
+.orderInformationContent {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.shippingInformationContainer,
+.shippingMethodContainer,
+.billingInformationContainer,
+.paymentMethodContainer {
+    composes: orderInformationContent;
+}
+
+.itemsContainer {
+    grid-row: 2 / span 4;
+    grid-column: 1 / span 2;
+}
+
+.orderTotalContainer {
+    display: block;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.orderTotalContainer > div {
+    border: none;
+    padding: 0;
+    max-width: 350px;
+    margin-right: 0;
+    margin-left: auto;
+    width: 100%;
+}
+
+.orderTotalContainer div[class*="orderTotal-heading"] {
+    display: none;
+}
+
+.orderTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderNumber > h3 {
+    font-weight: bold;
+}
+
+.orderDetailBox {
+    display: block;
+    padding: 0;
+    width: auto;
+}
+
+.orderDetailBox .heading {
+    display: inline-block;
+    width: auto;
+    margin: 0 0 -1px;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    position: relative;
+    background: #f6f6f6;
+    font-size: var(--venia-global-fontSize-base);
+}
+
+.orderDetailContent {
+    border: 1px solid #ccc;
+    padding: 25px;
+    position: relative;
+    z-index: 0;
+}
+
+.headerTab .hasShipment {
+    display: inline-block;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+}
+
+.headerTab :global(.react-tabs__tab) {
+    padding: 0;
+    border: none;
+}
+
+.headerTab :global(.react-tabs__tab-list) {
+    margin: 0;
+    border: none;
+}
+
+.headerTab :global(.react-tabs__tab--selected) {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.headerTab :global(.react-tabs__tab--selected) .heading {
+    background-color: var(--tigren-pwa-header-bg-color);
+}
+
+.headerTab .noShipment:global(.react-tabs__tab--selected) .heading {
+    background-color: var(--tigren-pwa-header-bg-color);
+}
+
+.headerTab :global(.react-tabs__tab:focus) {
+    box-shadow: none;
+}
+
+.backButton {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .orderInformation {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .orderShowPrint {
+        padding-top: 18px;
+        padding-left: 25px;
+        padding-bottom: 16px;
+    }
+
+    .numberOrder {
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+    }
+
+    .numberOrder h2 {
+        font-size: 30px;
+        padding-right: 25px;
+    }
+
+    .numberOrder h3 {
+        font-size: 18px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        color: black;
+    }
+
+    .orderDatePrint {
+        padding-left: 5px;
+    }
+
+    .orderDetailContent {
+        padding: 10px;
+    }
+
+    .orderDetailBox .heading {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+        line-height: 36px;
+        font-size: var(--global-font_size_heading_h6);
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .heading {
+        font-size: var(--venia-global-fontSize-base);
+        font-weight: 400;
+        margin: 0 0 10px;
+    }
+
+    .headerTab :global(.react-tabs__tab),
+    .headerTab .hasShipment {
+        padding: 0;
+        border: none;
+        display: block;
+    }
+}
+
+/* React tab list*/
+ul[class='react-tabs__tab-list'] {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    :global(html[data-direction="rtl"]) .headerTab :global(.react-tabs__tab-list) {
+        display: flex;
+    }
+}

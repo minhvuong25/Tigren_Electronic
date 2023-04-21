@@ -1,0 +1,38 @@
+.root {
+    display: grid;
+    justify-content: center;
+    padding: 40px 15px;
+    text-align: center;
+    grid-template-columns: minmax(auto, var(--sign-in_with));
+    row-gap: 2rem;
+}
+
+.header {
+    font-size: var(--sign-in-title_font-size);
+    font-weight: 600;
+    color: var(--primary__color);
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.contentContainer {
+    border: var(--sign-in_border);
+    border-radius: var(--sign-in_border-radius);
+    padding: 30px 15px 40px;
+}
+
+.contentContainer > div {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .contentContainer {
+        padding: 35px 60px 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .root {
+        padding: 15px;
+    }
+}

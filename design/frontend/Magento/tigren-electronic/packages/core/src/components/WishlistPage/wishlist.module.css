@@ -1,0 +1,56 @@
+.root {
+    margin-top: 15px;
+}
+
+.header {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.nameContainer {
+    align-items: center;
+    gap: 0.5rem 1rem;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.name {
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wrapNoWishlist {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.wrapNoWishlist img {
+    display: block;
+    width: 100%;
+    max-width: 90px;
+    margin: 0 auto;
+}
+
+.emptyListText {
+    font-size: 16px;
+    margin-top: 24px;
+    font-weight: bold;
+    color: var(--black-color-31);
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        margin-top: 10px;
+    }
+
+    .emptyListText {
+        font-size: 14px;
+    }
+}

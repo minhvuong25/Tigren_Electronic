@@ -1,0 +1,46 @@
+@media (max-width: 767px) {
+    .root_open {
+        composes: root_open from '@tigrensolutions/core/src/components/FilterModal/filterModal.module.css';
+        max-width: initial;
+    }
+
+    .root {
+        composes: root from '@tigrensolutions/core/src/components/FilterModal/filterModal.module.css';
+    }
+
+    .header {
+        composes: header from '@tigrensolutions/core/src/components/FilterModal/filterModal.module.css';
+        box-shadow: 0 2px 4px 0 rgb(228 228 228 / 50%);
+    }
+
+    .headerTitle {
+        composes: headerTitle from '@tigrensolutions/core/src/components/FilterModal/filterModal.module.css';
+        justify-content: center;
+    }
+
+    .header button {
+        left: 15px;
+        top: 18px;
+        background-position: -416px -25px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .header > button > span > svg {
+        stroke: transparent;
+    }
+
+    .root div[class*='filterFooter-root'] {
+        background-color: var(--electronic-secondary);
+    }
+
+    .root div[class*='filterFooter-root'] > button {
+        background-color: var(--electronic-secondary);
+        border-radius: 5px;
+    }
+
+    .root div[class*='filterFooter-root'] > button:disabled {
+        background-color: var(--electronic-secondary);
+        border-radius: 5px;
+    }
+}

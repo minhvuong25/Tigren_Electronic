@@ -1,0 +1,110 @@
+.tabListItem {
+    composes: tabListItem from '@tigrensolutions/core/src/components/Tabs/VerticalTab/verticaltab.module.css';
+    height: 55px;
+    padding: 11px 0 11px 35px;
+}
+
+.tabListItemActive {
+    composes: tabListItemActive from '@tigrensolutions/core/src/components/Tabs/VerticalTab/verticaltab.module.css';
+    background-color: var(--electronic-secondary);
+    border-left-color: var(--electronic-secondary);
+}
+
+.label {
+    composes: label from '@tigrensolutions/core/src/components/Tabs/VerticalTab/verticaltab.module.css';
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.tabListItemActive .label {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.tabListItemActive,
+.tabListItemActive:hover,
+.tabListItemActive:focus {
+    border-left-color: var(--electronic-secondary);
+    height: 55px;
+    padding: 11px 0 11px 35px;
+}
+
+.tabListItem,
+.tabListItem:hover,
+.tabListItem:focus {
+    height: 55px;
+    padding: 11px 0 11px 35px;
+}
+
+.tabListItem:before {
+
+}
+
+.icon {
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -494px -25px;
+    width: 21px;
+    height: 21px;
+}
+
+.account {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -409px -21px;
+    width: 21px;
+    height: 21px;
+}
+
+.accountEdit {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -411px -50px;
+    width: 21px;
+    height: 21px;
+}
+
+.accountAddress {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -411px -105px;
+    width: 21px;
+    height: 21px;
+}
+
+.orderHistory {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -411px -76px;
+    width: 21px;
+    height: 21px;
+}
+
+.wishlist {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -383px -189px;
+    width: 21px;
+    height: 21px;
+}
+
+.reviewCustomer {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -409px -21px;
+    width: 21px;
+    height: 21px;
+}
+
+.accountLogout {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -411px -128px;
+    width: 21px;
+    height: 21px;
+}
+
+@media (max-width: 767px) {
+
+}

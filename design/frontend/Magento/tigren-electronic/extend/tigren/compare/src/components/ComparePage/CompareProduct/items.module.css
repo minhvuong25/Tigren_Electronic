@@ -1,0 +1,48 @@
+.tableCompare {
+    composes: tableCompare from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/items.module.css';
+}
+
+.item {
+    composes: item from '@tigrensolutions/compare/src/components/ComparePage/CompareProduct/items.module.css';
+}
+
+.tableCompare thead tr td:last-child,
+.tableCompare thead tr td:first-child,
+.tableCompare tbody tr td:last-child,
+.tableCompare tbody tr td:first-child {
+    white-space: initial;
+}
+
+.tableCompare thead tr td:first-child,
+.tableCompare tbody tr td:first-child {
+    border-right: 1px solid #e7e7e7;
+}
+
+.item {
+    text-align: center;
+}
+
+.tableCompare tbody tr td {
+    color: #333333;
+}
+
+@media (max-width: 767px) {
+    .tableCompare tbody tr td:first-child {
+        background: #FAFAFA;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        left: 0;
+    }
+
+    .tableCompare tbody tr:last-child td:first-child {
+        border-radius: 0 0 20px 0;
+    }
+
+    .tableCompare tbody tr:first-child td:first-child {
+        border-radius: 0 20px 0 0;
+    }
+
+    .tableCompare tbody tr:last-child {
+        padding-bottom: 20px;
+    }
+}

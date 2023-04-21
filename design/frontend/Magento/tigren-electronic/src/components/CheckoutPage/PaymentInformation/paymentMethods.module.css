@@ -1,0 +1,17 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/CheckoutPage/PaymentInformation/paymentMethods.module.css';
+    border: none;
+    padding: 0;
+}
+
+.payment_method {
+    composes: payment_method from '@magento/venia-ui/lib/components/CheckoutPage/PaymentInformation/paymentMethods.module.css';
+}
+
+@media (min-width: 768px) {
+    .payment_method > label[class*="radio-root"] {
+        background-color: #FAFAFA;
+        padding: 25px 30px;
+        border: 1px solid #E9E9E9;
+    }
+}

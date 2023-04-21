@@ -1,0 +1,121 @@
+.editButton {
+    color: var(--text-global);
+    margin-right: 20px;
+}
+
+.deleteButton {
+    color: var(--text-global);
+}
+
+.iconEdit {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -272px -130px;
+    width: 21px;
+    height: 21px;
+}
+
+.iconDelete {
+    background-image: var(--background_electronic_image_icon);
+    background-size: 500px;
+    background-position: -251px -130px;
+    width: 21px;
+    height: 21px;
+}
+
+.root {
+    display: grid;
+    grid-template-areas:
+        'name name'
+        'address actions';
+    align-items: end;
+    justify-content: space-between;
+}
+
+.address {
+    composes: address from '@tigrensolutions/core/src/components/AddressBookPage/addressCard.module.css';
+}
+
+.name {
+    composes: name from '@tigrensolutions/core/src/components/AddressBookPage/addressCard.module.css';
+}
+
+.name {
+    grid-area: name;
+}
+
+.address {
+    grid-area: address;
+}
+
+.actionContainer {
+    grid-area: actions;
+}
+
+@media (min-width: 768px) {
+    .root {
+        /*composes: root from '@tigrensolutions/core/src/components/AddressBookPage/addressBookPage.module.css';*/
+        /*composes: root from '@tigrensolutions/core/src/components/AddressBookPage/addressCard.module.css';*/
+        background: #FAFAFA;
+        padding: 15px 20px;
+        margin: 15px 0;
+    }
+
+    .address {
+        font-weight: 400;
+        font-size: 16px;
+        color: #636363;
+        margin-top: 15px;
+    }
+
+    .name {
+        font-size: 16px;
+        color: #555555;
+        font-weight: 600;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .root {
+        background: #FFFFFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 20px 20px 25px;
+        margin-top: 15px;
+        grid-template-areas:
+        'name actions'
+        'address actions';
+        align-items: start;
+    }
+
+    .iconEdit ~ span,
+    .iconDelete ~ span {
+        display: none;
+    }
+
+    .iconEdit {
+        background-position: -420px -94px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .iconDelete {
+        background-position: -420px -126px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+    }
+
+    .editButton {
+        margin-right: 0;
+    }
+
+    .actionContainer {
+        grid-area: actions;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 50px;
+    }
+}

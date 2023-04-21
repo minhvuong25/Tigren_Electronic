@@ -1,0 +1,100 @@
+.root {
+    position: relative;
+    display: block;
+    gap: 1.5rem;
+    justify-items: stretch;
+}
+
+.form {
+    display: grid;
+    row-gap: 0.9375rem;
+    position: relative;
+}
+
+.form input {
+    padding: 3px 3px 3px 15px;
+    border-radius: 20px;
+    border: solid 1px #d7d6d6;
+    background-color: var(--white_text_color);
+    padding-right: calc(1.875rem * var(--iconsAfter) + 5.625rem);
+    font-size: var(--global-font_size_base);
+}
+
+.form label {
+    position: absolute;
+    z-index: -11111;
+    display: none;
+}
+
+.title {
+    font-size: var(--global-font_size_base);
+    font-weight: 600;
+    color: var(--primary__color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.subscribe_link {
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+    top: 0;
+    transform: translateY(7%);
+    max-height: 35px;
+    padding: 0 10px;
+    min-height: 35px;
+    border-radius: 20px;
+    background-color: var(--primary__color);
+    color: var(--white_text_color);
+    font-size: var(--global-font_size_base);
+    width: 90px;
+}
+
+.subscribe_link span {
+    display: inline-block;
+    color: inherit;
+}
+
+.subscribe_link:hover span {
+    color: rgb(var(--stroke));
+}
+
+.newsletter_text {
+    margin-bottom: 20px;
+}
+
+.loadingContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(252, 252, 252, 0.75);
+}
+
+.submitError {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-typography-body-S-fontSize);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+@media screen and (max-width: 767px) {
+    .root {
+        grid-column: span 2;
+    }
+
+    .form input {
+        padding-right: calc(1.875rem * var(--iconsAfter) + 0.625rem);
+        font-size: 12px;
+        height: 38px;
+    }
+
+    .subscribe_link {
+        font-size: 12px;
+        min-height: 33px;
+        top: 1px;
+        width: 70px;
+    }
+}

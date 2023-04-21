@@ -1,0 +1,49 @@
+.trigger {
+    composes: trigger from '@tigrensolutions/core/src/components/Header/cartTrigger.module.css';
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    width: 173px;
+    height: 66px;
+}
+
+.trigger:hover {
+    background-color: var(--electronic-secondary);
+}
+
+.trigger span[class*="icon-root"] {
+    background-image: var(--background_electronic_image_icon);
+    background-size: var(--background_electronic_image_size);
+    background-position: -252px -251px;
+    width: 32px;
+    height: 30px;
+    margin-bottom: 0;
+}
+
+.triggerContainer {
+    composes: triggerContainer from '@tigrensolutions/core/src/components/Header/cartTrigger.module.css';
+    height: unset;
+}
+
+.triggerContainer_open {
+    composes: triggerContainer_open from '@tigrensolutions/core/src/components/Header/cartTrigger.module.css';
+    height: unset;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    row-gap: 7px;
+    align-items: flex-start;
+}
+
+.right > :last-child {
+    font-weight: 700;
+}

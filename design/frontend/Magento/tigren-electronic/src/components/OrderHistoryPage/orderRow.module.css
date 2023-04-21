@@ -1,0 +1,105 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+}
+
+.viewDetail {
+    composes: viewDetail from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+    color: var(--text-global);
+    text-decoration: underline;
+}
+
+.viewDetail:hover {
+    text-decoration: none;
+}
+
+.orderConsigneeContainer {
+    composes: orderTotalContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+}
+
+.orderDateContainer {
+    composes: orderDateContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+}
+
+.orderTotalContainer {
+    composes: orderTotalContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+}
+
+.statusContainer {
+    composes: statusContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+}
+
+.orderConsigneeLabel {
+    composes: orderTotalLabel from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+}
+
+.button {
+
+}
+
+@media (max-width: 767px) {
+    .root {
+        background: #FFFFFF;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 20px 25px 15px;
+        margin-bottom: 10px;
+    }
+
+    .orderNumberContainer {
+        composes: orderNumberContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+    }
+
+    .orderTotalContainer {
+        composes: orderTotalContainer from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+    }
+
+    .orderTotal {
+        composes: orderTotal from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+    }
+
+    .orderNumber {
+        composes: orderNumber from '@tigrensolutions/core/src/components/OrderHistoryPage/orderRow.module.css';
+    }
+
+    /*.orderTotalContainer,*/
+    .orderNumberContainer,
+    .orderTotal, .orderNumber {
+        font-weight: 600;
+    }
+
+    .root {
+        display: grid;
+        grid-template-areas:
+            'number number'
+            'date date'
+            'ship ship'
+            'status status'
+            'total button';
+    }
+
+    .orderNumberContainer {
+        grid-area: number;
+    }
+
+    .orderDateContainer {
+        grid-area: date;
+    }
+
+    .orderTotalContainer {
+        grid-area: total;
+        margin-bottom: 0;
+    }
+
+    .statusContainer {
+        grid-area: status;
+        margin-bottom: 10px;
+    }
+
+    .orderConsigneeContainer {
+        grid-area: ship;
+    }
+
+    .button {
+        grid-area: button;
+    }
+}

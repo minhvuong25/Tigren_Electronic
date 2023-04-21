@@ -1,0 +1,42 @@
+.root {
+    --borderColor: var(--gray-color_e7);
+    background-color: white;
+    bottom: 0;
+    display: none;
+    grid-template-rows: 1fr 7rem;
+    max-width: 360px;
+    width: 100%;
+    z-index: 3;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #31353b;
+}
+
+
+.blocks > li:last-child {
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.blocks ul[class*="filterList-items"] {
+    margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        display: grid;
+    }
+}

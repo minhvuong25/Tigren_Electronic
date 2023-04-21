@@ -1,0 +1,67 @@
+.root {
+    composes: root from '@tigrensolutions/core/src/components/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.divider {
+    composes: divider from '@tigrensolutions/core/src/components/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.link {
+    composes: link from '@tigrensolutions/core/src/components/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.currentCategory {
+    composes: currentCategory from '@tigrensolutions/core/src/components/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.text {
+    composes: text from '@tigrensolutions/core/src/components/Breadcrumbs/breadcrumbs.module.css';
+}
+
+[data-page="product-detail"] .text,
+[data-page="product-detail"] .root .divider:nth-child(4) {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navigate {
+        background-position: -416px -19px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: 18px;
+        z-index: 11;
+        left: 2px;
+    }
+
+    .root .divider, .root .currentCategory {
+        display: none;
+    }
+
+    .root .link {
+        top: 18px;
+    }
+
+    span[class*="breadcrumbs-text"] {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        min-height: 70px;
+        font-size: 18px;
+        max-width: 100%;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: normal;
+        text-align: center;
+        color: var(--primary__color);
+    }
+}

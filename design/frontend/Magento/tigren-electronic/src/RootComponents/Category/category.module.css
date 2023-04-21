@@ -1,0 +1,124 @@
+.categoryHeaderContainer {
+    composes: categoryHeader from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+}
+
+.banner {
+    composes: banner from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+}
+
+.name {
+    composes: name from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+}
+
+.categoryHeaderContainer .banner .name {
+    position: relative;
+}
+
+.categoryHeaderContainer .banner .name:before {
+    display: inline-block;
+    content: '';
+    background-image: var(--background_electronic_image_icon);
+    background-size: 700px;
+    background-position: -316px -183px;
+    width: 20px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+.heading {
+    composes: heading from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: initial;
+}
+
+.headerButtons {
+    composes: headerButtons from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+    justify-content: flex-end;
+}
+
+.currentFilterContainer {
+    composes: currentFilterContainer from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+    display: none;
+}
+
+.categoryContent .currentFilterContainer {
+    display: flex;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .filterButton {
+        width: 30%;
+    }
+
+    .categoryHeaderContainer .banner .name {
+        left: 12%;
+    }
+}
+
+@media (max-width: 767px) {
+    .filterButton {
+        composes: filterButton from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+        position: fixed;
+        top: 16px;
+        z-index: 10;
+        right: 3px;
+        border: none;
+    }
+
+    .filterButton:before {
+        background-position: -382px -23px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .filterButton span {
+        display: none;
+    }
+
+    div[class*="category-categoryContent"] .categoryHeaderContainer .banner .name:before {
+        display: none;
+    }
+
+    .categoryHeaderContainer {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: white;
+        min-height: 70px;
+        max-width: 100%;
+    }
+
+    .categoryHeaderContainer .banner:before {
+        background-position: -382px -23px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .heading {
+        margin-top: 0;
+    }
+
+    .heading > div[class*="sortedByContainer-root"] {
+        display: none;
+    }
+
+    .contentWrapper {
+        composes: contentWrapper from '@tigrensolutions/core/src/RootComponents/Category/category.module.css';
+        margin-top: 0;
+    }
+
+    .categoryHeaderContainer .banner .name {
+        font-size: 18px;
+    }
+}
+

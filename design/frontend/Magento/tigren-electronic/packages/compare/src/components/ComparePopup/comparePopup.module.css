@@ -1,0 +1,89 @@
+.compareBtn {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 600;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    background: var(--orange_text_f60);
+    border: 1px solid var(--orange_text_f60);
+    padding: 12px 22px;
+    border-radius: 23px;
+    box-shadow: 1px 1px 8px 0 #c6c6c6;
+    display: block;
+    z-index: 1;
+}
+
+.iconCompare {
+    composes: icon-sprite from global;
+    display: inline-block;
+    width: 18px;
+    height: 11px;
+    background-position: -457px -378px;
+    margin-right: 9px;
+}
+
+.compareBtn:hover {
+    background: var(--button__info__hover__background);
+    border: 1px solid var(--button__info__hover__background);
+}
+
+.textLabel {
+    color: white;
+}
+
+.itemCount {
+    color: var(--primary_text_color);
+    font-size: 16px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Compare Popup */
+.dialogContent {
+    composes: contents from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    padding: 10px 25px;
+    /*overflow: hidden;*/
+}
+
+.dialogRoot {
+    composes: root from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    width: 664px;
+}
+
+.dialogHeader {
+    composes: header from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+    height: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .dialogDialog {
+        composes: dialog from '~@magento/venia-ui/lib/components/Dialog/dialog.module.css';
+        max-width: 100%;
+    }
+}
+
+.printLink {
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .compareBtn {
+        bottom: 75px;
+    }
+
+    .compareBtn {
+        font-size: 12px;
+        padding: 3px 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .compareBtn {
+        bottom: 17px;
+        left: 15px;
+    }
+}

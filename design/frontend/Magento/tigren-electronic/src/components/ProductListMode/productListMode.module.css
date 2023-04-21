@@ -1,0 +1,95 @@
+.displayMode {
+    composes: displayMode from '@tigrensolutions/core/src/components/ProductListMode/productListMode.module.css';
+    margin-left: auto;
+}
+
+.displayMode .gridModeClass {
+
+    background-position: -461px -52px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: 600px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.displayMode .gridModeClass[disabled] {
+    background-position: -461px -20px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.displayMode .listModeClass {
+    background-position: -461px -118px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: 600px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.displayMode .listModeClass[disabled] {
+    background-position: -461px -84px;
+    background-color: #ffffff;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .displayMode button {
+        margin-right: 0;
+    }
+}
+
+div[class="productListMode-gridModeClass"]:before {
+    background-position: -264px -187px;
+    background-image: var(--background_electronic_image_icon);
+    background-size: 450px;
+}
+
+@media (max-width: 767px) {
+    .displayMode .gridModeClass {
+        background-position: -425px -184px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .displayMode .gridModeClass[disabled] {
+        background-position: -354px -185px;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .displayMode .listModeClass {
+        background-position: -424px -245px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 600px;
+        width: 30px;
+        height: 30px;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .displayMode .listModeClass[disabled] {
+        background-position: -424px -216px;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    @media (max-width: 767px) {
+        .displayMode button {
+            margin-right: 0;
+        }
+    }
+
+    div[class="productListMode-gridModeClass"]:before {
+        background-position: -264px -187px;
+        background-image: var(--background_electronic_image_icon);
+        background-size: 450px;
+    }
+}

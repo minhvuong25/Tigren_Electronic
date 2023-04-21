@@ -1,0 +1,81 @@
+.root {
+    text-align: center;
+    width: 600px;
+    max-width: 95%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.rootInModal {
+    padding: 0 20px;
+}
+
+.pageTitle {
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.1;
+    color: var(--primary_text_color);
+}
+
+.subTitle {
+    font-size: 16px;
+    line-height: 1.1;
+    width: 100%;
+    margin-top: 13px;
+    text-align: center;
+    letter-spacing: 0.1px;
+}
+
+.formContent select option:not(checked) {
+    color: #000000;
+    font-style: normal;
+}
+
+.formContent select span[class*='icon-root'] svg {
+    stroke: #2C3E50;
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 27px;
+    text-align: left;
+}
+
+.divButtonContinue {
+    margin-top: 30px;
+    margin-bottom: 38px;
+    text-align: center;
+}
+
+.findOrderBy select {
+    font-size: 14px;
+    line-height: 1.1;
+    color: #C0C0C0;
+    font-style: italic;
+}
+
+.findOrderBy span[class*='icon-root'] svg {
+    stroke: #2C3E50;
+    height: 20px;
+}
+
+.popupWrapper {
+    padding: 0 15px;
+}
+
+@media (max-width: 767px) {
+    .root {
+        width: 95%;
+        max-width: 95%;
+        padding: 0 30px;
+    }
+
+    .rootInModal {
+        padding: 0 10px;
+    }
+}
+
+
